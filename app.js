@@ -17,15 +17,24 @@
     M: { zone: "Arlequin / Géants / Europe", count: 13 }
   };
 
+  const STATUS_OPTIONS = [
+    { value: "todo", label: "À faire", icon: "○" },
+    { value: "done", label: "Fait", icon: "✓" },
+    { value: "vandalized", label: "Vandalisé", icon: "!" },
+    { value: "covered", label: "Recouvert", icon: "↻" }
+  ];
+
   const GRENOBLE = [45.1885, 5.7245];
   const CACHE_KEY = "aq-grenoble-geocode-v2";
+  const TRACKING_KEY = "aq-grenoble-tracking-v1";
   const BOUNDS = { minLat: 45.08, maxLat: 45.30, minLon: 5.55, maxLon: 5.95 };
 
   const state = {
     points: [],
     circuit: getInitialCircuit(),
     markers: new Map(),
-    cache: loadCache(),
+    cache: loadJson(CACHE_KEY, {}),
+    tracking: loadJson(TRACKING_KEY, {}),
     renderToken: 0
   };
 
@@ -70,7 +79,7 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "circuit-btn";
-      button.textContent = letter;
+      button.innerHTML = `<span class="circuit-letter">${letter}</span><span class="circuit-label">Circuit ${letter}</span>`;
       button.title = `Circuit ${letter} · ${CIRCUITS[letter].zone}`;
       button.dataset.circuit = letter;
       button.addEventListener("click", () => showCircuit(letter));
@@ -95,20 +104,23 @@
     history.replaceState(null, "", url);
 
     document.querySelectorAll(".circuit-btn").forEach(btn => {
-      btn.setAttribute("aria-current", btn.dataset.circuit === letter ? "true" : "false");
+      const active = btn.dataset.circuit === letter;
+      btn.setAttribute("aria-current", active ? "true" : "false");
+      if (active) btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
     });
 
     const circuitPoints = state.points.filter(point => point.circuit === letter);
-    updateHeader(letter, circuitPoints.length);
+    updateHeader(letter, circuitPoints);
     renderList(circuitPoints);
     markerLayer.clearLayers();
     state.markers.clear();
     map.setView(GRENOBLE, 13);
 
     const cached = circuitPoints.filter(point => state.cache[point.address]);
-    cached.forEach((point, index) => {
+    cached.forEach(point => {
       const cachedPosition = state.cache[point.address];
-      addMarker(point, cachedPosition.lat, cachedPosition.lon, index + 1, cachedPosition.approx);
+      const pointIndex = circuitPoints.findIndex(p => p.name === point.name) + 1;
+      addMarker(point, cachedPosition.lat, cachedPosition.lon, pointIndex, cachedPosition.approx);
       updateCardGeocode(point.name, cachedPosition.approx ? "Repère approximatif." : "Repère chargé.");
     });
 
@@ -132,7 +144,7 @@
 
       if (location) {
         state.cache[point.address] = location;
-        saveCache();
+        saveJson(CACHE_KEY, state.cache);
         addMarker(point, location.lat, location.lon, pointIndex, location.approx);
         updateCardGeocode(point.name, location.approx ? "Repère approximatif. Utilise Google Maps pour l’adresse exacte." : "Repère placé.");
       } else {
@@ -142,20 +154,32 @@
       const done = cached.length + i + 1;
       setLoading(`Placement des repères : ${Math.min(done, circuitPoints.length)}/${circuitPoints.length}.`);
       fitToCurrentMarkers();
-
       await sleep(320);
     }
 
     setLoading("");
   }
 
-  function updateHeader(letter, count) {
+  function updateHeader(letter, points) {
     const info = CIRCUITS[letter];
     document.getElementById("subtitle").textContent = `Circuit ${letter} · ${info.zone}.`;
     document.getElementById("circuitBadge").textContent = `Circuit ${letter}.`;
     document.getElementById("zoneTitle").textContent = info.zone;
-    document.getElementById("count").textContent = `${count} points.`;
+    document.getElementById("count").textContent = `${points.length} points.`;
+    updateProgress(points);
     document.title = `Circuit ${letter} · Carte collage AQ Grenoble`;
+  }
+
+  function updateProgress(points) {
+    const progress = document.getElementById("progress");
+    if (!progress) return;
+    const done = points.filter(point => getTracking(point).status === "done").length;
+    const remaining = points.length - done;
+    const percent = points.length ? Math.round((done / points.length) * 100) : 0;
+    progress.innerHTML = `
+      <div class="progress-top"><strong>${done} / ${points.length} faits.</strong><span>${remaining} restant${remaining > 1 ? "s" : ""}.</span></div>
+      <div class="progress-bar" aria-label="Progression ${percent}%"><span style="width:${percent}%"></span></div>
+    `;
   }
 
   function renderList(points) {
@@ -163,8 +187,9 @@
     list.replaceChildren();
 
     points.forEach((point, index) => {
+      const tracking = getTracking(point);
       const li = document.createElement("li");
-      li.className = "point-card";
+      li.className = `point-card status-${tracking.status}`;
       li.dataset.point = point.name;
 
       const top = document.createElement("div");
@@ -177,7 +202,6 @@
       const poster = document.createElement("span");
       poster.className = `poster ${point.poster.includes("Couleur") ? "color" : "bw"}`;
       poster.textContent = point.poster;
-
       top.append(name, poster);
 
       const address = document.createElement("p");
@@ -192,33 +216,117 @@
       route.target = "_blank";
       route.rel = "noopener noreferrer";
       route.href = googleDirectionsUrl(point.address);
-      route.textContent = "Itinéraire.";
+      route.innerHTML = `<span class="action-icon">↗</span><span>Itinéraire.</span>`;
 
       const zoom = document.createElement("button");
       zoom.type = "button";
-      zoom.textContent = "Voir sur la carte.";
+      zoom.innerHTML = `<span class="action-icon">⌖</span><span>Voir sur la carte.</span>`;
       zoom.addEventListener("click", () => focusPoint(point.name));
-
       actions.append(route, zoom);
 
-      const status = document.createElement("div");
-      status.className = "geocode-status";
-      status.dataset.statusFor = point.name;
-      status.textContent = state.cache[point.address] ? "Repère chargé." : "Placement du repère en cours.";
+      const tracker = document.createElement("div");
+      tracker.className = "tracker-box";
 
-      li.append(top, address, actions, status);
+      const statusTitle = document.createElement("div");
+      statusTitle.className = "tracker-title";
+      statusTitle.innerHTML = `<strong>État du point.</strong><span>Choisis une case.</span>`;
+
+      const statusGrid = document.createElement("div");
+      statusGrid.className = "status-grid";
+      STATUS_OPTIONS.forEach(option => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `status-btn status-choice-${option.value}`;
+        button.dataset.value = option.value;
+        button.setAttribute("aria-pressed", tracking.status === option.value ? "true" : "false");
+        button.innerHTML = `<span class="status-icon">${option.icon}</span><span>${option.label}.</span>`;
+        button.addEventListener("click", () => setPointStatus(point, option.value));
+        statusGrid.appendChild(button);
+      });
+
+      const capacityBlock = document.createElement("div");
+      capacityBlock.className = "capacity-block";
+      const capacityTitle = document.createElement("div");
+      capacityTitle.className = "tracker-title capacity-title";
+      capacityTitle.innerHTML = `<strong>Capacité constatée.</strong><span>Nombre d’affiches possibles.</span>`;
+
+      const capacityGrid = document.createElement("div");
+      capacityGrid.className = "capacity-grid";
+      [1, 2, 3, 4].forEach(value => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "capacity-btn";
+        button.setAttribute("aria-pressed", tracking.capacity === value ? "true" : "false");
+        button.innerHTML = `<strong>${value}</strong><span>affiche${value > 1 ? "s" : ""}</span>`;
+        button.addEventListener("click", () => setPointCapacity(point, value));
+        capacityGrid.appendChild(button);
+      });
+      capacityBlock.append(capacityTitle, capacityGrid);
+
+      const localNote = document.createElement("div");
+      localNote.className = "local-note";
+      localNote.textContent = "Suivi enregistré sur ce téléphone.";
+
+      tracker.append(statusTitle, statusGrid, capacityBlock, localNote);
+
+      const geocodeStatus = document.createElement("div");
+      geocodeStatus.className = "geocode-status";
+      geocodeStatus.dataset.statusFor = point.name;
+      geocodeStatus.textContent = state.cache[point.address] ? "Repère chargé." : "Placement du repère en cours.";
+
+      li.append(top, address, actions, tracker, geocodeStatus);
       list.appendChild(li);
     });
   }
 
+  function trackingId(point) {
+    return `${point.circuit}|${point.name}`;
+  }
+
+  function getTracking(point) {
+    return { status: "todo", capacity: null, ...(state.tracking[trackingId(point)] || {}) };
+  }
+
+  function setPointStatus(point, status) {
+    const id = trackingId(point);
+    state.tracking[id] = { ...getTracking(point), status };
+    saveJson(TRACKING_KEY, state.tracking);
+    refreshPointTracking(point);
+  }
+
+  function setPointCapacity(point, capacity) {
+    const id = trackingId(point);
+    const current = getTracking(point);
+    state.tracking[id] = { ...current, capacity: current.capacity === capacity ? null : capacity };
+    saveJson(TRACKING_KEY, state.tracking);
+    refreshPointTracking(point);
+  }
+
+  function refreshPointTracking(point) {
+    const card = document.querySelector(`[data-point="${cssEscape(point.name)}"]`);
+    if (!card) return;
+    const tracking = getTracking(point);
+
+    STATUS_OPTIONS.forEach(option => {
+      const button = card.querySelector(`.status-btn[data-value="${option.value}"]`);
+      button?.setAttribute("aria-pressed", tracking.status === option.value ? "true" : "false");
+    });
+
+    card.querySelectorAll(".capacity-btn").forEach((button, index) => {
+      button.setAttribute("aria-pressed", tracking.capacity === index + 1 ? "true" : "false");
+    });
+
+    card.className = `point-card status-${tracking.status}${card.classList.contains("is-active") ? " is-active" : ""}`;
+    const points = state.points.filter(p => p.circuit === state.circuit);
+    updateProgress(points);
+  }
+
   async function geocodePoint(point) {
     const attempts = buildGeocodeAttempts(point.address);
-
     for (let i = 0; i < attempts.length; i += 1) {
       try {
-        const query = attempts[i];
         const url = new URL("https://photon.komoot.io/api/");
-        url.searchParams.set("q", query);
+        url.searchParams.set("q", attempts[i]);
         url.searchParams.set("limit", "1");
         url.searchParams.set("lat", String(GRENOBLE[0]));
         url.searchParams.set("lon", String(GRENOBLE[1]));
@@ -227,38 +335,27 @@
         const timer = setTimeout(() => controller.abort(), 7000);
         const response = await fetch(url, { signal: controller.signal, referrerPolicy: "no-referrer" });
         clearTimeout(timer);
-
         if (!response.ok) continue;
+
         const payload = await response.json();
         const feature = payload?.features?.[0];
         if (!feature?.geometry?.coordinates) continue;
 
         const [lon, lat] = feature.geometry.coordinates.map(Number);
         if (!isGrenobleArea(lat, lon)) continue;
-
         return { lat, lon, approx: i > 0 };
       } catch (error) {
         console.warn("Geocoding failed for", point.name, error);
       }
     }
-
     return null;
   }
 
   function buildGeocodeAttempts(address) {
-    const cleaned = address
-      .replace(/\([^)]*\)/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-
+    const cleaned = address.replace(/\([^)]*\)/g, " ").replace(/\s+/g, " ").trim();
     const firstSegment = cleaned.split(",")[0].trim();
     const normalizedNumber = firstSegment.replace(/N[°º]\s*/gi, " ").replace(/\s+/g, " ").trim();
-
-    return Array.from(new Set([
-      address,
-      cleaned,
-      `${normalizedNumber}, Grenoble, France`
-    ]));
+    return Array.from(new Set([address, cleaned, `${normalizedNumber}, Grenoble, France`]));
   }
 
   function isGrenobleArea(lat, lon) {
@@ -266,11 +363,12 @@
   }
 
   function addMarker(point, lat, lon, number, approx) {
+    const tracking = getTracking(point);
     const icon = L.divIcon({
       className: "",
-      html: `<div class="point-dot">${number}</div>`,
-      iconSize: [30, 30],
-      iconAnchor: [15, 15]
+      html: `<div class="point-dot marker-${tracking.status}">${number}</div>`,
+      iconSize: [34, 34],
+      iconAnchor: [17, 17]
     });
 
     const marker = L.marker([lat, lon], { icon }).addTo(markerLayer);
@@ -281,7 +379,6 @@
 
   function buildPopup(point, approx) {
     const wrap = document.createElement("div");
-
     const title = document.createElement("div");
     title.className = "popup-title";
     title.textContent = point.name;
@@ -308,8 +405,7 @@
       marker.openPopup();
       setActiveCard(name);
     } else {
-      const card = document.querySelector(`[data-point="${cssEscape(name)}"]`);
-      card?.scrollIntoView({ behavior: "smooth", block: "center" });
+      document.querySelector(`[data-point="${cssEscape(name)}"]`)?.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }
 
@@ -317,8 +413,7 @@
     document.querySelectorAll(".point-card").forEach(card => {
       card.classList.toggle("is-active", card.dataset.point === name);
     });
-    const card = document.querySelector(`[data-point="${cssEscape(name)}"]`);
-    card?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    document.querySelector(`[data-point="${cssEscape(name)}"]`)?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   function updateCardGeocode(name, message) {
@@ -329,8 +424,7 @@
   function fitToCurrentMarkers() {
     const markers = Array.from(state.markers.values());
     if (!markers.length) return;
-    const group = L.featureGroup(markers);
-    const bounds = group.getBounds();
+    const bounds = L.featureGroup(markers).getBounds();
     if (bounds.isValid()) map.fitBounds(bounds.pad(0.18), { maxZoom: 15 });
   }
 
@@ -384,19 +478,19 @@
     return url.toString();
   }
 
-  function loadCache() {
+  function loadJson(key, fallback) {
     try {
-      return JSON.parse(localStorage.getItem(CACHE_KEY) || "{}");
+      return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
     } catch {
-      return {};
+      return fallback;
     }
   }
 
-  function saveCache() {
+  function saveJson(key, value) {
     try {
-      localStorage.setItem(CACHE_KEY, JSON.stringify(state.cache));
+      localStorage.setItem(key, JSON.stringify(value));
     } catch {
-      // The map still works without cache.
+      // L’interface reste utilisable même si le stockage local est indisponible.
     }
   }
 
