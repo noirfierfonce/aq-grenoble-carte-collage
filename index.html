@@ -14,7 +14,8 @@
   <link rel="icon" href="./icons/icon-192.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./icons/icon-192.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="./app-pwa.css?v=1">
+  <link rel="stylesheet" href="./app-pwa.css?v=2">
+  <link rel="stylesheet" href="./styles-gas.css?v=2">
 </head>
 <body>
 <div class="app-shell">
@@ -33,14 +34,14 @@
   <section class="dashboard" aria-label="Compteurs de l’opération">
     <div class="stat-card accent"><div class="stat-label">📦 Stock maintenant</div><div class="stat-value" id="statStock">109 + 100</div><div class="stat-meta" id="statStockMeta">couleur + N&B à préparer.</div></div>
     <div class="stat-card"><div class="stat-label">✅ Faits</div><div class="stat-value" id="statDone">0 / 209</div><div class="stat-meta">progression globale.</div></div>
-    <div class="stat-card"><div class="stat-label">🔁 À recoller</div><div class="stat-value" id="statRecoller">0</div><div class="stat-meta">vandalisés ou recouverts.</div></div>
+    <div class="stat-card"><div class="stat-label">🔁 À recoller</div><div class="stat-value" id="statRecoller">0</div><div class="stat-meta">points à recoller.</div></div>
     <div class="stat-card"><div class="stat-label">🧭 Capacités relevées</div><div class="stat-value" id="statVerified">0 / 209</div><div class="stat-meta">panneaux mesurés.</div></div>
   </section>
 
   <nav class="circuit-nav" aria-label="Choix du circuit" id="circuitNav"></nav>
 
-  <main class="layout">
-    <section class="map-panel" aria-label="Carte">
+  <main class="layout" id="mainLayout">
+    <section class="map-panel" id="mapPanel" aria-label="Carte">
       <div id="map"></div>
       <div class="map-actions">
         <button id="locateBtn" type="button">◎ Ma position.</button>
@@ -80,7 +81,7 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="./config.js"></script>
-<script src="./app-pwa.js?v=1" defer></script>
+<script src="./config.js?v=2"></script>
+<script src="./app-pwa-v2.js?v=1" defer></script>
 </body>
 </html>
