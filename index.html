@@ -15,9 +15,9 @@
     <div>
       <div class="eyebrow">AQ Grenoble.</div>
       <h1>Carte de collage.</h1>
-      <p id="subtitle">Choisis un circuit.</p>
+      <p id="subtitle">Chargement de la carte générale.</p>
     </div>
-    <a class="ghost-link" href="https://www.google.com/maps/d/viewer?mid=1yaIrznb0MMRB0ISGAYjrH2Wp8zVAYb0" target="_blank" rel="noopener noreferrer">Carte générale.</a>
+    <a class="ghost-link" href="./?c=ALL">Vue générale.</a>
   </header>
 
   <nav class="circuit-nav" aria-label="Choix du circuit" id="circuitNav"></nav>
@@ -27,7 +27,7 @@
       <div id="map"></div>
       <div class="map-actions">
         <button id="locateBtn" type="button">◎ Ma position.</button>
-        <button id="shareBtn" type="button">↗ Partager ce circuit.</button>
+        <button id="shareBtn" type="button">↗ Partager.</button>
       </div>
       <div id="loading" class="loading" role="status" aria-live="polite"></div>
     </section>
@@ -35,13 +35,13 @@
     <aside class="list-panel">
       <div class="list-head">
         <div>
-          <span class="badge" id="circuitBadge">Circuit A.</span>
-          <h2 id="zoneTitle">Chargement.</h2>
+          <span class="badge" id="circuitBadge">Carte générale.</span>
+          <h2 id="zoneTitle">Grenoble.</h2>
         </div>
         <div class="count" id="count"></div>
       </div>
       <div id="progress" class="progress" aria-live="polite"></div>
-      <p class="hint">Chaque point est dans sa propre case. Ouvre l’itinéraire, indique son état et, lors du repérage, le nombre d’affiches possibles.</p>
+      <p class="hint">Chargement des 209 points.</p>
       <ol id="pointList" class="point-list"></ol>
     </aside>
   </main>
@@ -52,6 +52,6 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="./app.js?v=2" defer></script>
+  <script src="./app.js?v=3" defer></script>
 </body>
 </html>
