@@ -1,0 +1,1 @@
+Front-end PWA sur GitHub Pages. Backend Google Apps Script. Base opérationnelle Google Sheets. Les changements terrain sont d’abord appliqués localement, mis en file d’attente, envoyés au backend puis confirmés au prochain snapshot partagé.
