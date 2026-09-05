@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://photon.komoot.io; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
+  <title>Carte collage · AQ Grenoble</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">AQ Grenoble.</div>
+      <h1>Carte de collage.</h1>
+      <p id="subtitle">Choisis un circuit.</p>
+    </div>
+    <a class="ghost-link" href="https://www.google.com/maps/d/viewer?mid=1yaIrznb0MMRB0ISGAYjrH2Wp8zVAYb0" target="_blank" rel="noopener noreferrer">Carte générale.</a>
+  </header>
+
+  <nav class="circuit-nav" aria-label="Choix du circuit" id="circuitNav"></nav>
+
+  <main class="layout">
+    <section class="map-panel" aria-label="Carte">
+      <div id="map"></div>
+      <div class="map-actions">
+        <button id="locateBtn" type="button">◎ Ma position.</button>
+        <button id="shareBtn" type="button">↗ Partager ce circuit.</button>
+      </div>
+      <div id="loading" class="loading" role="status" aria-live="polite"></div>
+    </section>
+
+    <aside class="list-panel">
+      <div class="list-head">
+        <div>
+          <span class="badge" id="circuitBadge">Circuit A.</span>
+          <h2 id="zoneTitle">Chargement.</h2>
+        </div>
+        <div class="count" id="count"></div>
+      </div>
+      <p class="hint">Les points sont présentés dans l’ordre du circuit. Le bouton « Itinéraire » ouvre Google Maps avec l’adresse officielle.</p>
+      <ol id="pointList" class="point-list"></ol>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Carte terrain publique. Aucune donnée personnelle, aucun suivi d’utilisateur.</span>
+    <span>Données cartographiques © OpenStreetMap contributors.</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
