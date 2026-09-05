@@ -24,6 +24,7 @@
     { value: "covered", label: "Recouvert", icon: "↻" }
   ];
 
+  const GENERAL_VIEW = "ALL";
   const GRENOBLE = [45.1885, 5.7245];
   const CACHE_KEY = "aq-grenoble-geocode-v2";
   const TRACKING_KEY = "aq-grenoble-tracking-v1";
@@ -69,12 +70,23 @@
 
   function getInitialCircuit() {
     const requested = new URLSearchParams(window.location.search).get("c");
-    const normalized = (requested || "A").toUpperCase();
-    return CIRCUITS[normalized] ? normalized : "A";
+    const normalized = (requested || GENERAL_VIEW).toUpperCase();
+    if (normalized === GENERAL_VIEW) return GENERAL_VIEW;
+    return CIRCUITS[normalized] ? normalized : GENERAL_VIEW;
   }
 
   function buildCircuitNav() {
     const nav = document.getElementById("circuitNav");
+
+    const allButton = document.createElement("button");
+    allButton.type = "button";
+    allButton.className = "circuit-btn";
+    allButton.innerHTML = `<span class="circuit-letter">◎</span><span class="circuit-label">Tous</span>`;
+    allButton.title = "Carte générale · 209 points";
+    allButton.dataset.circuit = GENERAL_VIEW;
+    allButton.addEventListener("click", () => showCircuit(GENERAL_VIEW));
+    nav.appendChild(allButton);
+
     Object.keys(CIRCUITS).forEach(letter => {
       const button = document.createElement("button");
       button.type = "button";
@@ -93,7 +105,7 @@
   }
 
   async function showCircuit(letter) {
-    if (!CIRCUITS[letter]) return;
+    if (letter !== GENERAL_VIEW && !CIRCUITS[letter]) return;
 
     state.circuit = letter;
     state.renderToken += 1;
@@ -109,37 +121,56 @@
       if (active) btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
     });
 
-    const circuitPoints = state.points.filter(point => point.circuit === letter);
-    updateHeader(letter, circuitPoints);
-    renderList(circuitPoints);
+    const points = letter === GENERAL_VIEW
+      ? state.points
+      : state.points.filter(point => point.circuit === letter);
+
+    updateHeader(letter, points);
     markerLayer.clearLayers();
     state.markers.clear();
-    map.setView(GRENOBLE, 13);
+    map.setView(GRENOBLE, letter === GENERAL_VIEW ? 12 : 13);
 
-    const cached = circuitPoints.filter(point => state.cache[point.address]);
-    cached.forEach(point => {
+    if (letter === GENERAL_VIEW) {
+      renderGeneralOverview();
+    } else {
+      renderList(points);
+    }
+
+    const cached = points.filter(point => state.cache[point.address]);
+    cached.forEach((point, index) => {
       const cachedPosition = state.cache[point.address];
-      const pointIndex = circuitPoints.findIndex(p => p.name === point.name) + 1;
+      const pointIndex = letter === GENERAL_VIEW ? point.circuit : points.findIndex(p => p.name === point.name) + 1;
       addMarker(point, cachedPosition.lat, cachedPosition.lon, pointIndex, cachedPosition.approx);
-      updateCardGeocode(point.name, cachedPosition.approx ? "Repère approximatif." : "Repère chargé.");
+      if (letter !== GENERAL_VIEW) {
+        updateCardGeocode(point.name, cachedPosition.approx ? "Repère approximatif." : "Repère chargé.");
+      }
     });
 
     fitToCurrentMarkers();
 
-    const missing = circuitPoints.filter(point => !state.cache[point.address]);
+    const missing = points.filter(point => !state.cache[point.address]);
     if (!missing.length) {
       setLoading("");
       return;
     }
 
-    setLoading(`Placement des repères : ${cached.length}/${circuitPoints.length}.`);
+    if (letter === GENERAL_VIEW) {
+      await geocodeGeneralView(missing, token, points.length, cached.length);
+    } else {
+      await geocodeCircuitView(missing, token, points, cached.length);
+    }
+
+    if (token === state.renderToken) setLoading("");
+  }
+
+  async function geocodeCircuitView(missing, token, points, cachedCount) {
+    setLoading(`Placement des repères : ${cachedCount}/${points.length}.`);
+
     for (let i = 0; i < missing.length; i += 1) {
       if (token !== state.renderToken) return;
-
       const point = missing[i];
-      const pointIndex = circuitPoints.findIndex(p => p.name === point.name) + 1;
+      const pointIndex = points.findIndex(p => p.name === point.name) + 1;
       const location = await geocodePoint(point);
-
       if (token !== state.renderToken) return;
 
       if (location) {
@@ -151,21 +182,63 @@
         updateCardGeocode(point.name, "Repère non placé. L’itinéraire Google Maps reste disponible.");
       }
 
-      const done = cached.length + i + 1;
-      setLoading(`Placement des repères : ${Math.min(done, circuitPoints.length)}/${circuitPoints.length}.`);
+      setLoading(`Placement des repères : ${Math.min(cachedCount + i + 1, points.length)}/${points.length}.`);
       fitToCurrentMarkers();
       await sleep(320);
     }
+  }
 
-    setLoading("");
+  async function geocodeGeneralView(missing, token, total, cachedCount) {
+    let completed = cachedCount;
+    setLoading(`Carte générale : ${completed}/${total} repères chargés.`);
+
+    for (let i = 0; i < missing.length; i += 3) {
+      if (token !== state.renderToken) return;
+      const batch = missing.slice(i, i + 3);
+      const results = await Promise.all(batch.map(async point => ({ point, location: await geocodePoint(point) })));
+      if (token !== state.renderToken) return;
+
+      results.forEach(({ point, location }) => {
+        completed += 1;
+        if (!location) return;
+        state.cache[point.address] = location;
+        addMarker(point, location.lat, location.lon, point.circuit, location.approx);
+      });
+
+      saveJson(CACHE_KEY, state.cache);
+      setLoading(`Carte générale : ${Math.min(completed, total)}/${total} repères chargés.`);
+      fitToCurrentMarkers();
+      await sleep(250);
+    }
   }
 
   function updateHeader(letter, points) {
+    const general = letter === GENERAL_VIEW;
+    const shareBtn = document.getElementById("shareBtn");
+    const hint = document.querySelector(".hint");
+
+    if (general) {
+      document.getElementById("subtitle").textContent = "Vue générale · 209 points · 13 circuits.";
+      document.getElementById("circuitBadge").textContent = "Carte générale.";
+      document.getElementById("zoneTitle").textContent = "Grenoble · tous les circuits.";
+      document.getElementById("count").textContent = `${points.length} points.`;
+      shareBtn.textContent = "↗ Partager la carte générale.";
+      hint.textContent = "Vue d’ensemble des 209 points. Touche un circuit ci-dessous pour passer au suivi terrain détaillé.";
+      document.getElementById("progress").innerHTML = `
+        <div class="progress-top"><strong>209 points officiels.</strong><span>13 circuits.</span></div>
+        <div class="progress-bar" aria-label="Carte générale"><span style="width:100%"></span></div>
+      `;
+      document.title = "Carte générale · Collage AQ Grenoble";
+      return;
+    }
+
     const info = CIRCUITS[letter];
     document.getElementById("subtitle").textContent = `Circuit ${letter} · ${info.zone}.`;
     document.getElementById("circuitBadge").textContent = `Circuit ${letter}.`;
     document.getElementById("zoneTitle").textContent = info.zone;
     document.getElementById("count").textContent = `${points.length} points.`;
+    shareBtn.textContent = "↗ Partager ce circuit.";
+    hint.textContent = "Chaque point est dans sa propre case. Ouvre l’itinéraire, indique son état et, lors du repérage, le nombre d’affiches possibles.";
     updateProgress(points);
     document.title = `Circuit ${letter} · Carte collage AQ Grenoble`;
   }
@@ -180,6 +253,58 @@
       <div class="progress-top"><strong>${done} / ${points.length} faits.</strong><span>${remaining} restant${remaining > 1 ? "s" : ""}.</span></div>
       <div class="progress-bar" aria-label="Progression ${percent}%"><span style="width:${percent}%"></span></div>
     `;
+  }
+
+  function renderGeneralOverview() {
+    const list = document.getElementById("pointList");
+    list.replaceChildren();
+
+    Object.entries(CIRCUITS).forEach(([letter, info]) => {
+      const li = document.createElement("li");
+      li.className = "point-card";
+
+      const top = document.createElement("div");
+      top.className = "point-top";
+
+      const name = document.createElement("div");
+      name.className = "point-name";
+      name.textContent = `Circuit ${letter} · ${info.zone}`;
+
+      const count = document.createElement("span");
+      count.className = "poster";
+      count.textContent = `${info.count} points`;
+      top.append(name, count);
+
+      const actions = document.createElement("div");
+      actions.className = "card-actions";
+
+      const open = document.createElement("button");
+      open.type = "button";
+      open.className = "primary";
+      open.innerHTML = `<span class="action-icon">→</span><span>Ouvrir le circuit ${letter}.</span>`;
+      open.addEventListener("click", () => showCircuit(letter));
+
+      const share = document.createElement("button");
+      share.type = "button";
+      share.innerHTML = `<span class="action-icon">↗</span><span>Lien du circuit.</span>`;
+      share.addEventListener("click", async () => {
+        const url = new URL(window.location.href);
+        url.searchParams.set("c", letter);
+        try {
+          if (navigator.clipboard) {
+            await navigator.clipboard.writeText(url.toString());
+            setLoading(`Lien du circuit ${letter} copié.`);
+            setTimeout(() => setLoading(""), 1800);
+          }
+        } catch (error) {
+          console.warn(error);
+        }
+      });
+
+      actions.append(open, share);
+      li.append(top, actions);
+      list.appendChild(li);
+    });
   }
 
   function renderList(points) {
@@ -364,24 +489,26 @@
 
   function addMarker(point, lat, lon, number, approx) {
     const tracking = getTracking(point);
+    const general = state.circuit === GENERAL_VIEW;
     const icon = L.divIcon({
       className: "",
-      html: `<div class="point-dot marker-${tracking.status}">${number}</div>`,
+      html: `<div class="point-dot ${general ? "" : `marker-${tracking.status}`}">${number}</div>`,
       iconSize: [34, 34],
       iconAnchor: [17, 17]
     });
 
     const marker = L.marker([lat, lon], { icon }).addTo(markerLayer);
     marker.bindPopup(buildPopup(point, approx));
-    marker.on("click", () => setActiveCard(point.name));
-    state.markers.set(point.name, marker);
+    if (!general) marker.on("click", () => setActiveCard(point.name));
+    state.markers.set(`${point.circuit}|${point.name}`, marker);
+    if (!general) state.markers.set(point.name, marker);
   }
 
   function buildPopup(point, approx) {
     const wrap = document.createElement("div");
     const title = document.createElement("div");
     title.className = "popup-title";
-    title.textContent = point.name;
+    title.textContent = state.circuit === GENERAL_VIEW ? `Circuit ${point.circuit} · ${point.name}` : point.name;
 
     const address = document.createElement("div");
     address.className = "popup-address";
@@ -422,10 +549,10 @@
   }
 
   function fitToCurrentMarkers() {
-    const markers = Array.from(state.markers.values());
+    const markers = Array.from(new Set(state.markers.values()));
     if (!markers.length) return;
     const bounds = L.featureGroup(markers).getBounds();
-    if (bounds.isValid()) map.fitBounds(bounds.pad(0.18), { maxZoom: 15 });
+    if (bounds.isValid()) map.fitBounds(bounds.pad(0.18), { maxZoom: state.circuit === GENERAL_VIEW ? 14 : 15 });
   }
 
   function locateUser() {
@@ -451,11 +578,10 @@
 
   async function shareCurrentCircuit() {
     const url = window.location.href;
-    const data = {
-      title: `Circuit ${state.circuit} · AQ Grenoble`,
-      text: `Carte du circuit ${state.circuit} · ${CIRCUITS[state.circuit].zone}.`,
-      url
-    };
+    const general = state.circuit === GENERAL_VIEW;
+    const data = general
+      ? { title: "Carte générale · AQ Grenoble", text: "Carte générale des 209 points de collage · Grenoble.", url }
+      : { title: `Circuit ${state.circuit} · AQ Grenoble`, text: `Carte du circuit ${state.circuit} · ${CIRCUITS[state.circuit].zone}.`, url };
 
     try {
       if (navigator.share) {
