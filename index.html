@@ -3,22 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#111827">
+  <meta name="theme-color" content="#f2c14e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AQ Collage">
   <meta name="robots" content="noindex,nofollow,noarchive">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://photon.komoot.io; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
-  <title>Carte collage · AQ Grenoble</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com https://script.google.com https://script.googleusercontent.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://photon.komoot.io https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
+  <title>Collage AQ Grenoble</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-192.svg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="./styles.css?v=2">
+  <link rel="stylesheet" href="./app-pwa.css?v=1">
 </head>
 <body>
+<div class="app-shell">
   <header class="topbar">
     <div>
-      <div class="eyebrow">AQ Grenoble.</div>
-      <h1>Carte de collage.</h1>
-      <p id="subtitle">Chargement de la carte générale.</p>
+      <div class="brand-kicker">AQ Grenoble · terrain</div>
+      <h1 class="brand-title">Collage.</h1>
+      <p class="brand-sub" id="subtitle">Vue générale · 209 points · 13 circuits.</p>
     </div>
-    <a class="ghost-link" href="./?c=ALL">Vue générale.</a>
+    <div class="top-actions">
+      <div class="sync-chip" id="syncChip" aria-live="polite"><span class="sync-dot"></span><span id="syncLabel">Chargement…</span></div>
+      <button class="install-btn" id="installBtn" type="button" hidden>Installer.</button>
+    </div>
   </header>
+
+  <section class="dashboard" aria-label="Compteurs de l’opération">
+    <div class="stat-card accent"><div class="stat-label">📦 Stock maintenant</div><div class="stat-value" id="statStock">109 + 100</div><div class="stat-meta" id="statStockMeta">couleur + N&B à préparer.</div></div>
+    <div class="stat-card"><div class="stat-label">✅ Faits</div><div class="stat-value" id="statDone">0 / 209</div><div class="stat-meta">progression globale.</div></div>
+    <div class="stat-card"><div class="stat-label">🔁 À recoller</div><div class="stat-value" id="statRecoller">0</div><div class="stat-meta">vandalisés ou recouverts.</div></div>
+    <div class="stat-card"><div class="stat-label">🧭 Capacités relevées</div><div class="stat-value" id="statVerified">0 / 209</div><div class="stat-meta">panneaux mesurés.</div></div>
+  </section>
 
   <nav class="circuit-nav" aria-label="Choix du circuit" id="circuitNav"></nav>
 
@@ -36,22 +53,34 @@
       <div class="list-head">
         <div>
           <span class="badge" id="circuitBadge">Carte générale.</span>
-          <h2 id="zoneTitle">Grenoble.</h2>
+          <h2 class="zone-title" id="zoneTitle">Grenoble · tous les circuits.</h2>
         </div>
-        <div class="count" id="count"></div>
+        <div class="count" id="count">209 points.</div>
       </div>
       <div id="progress" class="progress" aria-live="polite"></div>
-      <p class="hint">Chargement des 209 points.</p>
+      <div id="circuitMini" class="circuit-mini"></div>
+      <p class="hint">Vue d’ensemble. Ouvre un circuit pour le suivi terrain détaillé.</p>
       <ol id="pointList" class="point-list"></ol>
     </aside>
   </main>
 
-  <footer>
-    <span>Carte terrain publique. Aucun compte ni outil d’analytics.</span>
+  <footer class="footer">
+    <div class="signature"><span class="signature-mark" aria-hidden="true">🐆</span><span>Développé par Noir Fier Foncé.</span></div>
     <span>Données cartographiques © OpenStreetMap contributors.</span>
   </footer>
+</div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="./app.js?v=3" defer></script>
+<div class="access-modal" id="accessModal" hidden>
+  <form class="access-card" id="accessForm">
+    <h2>Accès équipe.</h2>
+    <p id="accessText">Entre le code partagé dans le groupe pour synchroniser le suivi collectif.</p>
+    <input id="accessInput" inputmode="numeric" autocomplete="one-time-code" aria-label="Code d’accès" placeholder="Code d’accès">
+    <button type="submit">Ouvrir l’application.</button>
+  </form>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="./config.js"></script>
+<script src="./app-pwa.js?v=1" defer></script>
 </body>
 </html>
