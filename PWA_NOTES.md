@@ -1,0 +1,1 @@
+La PWA affiche désormais les compteurs globaux, les cartes de circuits, le suivi tactile des points, les capacités 1–4, un indicateur de synchronisation, une file d’attente locale et une signature Noir Fier Foncé. Le backend doit encore être déployé et son URL ajoutée à `config.js` pour activer la synchronisation collective.
