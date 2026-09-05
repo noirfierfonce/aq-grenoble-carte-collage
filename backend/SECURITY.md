@@ -1,0 +1,1 @@
+Le dépôt public ne doit jamais contenir le code d’accès, l’identifiant privé du tableur, des noms d’équipes, des numéros de téléphone, des notes internes ou des données personnelles. Les secrets de déploiement restent uniquement dans les propriétés du projet Apps Script.
