@@ -5,19 +5,18 @@
 .sync-error { color: var(--danger); background: var(--danger-soft); border-color: rgba(253,164,175,.38); }
 
 .stock-mode { grid-template-columns: minmax(0, 1fr) !important; }
-.stock-editor { margin: 0 0 16px; padding: 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel-2); }
-.stock-owner-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; margin-top: 10px; }
-.stock-owner-row input { width: 100%; min-height: 46px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--panel-3); color: var(--text); padding: 10px 12px; font: inherit; }
-.stock-owner-row input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.stock-mode .list-panel { max-height: none; }
 .stock-kpis { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
-.stock-kpis strong { display: inline-flex; min-height: 40px; align-items: center; padding: 8px 12px; border-radius: 12px; background: var(--panel-3); border: 1px solid var(--border); }
+.stock-kpis strong { display: inline-flex; min-height: 40px; align-items: center; padding: 8px 12px; border-radius: 12px; background: var(--panel3); border: 1px solid var(--border); }
 .stock-kpis.big strong { font-size: 1rem; }
 .overview-stats { display: flex; flex-wrap: wrap; gap: 10px; color: var(--muted); font-weight: 700; margin: 10px 0 12px; }
 .general-stock-card { border-color: rgba(242,193,78,.5); background: linear-gradient(180deg, rgba(242,193,78,.08), var(--panel)); }
-.stock-open-btn { width: 100%; margin-top: 2px; }
-.shared-note { color: var(--ok); }
+.stock-open-btn,
+.point-card > button.primary { width: 100%; min-height: 50px; margin-top: 8px; border-radius: 11px; border: 1px solid var(--accent); background: var(--accent); color: #111; font-weight: 900; cursor: pointer; }
 .status-choice-repost[aria-pressed="true"] { border-color: var(--covered); background: var(--covered-soft); color: var(--covered); }
 .status-choice-skip[aria-pressed="true"] { border-color: var(--muted); background: rgba(167,176,189,.10); color: var(--text); }
+.point-card.status-repost::before { background: var(--covered); }
+.point-card.status-skip::before { background: var(--muted); }
 .marker-repost { background: var(--covered) !important; color: #111 !important; }
 .marker-skip { background: var(--muted) !important; color: #111 !important; }
 
@@ -25,6 +24,4 @@
   .topbar { align-items: flex-start; }
   .sync-wrap { width: auto; }
   .sync-state { font-size: .74rem; padding: 7px 10px; }
-  .stock-owner-row { grid-template-columns: 1fr; }
-  .stock-owner-row button { width: 100%; }
 }
