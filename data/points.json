@@ -1,0 +1,1465 @@
+[
+  {
+    "name": "A – Point 01",
+    "address": "Rue Henri TARZE, rue Roger JOSSERAND, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "A – Point 02",
+    "address": "Rue du VILLARD DE LANS N°8, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "A – Point 03",
+    "address": "Quai de la GRAILLE N°17, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "A – Point 04",
+    "address": "Rue ARAGO N°15, angle rue Emile GUEYMARD, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "A – Point 05",
+    "address": "Rue Emile GUEYMARD N°22, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "A – Point 06",
+    "address": "Place Doyen GOSSE, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 07",
+    "address": "Rue d'ARSONVAL N°6, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "A – Point 08",
+    "address": "Place de la GARE, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 09",
+    "address": "Place de la Gare, face rue André REAL, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 10",
+    "address": "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 11",
+    "address": "Place Firmin GAUTIER, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 12",
+    "address": "Cours BERRIAT N°163, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 13",
+    "address": "Esplanade ANDRY-FARCY N°5 (face au Magasin), Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 14",
+    "address": "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 15",
+    "address": "Cours BERRIAT N°106-108, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 16",
+    "address": "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 17",
+    "address": "Trémie BERRIAT-GARE, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "A – Point 18",
+    "address": "Passage du MARCHE, Grenoble, France",
+    "circuit": "A",
+    "zone": "Gare / Europole / Berriat",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 01",
+    "address": "Place Saint BRUNO N°22, face rue GERIN, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "B – Point 02",
+    "address": "Rue Henri LE CHATELIER N°3BIS, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 03",
+    "address": "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 04",
+    "address": "Rue Marx DORMOY N°41, parc Marliave, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 05",
+    "address": "Rue CUVIER N°2, angle rue MOZART, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 06",
+    "address": "Rue MOZART N°4BIS, angle rue CUVIER, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 07",
+    "address": "Rue Victor LASTELLA N°22, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 08",
+    "address": "Rue des ARTS et METIERS N°15 (salle rouge), Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 09",
+    "address": "Place Saint BRUNO N°17, angle rue Nicolas CHORIER (lycée), Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "B – Point 10",
+    "address": "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "B – Point 11",
+    "address": "Rue Alphonse TERRAY N°14, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 12",
+    "address": "Rue de NEW YORK N°23, parc Paul Perrin (entrée), Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 13",
+    "address": "Rue d'ALEMBERT N°102, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 14",
+    "address": "Rue Nicolas CHORIER N°42, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 15",
+    "address": "Rue du DRAC N°72 (école Ampère), Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 16",
+    "address": "Rue AMPERE N°77, angle rue Docteur HERMITE, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 17",
+    "address": "Rue Docteur CALMETTE, angle rue Léon DRIVIER, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 18",
+    "address": "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "B – Point 19",
+    "address": "Rue IRVOY N°26, boulevard Joseph Vallier, Grenoble, France",
+    "circuit": "B",
+    "zone": "Saint-Bruno / Chorier / Drac / Vallier",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 01",
+    "address": "Rue FARCONNET N°10, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 02",
+    "address": "Avenue Maréchal RANDON N°10 (place du GRESIVAUDAN), Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 03",
+    "address": "Place Docteur GIRARD, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 04",
+    "address": "Rue Aimon de CHISSE N°6, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 05",
+    "address": "Avenue Maréchal RANDON, bd Maréchal LECLERC (parc Ile Verte), Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 06",
+    "address": "Boulevard Maréchal LECLERC N°19 (tour Mont Blanc), Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 07",
+    "address": "18 Avenue Saint-Roch, 38000 Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 08",
+    "address": "Rue du 19 MARS 1962, angle Jean PAIN, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 09",
+    "address": "Rue Joseph CHANRION N°18, angle boulevard Jean PAIN, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 10",
+    "address": "Rue Joseph CHANRION N°35, vers Centre Social, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 11",
+    "address": "Rue HEBERT, angle boulevard des ADIEUX, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 12",
+    "address": "Rue HEBERT N°3, rue Joseph CHANRION, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 13",
+    "address": "Rue HEBERT N°12, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 14",
+    "address": "Rue Cornélie GEMOND N°7, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 15",
+    "address": "Rue Cornélie GEMOND N°14 (école maternelle), Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "C – Point 16",
+    "address": "Boulevard Jean PAIN N°12, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 17",
+    "address": "Rue du Manège (Cinéma Chavant), Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "C – Point 18",
+    "address": "Boulevard Maréchal LYAUTEY N°11, angle rue BECCARIA, Grenoble, France",
+    "circuit": "C",
+    "zone": "Île Verte / Jean-Pain / Chavant",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 01",
+    "address": "Place André MALRAUX N°7, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 02",
+    "address": "Rue du 4ième REGIMENT du GENIE N°11, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 03",
+    "address": "Place de METZ, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 04",
+    "address": "Place VAUCANSON (au centre), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 05",
+    "address": "Place Jean ACHARD N°1ter, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 06",
+    "address": "Passage du LYCEE N°3, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 07",
+    "address": "Rue de la REPUBLIQUE N°14 (Office du Tourisme), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 08",
+    "address": "Rue MADELEINE N°1, rue de LIONNE, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 09",
+    "address": "Place NOTRE DAME N°2bis (arrêt de tram), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 10",
+    "address": "Rue du VIEUX TEMPLE N°10, rue TRES CLOITRES, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 11",
+    "address": "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 12",
+    "address": "Place Edmond ARNAUD (sous les arcades), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 13",
+    "address": "Place Saint LAURENT, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 14",
+    "address": "Rue SAINT LAURENT N°77, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 15",
+    "address": "Quai PERRIERE face N°16, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 16",
+    "address": "Quai PERRIERE N°66, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 17",
+    "address": "Quai de France N°50 (Jardin des Dauphins), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 18",
+    "address": "Route de LYON N°19, Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "D – Point 19",
+    "address": "Rue de BELGRADE N°5 (square Vallois), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "D – Point 20",
+    "address": "Jardin de VILLE N°5 (école), Grenoble, France",
+    "circuit": "D",
+    "zone": "Centre / Notre-Dame / Saint-Laurent",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "E – Point 01",
+    "address": "Avenue Félix POULAT N°4 (derrière WC public), Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 02",
+    "address": "Boulevard Agutte SEMBAT N°9, angle rue MILLET, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 03",
+    "address": "Place Victor HUGO, face N°12, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 04",
+    "address": "Place Victor HUGO, face N°8, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 05",
+    "address": "Place Victor HUGO, côté Agutte Sembat, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 06",
+    "address": "Place Victor HUGO N°9, côté Agutte Sembat, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 07",
+    "address": "Boulevard GAMBETTA N°33, angle cours LAFONTAINE, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 08",
+    "address": "Rue LESDIGUIERES N°30, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "E – Point 09",
+    "address": "Rue LESDIGUIERES N°26, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "E – Point 10",
+    "address": "Rue Berthe de BOISSIEUX N°6 (square Silvestri), Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "E – Point 11",
+    "address": "Rue MARCEAU N°30, angle rue Colonel DUMONT, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 12",
+    "address": "Square Charles MICHEL N°2, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "E – Point 13",
+    "address": "Place Jacqueline MARVAL N°3, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 14",
+    "address": "Place Jacqueline MARVAL N°2, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 15",
+    "address": "Place CHAMPIONNET N°8, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 16",
+    "address": "Place CONDORCET, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 17",
+    "address": "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "E – Point 18",
+    "address": "Rue BILLEREY N°8, angle rue JAY, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "E – Point 19",
+    "address": "Rue JAY N°2, angle rue BILLEREY, Grenoble, France",
+    "circuit": "E",
+    "zone": "Victor-Hugo / Championnet / Jaurès",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 01",
+    "address": "CATANE, avenue RHIN et DANUBE, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 02",
+    "address": "Avenue RHIN et DANUBE N°1, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 03",
+    "address": "Boulevard Joseph VALLIER N°57, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 04",
+    "address": "Avenue Joseph VALLIER N°35, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 05",
+    "address": "Rue Louis Le CARDONNEL N°2bis, bd Joseph VALLIER, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 06",
+    "address": "Rue Charles PEGUY N°23, face rue DUNKERQUE, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 07",
+    "address": "Rue des EAUX CLAIRES N°1, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 08",
+    "address": "Rue des EAUX CLAIRES N°27, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 09",
+    "address": "Rue Joseph BOUCHAYER N°31, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 10",
+    "address": "Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 11",
+    "address": "Rue des EAUX CLAIRES N°55, bd Roger SALENGRO, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 12",
+    "address": "Rue MARBEUF N°16, rue des CHAMPS ELYSEES, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "F – Point 13",
+    "address": "Avenue RHIN et DANUBE, face Hôtel des Impôts, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 14",
+    "address": "Avenue RHIN et DANUBE, face Hôtel des Impôts, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 15",
+    "address": "Avenue RHIN et DANUBE N°48, angle rue SIBELLAS, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 16",
+    "address": "Rue ANATOLE FRANCE N°35, angle avenue RHIN et DANUBE, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 17",
+    "address": "Rue ANATOLE FRANCE N°35, angle avenue RHIN et DANUBE, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "F – Point 18",
+    "address": "Avenue RHIN et DANUBE N°70, Grenoble, France",
+    "circuit": "F",
+    "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "G – Point 01",
+    "address": "Avenue RHIN et DANUBE N°84, rue Paul STRAUSS, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "G – Point 02",
+    "address": "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 03",
+    "address": "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 04",
+    "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "G – Point 05",
+    "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "G – Point 06",
+    "address": "Cours de la LIBERATION N°198, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "G – Point 07",
+    "address": "Rue André ABRY N°18, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 08",
+    "address": "Cours de la LIBERATION N°106, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "G – Point 09",
+    "address": "Rue Louise MICHEL N°24 (lycée), Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 10",
+    "address": "Chemin MENEY, N°19, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 11",
+    "address": "Rue Capitaine CAMINE, face N°5, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 12",
+    "address": "Rue Anatole France N° 28, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "G – Point 13",
+    "address": "Rue SIDI BRAHIM N°45, Grenoble, France",
+    "circuit": "G",
+    "zone": "Bachelard / Libération / Louise-Michel",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "H – Point 01",
+    "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 02",
+    "address": "Rue Roger Louis LACHAT N°5, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "H – Point 03",
+    "address": "Rue Colonel DRIANT N°2 (école maternelle), Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "H – Point 04",
+    "address": "Avenue Jean PERROT N°11, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 05",
+    "address": "Avenue Jean PERROT N°79, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 06",
+    "address": "Avenue Albert 1ier de BELGIQUE N°23, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 07",
+    "address": "Avenue Marcellin BERTHELOT N°4 (lycée Mounier), Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 08",
+    "address": "Avenue Marcellin BERTHELOT N°38, face à la MC2, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 09",
+    "address": "Avenue Marcellin BERTHELOT N°56, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "H – Point 10",
+    "address": "Rue de STALINGRAD parking Clos d'Or, Grenoble, France",
+    "circuit": "H",
+    "zone": "Clemenceau / Jean-Perrot / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "I – Point 01",
+    "address": "Rue des ALLIES N°101, angle rue Amable MATUSSIERE, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "I – Point 02",
+    "address": "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "I – Point 03",
+    "address": "Rue Général MANGIN N°73Ter, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 04",
+    "address": "Rue Général MANGIN N°73Ter, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 05",
+    "address": "Avenue Léon BLUM N°82, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "I – Point 06",
+    "address": "Rue René LESAGE N°6, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 07",
+    "address": "Rue René LESAGE N°16 (groupe scolaire), Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 08",
+    "address": "Rue de STALINGRAD N°86, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "I – Point 09",
+    "address": "Rue JACQUARD N°1, angle rue Honoré de BALZAC, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 10",
+    "address": "Rue Pierre BONNARD N°4, place Docteur GALLIMARD, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 11",
+    "address": "Rue Pierre BONNARD N°2, place Docteur GALLIMARD, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 12",
+    "address": "Rue Edouard VAILLANT N°33, rue des DEPORTES du 11/11/1943, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 13",
+    "address": "Rue de STALINGRAD N°58, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "I – Point 14",
+    "address": "Rue des DEPORTES du 11/11/1943, face rue Paul BOURGET, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 15",
+    "address": "Rue Paul BOURGET N°5 (groupe scolaire Ferdinand Buisson), Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 16",
+    "address": "Rue LEBRIX N°29, rue Léo LAGRANGE, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "I – Point 17",
+    "address": "Boulevard Maréchal FOCH N°51, Grenoble, France",
+    "circuit": "I",
+    "zone": "Alliés / Stalingrad / Foch",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 01",
+    "address": "Boulevard CLEMENCEAU N°42, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 02",
+    "address": "Boulevard CLEMENCEAU N°12, face rue du MONT FROID, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 03",
+    "address": "Rue du 19 MARS 1962, angle Jean PAIN, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 04",
+    "address": "Rue Jules FLANDRIN N°3, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 05",
+    "address": "Avenue Jeanne d'ARC, rue Commandant PERREAU N°20, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 06",
+    "address": "Rue Claude GENIN N°57, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 07",
+    "address": "Rue CONDE, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 08",
+    "address": "Avenue Jeanne d'ARC N°84, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 09",
+    "address": "Place Joseph RIBOUD N°7, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 10",
+    "address": "Rue Henri POINCARE N°1(école), Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 11",
+    "address": "Rue Marius BLANCHET, av du GRAND CHATELET, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 12",
+    "address": "Place de la COMMUNE, angle rue André ARGOUGES, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "J – Point 13",
+    "address": "Rue André ARGOUGES N°14, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 14",
+    "address": "Rue Jean BART face N°33, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 15",
+    "address": "Rue Léon JOUHAUX N°59 Bis (entrée collège), Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "J – Point 16",
+    "address": "Rue Léon JOUHAUX N°61, Grenoble, France",
+    "circuit": "J",
+    "zone": "Clemenceau / Abbaye / Jouhaux",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "K – Point 01",
+    "address": "Rue Georges de MANTEYER N°15, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "K – Point 02",
+    "address": "Rue Georges de MANTEYER N°33, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "K – Point 03",
+    "address": "Rue LETONNELIER N°4, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "K – Point 04",
+    "address": "Avenue TEISSEIRE N°22 (Groupe scolaire), Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 05",
+    "address": "Avenue TEISSEIRE N°22 (Groupe scolaire), Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 06",
+    "address": "Avenue Jean PERROT, avenue Paul COCAT N°31, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 07",
+    "address": "Place Salvador ALLENDE N°4, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 08",
+    "address": "Rue Ninon VALLIN N°2, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "K – Point 09",
+    "address": "Avenue Jean PERROT N°107, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 10",
+    "address": "MC2 (parking), rue Paul CLAUDEL, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 11",
+    "address": "Rue Gérard PHILIPPE, avenue MALHERBE N°28, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 12",
+    "address": "Avenue MALHERBE N°25 (groupe scolaire), Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 13",
+    "address": "Avenue MALHERBE N°25 (groupe scolaire), Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 14",
+    "address": "Avenue MALHERBE N°13, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "K – Point 15",
+    "address": "Rue TURGOT N°2, sous la voûte, Grenoble, France",
+    "circuit": "K",
+    "zone": "Teisseire / Malherbe / MC2",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 01",
+    "address": "Avenue MALHERBE N°31, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "L – Point 02",
+    "address": "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "L – Point 03",
+    "address": "Rue Guy MOQUET N°1, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 04",
+    "address": "Avenue Marie REYNOARD N°10, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "L – Point 05",
+    "address": "Allée des Deux MONDES N°50, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 06",
+    "address": "Rue Alfred de MUSSET N°1Ter, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 07",
+    "address": "Placette PREMOL, rue du VILLAGE face N°2, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 08",
+    "address": "Rue Aimé PUPIN, rue Roger FRANCOIS, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 09",
+    "address": "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 10",
+    "address": "Rue Claude KOGAN, angle rue Christophe TURC, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 11",
+    "address": "Rue Gusto GERVASOTI, angle rue Christophe TURC, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "L – Point 12",
+    "address": "Avenue Edmond ESMONIN N°12 (piscine des Dauphins), Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "L – Point 13",
+    "address": "Avenue de l'EUROPE, face rue Maurice DODERO N°43, Grenoble, France",
+    "circuit": "L",
+    "zone": "Malherbe / Village Olympique / Prémol",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 01",
+    "address": "Arrêt de tram ARLEQUIN, rue Maurice DODERO, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 02",
+    "address": "Galerie de l'ARLEQUIN N°110, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 03",
+    "address": "Galerie de l'ARLEQUIN N°70, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 04",
+    "address": "Galerie de l'ARLEQUIN N°60, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 05",
+    "address": "Galerie de l'ARLEQUIN N°30, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 06",
+    "address": "Galerie de l'ARLEQUIN N°150, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 07",
+    "address": "Galerie de l'ARLEQUIN N°170, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 08",
+    "address": "Allée des Genêts N°7 (école), Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "M – Point 09",
+    "address": "Avenue de CONSTANTINE N°22, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 10",
+    "address": "Place des GEANTS N°40, Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 11",
+    "address": "Rue Paul HELBRONNER N°16Bis (école), Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "⚫ N&B"
+  },
+  {
+    "name": "M – Point 12",
+    "address": "Avenue La BRUYERE, face N°30 (école), Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  },
+  {
+    "name": "M – Point 13",
+    "address": "Avenue de l'EUROPE N°34 (bourse du travail), Grenoble, France",
+    "circuit": "M",
+    "zone": "Arlequin / Géants / Europe",
+    "poster": "🎨 Couleur"
+  }
+]
