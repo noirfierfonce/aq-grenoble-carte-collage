@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://photon.komoot.io; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'none'; upgrade-insecure-requests">
   <title>Carte collage · AQ Grenoble</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=2">
 </head>
 <body>
   <header class="topbar">
@@ -40,7 +40,8 @@
         </div>
         <div class="count" id="count"></div>
       </div>
-      <p class="hint">Les points sont présentés dans l’ordre du circuit. Le bouton « Itinéraire » ouvre Google Maps avec l’adresse officielle.</p>
+      <div id="progress" class="progress" aria-live="polite"></div>
+      <p class="hint">Chaque point est dans sa propre case. Ouvre l’itinéraire, indique son état et, lors du repérage, le nombre d’affiches possibles.</p>
       <ol id="pointList" class="point-list"></ol>
     </aside>
   </main>
@@ -51,6 +52,6 @@
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="./app.js" defer></script>
+  <script src="./app.js?v=2" defer></script>
 </body>
 </html>
