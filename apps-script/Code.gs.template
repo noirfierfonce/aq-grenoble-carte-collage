@@ -1,0 +1,232 @@
+const AQ_SPREADSHEET_ID = "REMPLACER_PAR_ID_DU_TABLEAU";
+
+const AQ_CIRCUITS = {
+  A: 18, B: 19, C: 18, D: 20, E: 19, F: 18, G: 13,
+  H: 10, I: 17, J: 16, K: 15, L: 13, M: 13
+};
+
+const AQ_STATUS_TO_SHEET = {
+  todo: "⏳ À faire",
+  done: "✅ Fait",
+  repost: "🔁 À recoller",
+  skip: "⏭️ Passé"
+};
+
+const AQ_STATUS_FROM_SHEET = {
+  "⏳ À faire": "todo",
+  "✅ Fait": "done",
+  "🔁 À recoller": "repost",
+  "⏭️ Passé": "skip"
+};
+
+function doGet() {
+  const html = `<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#0b0d10">
+  <title>Collage · AQ Grenoble</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://noirfierfonce.github.io/aq-grenoble-carte-collage/styles.css?v=4">
+  <link rel="stylesheet" href="https://noirfierfonce.github.io/aq-grenoble-carte-collage/styles-gas.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">AQ Grenoble.</div>
+      <h1>Collage terrain.</h1>
+      <p id="subtitle">Chargement du suivi collectif.</p>
+    </div>
+    <div class="sync-wrap"><span id="syncStatus" class="sync-state sync-loading">Connexion…</span></div>
+  </header>
+
+  <nav class="circuit-nav" aria-label="Choix de la vue" id="circuitNav"></nav>
+
+  <main class="layout" id="mainLayout">
+    <section class="map-panel" id="mapPanel" aria-label="Carte">
+      <div id="map"></div>
+      <div class="map-actions">
+        <button id="locateBtn" type="button">◎ Ma position.</button>
+        <button id="shareBtn" type="button">↗ Partager.</button>
+      </div>
+      <div id="loading" class="loading" role="status" aria-live="polite"></div>
+    </section>
+
+    <aside class="list-panel">
+      <div class="list-head">
+        <div>
+          <span class="badge" id="circuitBadge">Chargement.</span>
+          <h2 id="zoneTitle">Suivi collectif.</h2>
+        </div>
+        <div class="count" id="count"></div>
+      </div>
+      <div id="progress" class="progress" aria-live="polite"></div>
+      <p class="hint">Les données se synchronisent avec le tableau commun.</p>
+      <div id="stockEditor" class="stock-editor" hidden></div>
+      <ol id="pointList" class="point-list"></ol>
+    </aside>
+  </main>
+
+  <footer>
+    <span>Suivi collectif AQ Grenoble.</span>
+    <span>Données cartographiques © OpenStreetMap contributors.</span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://noirfierfonce.github.io/aq-grenoble-carte-collage/app-gas.js?v=1" defer></script>
+</body>
+</html>`;
+  return HtmlService.createHtmlOutput(html).setTitle("Collage · AQ Grenoble");
+}
+
+function aqGetData() {
+  const ss = aqSpreadsheet_();
+  const pointsSheet = aqSheet_(ss, "CARTE - IMPORT");
+  const pointRows = pointsSheet.getRange(2, 1, 209, 5).getDisplayValues();
+  const points = pointRows.map(r => ({
+    name: r[0], address: r[1], circuit: r[2], zone: r[3], poster: r[4]
+  }));
+
+  const capacities = {};
+  const firstPass = aqSheet_(ss, "1ER PASSAGE").getRange(6, 3, 209, 4).getDisplayValues();
+  firstPass.forEach(r => {
+    const address = r[0];
+    const qty = Number(r[2]);
+    const verified = r[3] === "✅ Vérifié";
+    if (address) capacities[address] = verified && qty >= 1 && qty <= 4 ? qty : null;
+  });
+
+  const tracking = {};
+  Object.keys(AQ_CIRCUITS).forEach(letter => {
+    const values = aqSheet_(ss, `Circuit ${letter}`).getRange(8, 2, AQ_CIRCUITS[letter], 4).getDisplayValues();
+    values.forEach(r => {
+      const address = r[0];
+      if (!address) return;
+      tracking[`${letter}|${address}`] = {
+        status: AQ_STATUS_FROM_SHEET[r[3]] || "todo",
+        capacity: capacities[address] || null
+      };
+    });
+  });
+
+  return {
+    points,
+    tracking,
+    stock: aqStock_(ss),
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function aqUpdatePoint(payload) {
+  if (!payload || typeof payload !== "object") throw new Error("Données invalides.");
+  const letter = String(payload.circuit || "").toUpperCase();
+  const address = String(payload.address || "").trim();
+  if (!AQ_CIRCUITS[letter] || !address) throw new Error("Point invalide.");
+
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const ss = aqSpreadsheet_();
+    aqAssertOfficialPoint_(ss, letter, address);
+
+    if (payload.status !== undefined) {
+      const status = AQ_STATUS_TO_SHEET[String(payload.status)];
+      if (!status) throw new Error("État invalide.");
+      const sheet = aqSheet_(ss, `Circuit ${letter}`);
+      const row = aqFindExactRow_(sheet, 2, 8, AQ_CIRCUITS[letter], address);
+      if (!row) throw new Error("Point introuvable dans le circuit.");
+      sheet.getRange(row, 5).setValue(status);
+    }
+
+    if (payload.capacity !== undefined && payload.capacity !== null) {
+      const capacity = Number(payload.capacity);
+      if (![1, 2, 3, 4].includes(capacity)) throw new Error("Capacité invalide.");
+      const firstPass = aqSheet_(ss, "1ER PASSAGE");
+      const row = aqFindExactRow_(firstPass, 3, 6, 209, address);
+      if (!row) throw new Error("Point introuvable dans le premier passage.");
+      firstPass.getRange(row, 5).setValue(capacity);
+      firstPass.getRange(row, 6).setValue("✅ Vérifié");
+    }
+
+    SpreadsheetApp.flush();
+    return aqPointState_(ss, letter, address);
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function aqSetStockOwner(name) {
+  const clean = String(name || "").trim().slice(0, 80);
+  const ss = aqSpreadsheet_();
+  aqSheet_(ss, "📦 STOCK").getRange("B3").setValue(clean);
+  SpreadsheetApp.flush();
+  return aqStock_(ss);
+}
+
+function aqPointState_(ss, letter, address) {
+  const circuit = aqSheet_(ss, `Circuit ${letter}`);
+  const row = aqFindExactRow_(circuit, 2, 8, AQ_CIRCUITS[letter], address);
+  const statusText = row ? circuit.getRange(row, 5).getDisplayValue() : "⏳ À faire";
+
+  const firstPass = aqSheet_(ss, "1ER PASSAGE");
+  const firstRow = aqFindExactRow_(firstPass, 3, 6, 209, address);
+  let capacity = null;
+  if (firstRow) {
+    const verified = firstPass.getRange(firstRow, 6).getDisplayValue() === "✅ Vérifié";
+    const qty = Number(firstPass.getRange(firstRow, 5).getValue());
+    if (verified && qty >= 1 && qty <= 4) capacity = qty;
+  }
+
+  return {
+    id: `${letter}|${address}`,
+    tracking: { status: AQ_STATUS_FROM_SHEET[statusText] || "todo", capacity },
+    stock: aqStock_(ss),
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function aqStock_(ss) {
+  const stockSheet = aqSheet_(ss, "📦 STOCK");
+  const circuitValues = aqSheet_(ss, "CIRCUITS").getRange("A6:G18").getDisplayValues();
+  return {
+    owner: stockSheet.getRange("B3").getDisplayValue(),
+    color: Number(stockSheet.getRange("B6").getValue()) || 0,
+    bw: Number(stockSheet.getRange("B7").getValue()) || 0,
+    total: Number(stockSheet.getRange("B8").getValue()) || 0,
+    done: Number(stockSheet.getRange("B13").getValue()) || 0,
+    toTreat: Number(stockSheet.getRange("B14").getValue()) || 0,
+    circuits: circuitValues.map(r => ({
+      circuit: r[0], zone: r[1], points: Number(r[2]) || 0,
+      stock: r[3], done: Number(r[5]) || 0, toTreat: Number(r[6]) || 0
+    }))
+  };
+}
+
+function aqAssertOfficialPoint_(ss, letter, address) {
+  const rows = aqSheet_(ss, "CARTE - IMPORT").getRange(2, 2, 209, 2).getDisplayValues();
+  const ok = rows.some(r => r[0] === address && r[1] === letter);
+  if (!ok) throw new Error("Ce point ne fait pas partie de la liste officielle.");
+}
+
+function aqFindExactRow_(sheet, column, startRow, rowCount, value) {
+  const finder = sheet.getRange(startRow, column, rowCount, 1)
+    .createTextFinder(value)
+    .matchEntireCell(true)
+    .findNext();
+  return finder ? finder.getRow() : 0;
+}
+
+function aqSpreadsheet_() {
+  if (!AQ_SPREADSHEET_ID || AQ_SPREADSHEET_ID === "REMPLACER_PAR_ID_DU_TABLEAU") {
+    throw new Error("Le tableau n’est pas encore relié à l’application.");
+  }
+  return SpreadsheetApp.openById(AQ_SPREADSHEET_ID);
+}
+
+function aqSheet_(ss, name) {
+  const sheet = ss.getSheetByName(name);
+  if (!sheet) throw new Error(`Onglet introuvable : ${name}.`);
+  return sheet;
+}
