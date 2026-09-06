@@ -1,0 +1,55 @@
+name: Figer les coordonnées des panneaux Grenoble.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/freeze-geocodes.mjs'
+      - '.github/workflows/freeze-geocodes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: freeze-grenoble-geocodes
+  cancel-in-progress: false
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt.
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Figer les 209 coordonnées avec le code INSEE de Grenoble.
+        run: node scripts/freeze-geocodes.mjs
+
+      - name: Vérifier qu'aucun point n'est hors de Grenoble.
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const points = JSON.parse(fs.readFileSync('data/points.json', 'utf8'));
+          if (points.length !== 209) throw new Error(`Attendu 209 points, trouvé ${points.length}`);
+          const bad = points.filter(p => p.citycode !== '38185' || !Number.isFinite(p.lat) || !Number.isFinite(p.lon) || p.lat < 45.14 || p.lat > 45.23 || p.lon < 5.67 || p.lon > 5.79);
+          if (bad.length) {
+            console.error(bad);
+            throw new Error(`${bad.length} point(s) invalide(s) ou hors Grenoble.`);
+          }
+          console.log('Validation OK : 209/209 points dans la commune de Grenoble.');
+          NODE
+
+      - name: Enregistrer définitivement les coordonnées.
+        run: |
+          if git diff --quiet -- data/points.json data/geocode-report.json geocode-cache-v1.js; then
+            echo 'Aucune modification à enregistrer.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/points.json data/geocode-report.json geocode-cache-v1.js
+          git commit -m 'Figer les coordonnées des 209 panneaux Grenoble'
+          git push
