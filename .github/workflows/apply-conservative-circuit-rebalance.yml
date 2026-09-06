@@ -1,0 +1,81 @@
+name: Rééquilibrage conservateur des circuits.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-conservative-circuit-rebalance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebalance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Réaffecter uniquement les incohérences fortes et migrer le suivi.
+        run: |
+          node <<'NODE'
+          const fs=require('fs');
+          const moves={
+            'L – Point 01':['L','K'],
+            'H – Point 10':['H','I'],
+            'H – Point 01':['H','J'],
+            'F – Point 10':['F','G'],
+            'G – Point 13':['G','I'],
+            'I – Point 05':['I','L'],
+            'I – Point 14':['I','H'],
+            'I – Point 15':['I','H'],
+            'I – Point 12':['I','H'],
+            'D – Point 02':['D','H'],
+            'I – Point 17':['I','H']
+          };
+
+          const pfile='data/points.json';
+          const points=JSON.parse(fs.readFileSync(pfile,'utf8'));
+          for(const p of points){
+            const m=moves[p.name];
+            if(m && p.circuit===m[0]) p.circuit=m[1];
+          }
+          if(points.length!==209) throw new Error(`Nombre de points inattendu: ${points.length}`);
+          const counts={};
+          for(const p of points) counts[p.circuit]=(counts[p.circuit]||0)+1;
+          const expected={A:18,B:19,C:18,D:19,E:19,F:17,G:13,H:13,I:14,J:17,K:16,L:13,M:13};
+          for(const [c,n] of Object.entries(expected)) if(counts[c]!==n) throw new Error(`${c}: ${counts[c]} au lieu de ${n}`);
+          fs.writeFileSync(pfile,JSON.stringify(points,null,2)+'\n');
+
+          const afile='app-pwa-v2.js';
+          let app=fs.readFileSync(afile,'utf8');
+          app=app.replace(
+            'A:{zone:"Gare / Europole / Berriat",count:18},B:{zone:"Saint-Bruno / Chorier / Drac / Vallier",count:19},C:{zone:"Île Verte / Jean-Pain / Chavant",count:18},D:{zone:"Centre / Notre-Dame / Saint-Laurent",count:20},E:{zone:"Victor-Hugo / Championnet / Jaurès",count:19},F:{zone:"Vallier / Eaux-Claires / Rhin-et-Danube",count:18},G:{zone:"Bachelard / Libération / Louise-Michel",count:13},H:{zone:"Clemenceau / Jean-Perrot / MC2",count:10},I:{zone:"Alliés / Stalingrad / Foch",count:17},J:{zone:"Clemenceau / Abbaye / Jouhaux",count:16},K:{zone:"Teisseire / Malherbe / MC2",count:15},L:{zone:"Malherbe / Village Olympique / Prémol",count:13},M:{zone:"Arlequin / Géants / Europe",count:13}',
+            'A:{zone:"Gare / Europole / Berriat",count:18},B:{zone:"Saint-Bruno / Chorier / Drac / Vallier",count:19},C:{zone:"Île Verte / Jean-Pain / Chavant",count:18},D:{zone:"Centre / Notre-Dame / Saint-Laurent",count:19},E:{zone:"Victor-Hugo / Championnet / Jaurès",count:19},F:{zone:"Vallier / Eaux-Claires / Rhin-et-Danube",count:17},G:{zone:"Bachelard / Libération / Louise-Michel",count:13},H:{zone:"Jean-Perrot / Déportés / MC2",count:13},I:{zone:"Alliés / Stalingrad / Sidi-Brahim",count:14},J:{zone:"Clemenceau / Abbaye / Jouhaux",count:17},K:{zone:"Teisseire / Malherbe / MC2",count:16},L:{zone:"Village Olympique / Prémol / Léon-Blum",count:13},M:{zone:"Arlequin / Géants / Europe",count:13}'
+          );
+
+          const oldNorm=`  function normalizeLegacyTracking(){\n    let changed = false;\n    Object.keys(state.tracking).forEach(id=>{\n      const entry = state.tracking[id] || {};\n      if(entry.status === "vandalized"){ entry.status = "repost"; changed = true; }\n      if(entry.status === "covered"){ entry.status = "skip"; changed = true; }\n    });\n    if(changed) saveJson(TRACKING_KEY,state.tracking);\n  }`;
+          const migration=Object.entries(moves).map(([name,[from,to]])=>`      "${from}|${name}":"${to}|${name}"`).join(',\n');
+          const newNorm=`  function normalizeLegacyTracking(){\n    let changed = false, queueChanged = false;\n    Object.keys(state.tracking).forEach(id=>{\n      const entry = state.tracking[id] || {};\n      if(entry.status === "vandalized"){ entry.status = "repost"; changed = true; }\n      if(entry.status === "covered"){ entry.status = "skip"; changed = true; }\n    });\n    const movedIds={\n${migration}\n    };\n    Object.entries(movedIds).forEach(([oldId,newId])=>{\n      if(state.tracking[oldId] && !state.tracking[newId]){ state.tracking[newId]=state.tracking[oldId]; changed=true; }\n      if(state.tracking[oldId]){ delete state.tracking[oldId]; changed=true; }\n      state.queue.forEach(item=>{\n        if(item.id===oldId){ item.id=newId; item.circuit=newId.slice(0,1); queueChanged=true; }\n      });\n    });\n    if(changed) saveJson(TRACKING_KEY,state.tracking);\n    if(queueChanged) saveJson(QUEUE_KEY,state.queue);\n  }`;
+          if(app.includes(oldNorm)) app=app.replace(oldNorm,newNorm);
+          if(!app.includes('const movedIds=')) throw new Error('Migration du suivi non injectée.');
+          app=app.replace('name.textContent=`${index+1}. ${point.name}`;','name.textContent=`${index+1}. Circuit ${point.circuit} · point ${String(index+1).padStart(2,"0")}`;');
+          app=app.replace('state.tracking=remote.tracking||{};\n      saveJson(TRACKING_KEY,state.tracking);','state.tracking=remote.tracking||{};\n      normalizeLegacyTracking();\n      saveJson(TRACKING_KEY,state.tracking);');
+          fs.writeFileSync(afile,app);
+
+          const sw='sw-v3.js';
+          let swt=fs.readFileSync(sw,'utf8').replace('aq-collage-pwa-v34','aq-collage-pwa-v35');
+          fs.writeFileSync(sw,swt);
+          NODE
+      - name: Vérifier la cohérence finale.
+        run: |
+          node -e 'const p=require("./data/points.json"); const c={}; for(const x of p)c[x.circuit]=(c[x.circuit]||0)+1; console.log(c); if(p.length!==209||Math.min(...Object.values(c))<13||Math.max(...Object.values(c))>19) process.exit(1)'
+          grep -q 'aq-collage-pwa-v35' sw-v3.js
+          grep -q 'const movedIds=' app-pwa-v2.js
+      - name: Enregistrer le rééquilibrage.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/points.json app-pwa-v2.js sw-v3.js
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Rééquilibrer les incohérences fortes des circuits"
+          git push
