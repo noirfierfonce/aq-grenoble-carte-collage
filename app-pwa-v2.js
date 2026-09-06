@@ -15,7 +15,6 @@
   const GENERAL = "ALL";
   const STOCK = "STOCK";
   const GRENOBLE = [45.1885,5.7245];
-  const BOUNDS = {minLat:45.08,maxLat:45.30,minLon:5.55,maxLon:5.95};
   const GEO_KEY = "aq-grenoble-geocode-v2";
   const TRACKING_KEY = "aq-grenoble-shared-cache-v2";
   const QUEUE_KEY = "aq-grenoble-sync-queue-v2";
@@ -26,7 +25,6 @@
     points: [],
     circuit: initialView(),
     tracking: loadJson(TRACKING_KEY,{}),
-    geocode: loadJson(GEO_KEY,{}),
     queue: loadJson(QUEUE_KEY,[]),
     accessCode: sessionStorage.getItem(ACCESS_KEY) || "",
     markers: new Map(),
@@ -50,7 +48,14 @@
     try{
       const response = await fetch("./data/points.json",{cache:"no-store"});
       if(!response.ok) throw new Error("Données indisponibles.");
-      state.points = await response.json();
+      const points = await response.json();
+      const boundaryResponse = await fetch("./data/grenoble-boundary.geojson");
+      if (!boundaryResponse.ok) throw new Error("Limite communale indisponible.");
+      const errors = AQFixedCoordinates.validate(points, await boundaryResponse.json());
+      if (errors.length) throw new Error("Coordonnées de la carte non validées.");
+      state.points = points;
+      // Supprimer uniquement les anciens placements, jamais le suivi ni le stock.
+      try { localStorage.removeItem(GEO_KEY); } catch (_) {}
       normalizeLegacyTracking();
       await showView(state.circuit);
       updateDashboard();
@@ -165,20 +170,11 @@
 
     if(view===GENERAL) renderGeneralOverview(); else renderList(points);
 
-    const token=++state.renderToken;
-    const cached=points.filter(p=>state.geocode[p.address]);
-    cached.forEach((point,index)=>{
-      const loc=state.geocode[point.address];
-      addMarker(point,loc.lat,loc.lon,view===GENERAL?point.circuit:index+1,loc.approx);
+    points.forEach((point,index)=>{
+      addMarker(point,point.lat,point.lon,view===GENERAL?point.circuit:index+1,false);
     });
     fitMarkers();
-
-    const missing=points.filter(p=>!state.geocode[p.address]);
-    if(!missing.length || !navigator.onLine){ setLoading(""); return; }
-
-    if(view===GENERAL) await geocodeGeneral(missing,token,points.length,cached.length);
-    else await geocodeCircuit(missing,token,points,cached.length);
-    if(token===state.renderToken) setLoading("");
+    setLoading("");
   }
 
   function updateHeader(view,points){
@@ -263,7 +259,7 @@
       const poster=document.createElement("span"); poster.className=`poster ${point.poster.includes("Couleur")?"color":"bw"}`; poster.textContent=point.poster; top.append(name,poster);
       const address=document.createElement("p"); address.className="address"; address.textContent=point.address;
       const actions=document.createElement("div"); actions.className="card-actions";
-      const route=document.createElement("a"); route.className="primary"; route.target="_blank"; route.rel="noopener noreferrer"; route.href=googleDirectionsUrl(point.address); route.innerHTML='<span class="action-icon">↗</span><span>Itinéraire.</span>';
+      const route=document.createElement("a"); route.className="primary"; route.target="_blank"; route.rel="noopener noreferrer"; route.href=googleDirectionsUrl(point); route.innerHTML='<span class="action-icon">↗</span><span>Itinéraire.</span>';
       const zoom=document.createElement("button"); zoom.type="button"; zoom.innerHTML='<span class="action-icon">⌖</span><span>Voir sur la carte.</span>'; zoom.onclick=()=>focusPoint(point.name); actions.append(route,zoom);
 
       const tracker=document.createElement("div"); tracker.className="tracker-box";
@@ -281,7 +277,7 @@
       capacity.append(capacityGrid);
 
       const save=document.createElement("div"); save.className="save-state"; save.dataset.saveFor=trackingId(point); updateSaveState(save,point);
-      const geo=document.createElement("div"); geo.className="geocode-status"; geo.dataset.statusFor=point.name; geo.textContent=state.geocode[point.address]?"Repère chargé.":"Placement du repère en cours.";
+      const geo=document.createElement("div"); geo.className="geocode-status"; geo.dataset.statusFor=point.name; geo.textContent="Repère vérifié.";
       tracker.append(statusTitle,statusGrid,capacity,save);
       li.append(top,address,actions,tracker,geo); list.append(li);
     });
@@ -419,56 +415,6 @@
     });
   }
 
-  async function geocodeCircuit(missing,token,points,cachedCount){
-    setLoading(`Placement des repères : ${cachedCount}/${points.length}.`);
-    for(let i=0;i<missing.length;i++){
-      if(token!==state.renderToken) return;
-      const point=missing[i];
-      const loc=await geocodePoint(point);
-      if(token!==state.renderToken) return;
-      if(loc){
-        state.geocode[point.address]=loc; saveJson(GEO_KEY,state.geocode);
-        addMarker(point,loc.lat,loc.lon,points.findIndex(p=>p.name===point.name)+1,loc.approx);
-        updateCardGeocode(point.name,loc.approx?"Repère approximatif. Utilise l’itinéraire pour l’adresse exacte.":"Repère placé.");
-      }else updateCardGeocode(point.name,"Repère non placé. L’itinéraire reste disponible.");
-      setLoading(`Placement des repères : ${Math.min(cachedCount+i+1,points.length)}/${points.length}.`); fitMarkers(); await sleep(320);
-    }
-  }
-
-  async function geocodeGeneral(missing,token,total,cachedCount){
-    let completed=cachedCount; setLoading(`Carte générale : ${completed}/${total} repères.`);
-    for(let i=0;i<missing.length;i+=3){
-      if(token!==state.renderToken) return;
-      const batch=missing.slice(i,i+3);
-      const results=await Promise.all(batch.map(async point=>({point,loc:await geocodePoint(point)})));
-      if(token!==state.renderToken) return;
-      results.forEach(({point,loc})=>{ completed++; if(!loc) return; state.geocode[point.address]=loc; addMarker(point,loc.lat,loc.lon,point.circuit,loc.approx); });
-      saveJson(GEO_KEY,state.geocode); setLoading(`Carte générale : ${Math.min(completed,total)}/${total} repères.`); fitMarkers(); await sleep(250);
-    }
-  }
-
-  async function geocodePoint(point){
-    for(const attempt of geocodeAttempts(point.address)){
-      try{
-        const url=new URL("https://photon.komoot.io/api/");
-        url.searchParams.set("q",attempt); url.searchParams.set("limit","1"); url.searchParams.set("lat",String(GRENOBLE[0])); url.searchParams.set("lon",String(GRENOBLE[1]));
-        const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),7000);
-        const response=await fetch(url,{signal:controller.signal,referrerPolicy:"no-referrer"}); clearTimeout(timer);
-        if(!response.ok) continue;
-        const feature=(await response.json())?.features?.[0]; if(!feature?.geometry?.coordinates) continue;
-        const [lon,lat]=feature.geometry.coordinates.map(Number); if(lat<BOUNDS.minLat||lat>BOUNDS.maxLat||lon<BOUNDS.minLon||lon>BOUNDS.maxLon) continue;
-        return {lat,lon,approx:attempt!==point.address};
-      }catch(error){ console.warn("Geocoding",point.name,error); }
-    }
-    return null;
-  }
-
-  function geocodeAttempts(address){
-    const cleaned=address.replace(/\([^)]*\)/g," ").replace(/\s+/g," ").trim();
-    const first=cleaned.split(",")[0].trim().replace(/N[°º]\s*/gi," ").replace(/\s+/g," ").trim();
-    return [...new Set([address,cleaned,`${first}, Grenoble, France`])];
-  }
-
   function makeMarkerIcon(point,label){
     const status=getTracking(point).status;
     return L.divIcon({className:"",html:`<div class="point-dot ${state.circuit===GENERAL?"":`marker-${status}`}">${label}</div>`,iconSize:[34,34],iconAnchor:[17,17]});
@@ -487,7 +433,7 @@
     const wrap=document.createElement("div");
     const title=document.createElement("div"); title.className="popup-title"; title.textContent=state.circuit===GENERAL?`Circuit ${point.circuit} · ${point.name}`:point.name;
     const address=document.createElement("div"); address.className="popup-address"; address.textContent=`${point.address}${approx?" · Repère approximatif.":""}`;
-    const link=document.createElement("a"); link.className="popup-link"; link.target="_blank"; link.rel="noopener noreferrer"; link.href=googleDirectionsUrl(point.address); link.textContent="Itinéraire.";
+    const link=document.createElement("a"); link.className="popup-link"; link.target="_blank"; link.rel="noopener noreferrer"; link.href=googleDirectionsUrl(point); link.textContent="Itinéraire.";
     wrap.append(title,address,link); return wrap;
   }
 
@@ -526,7 +472,7 @@
     }catch(error){ if(error?.name!=="AbortError") console.warn(error); }
   }
 
-  function googleDirectionsUrl(address){ const url=new URL("https://www.google.com/maps/dir/"); url.searchParams.set("api","1"); url.searchParams.set("destination",address); url.searchParams.set("travelmode","walking"); return url.toString(); }
+  function googleDirectionsUrl(point){ return AQFixedCoordinates.directionsUrl(point); }
   function loadJson(key,fallback){ try{return JSON.parse(localStorage.getItem(key)||JSON.stringify(fallback));}catch{return fallback;} }
   function saveJson(key,value){ try{localStorage.setItem(key,JSON.stringify(value));}catch{} }
   function setLoading(text){ document.getElementById("loading").textContent=text; }
