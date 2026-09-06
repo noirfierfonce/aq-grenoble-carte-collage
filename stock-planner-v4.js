@@ -92,16 +92,11 @@
     LETTERS.forEach(letter => {
       const need = needs[letter] || { color: 0, bw: 0 };
       const totalNeed = need.color + need.bw;
-
-      // On respecte d’abord la répartition conseillée couleur / N&B.
       let color = Math.min(need.color, colorLeft);
       let bw = Math.min(need.bw, bwLeft);
       colorLeft -= color;
       bwLeft -= bw;
 
-      // Puis on autorise le remplacement d’un type par l’autre. Si, par exemple,
-      // il n’y a plus de couleur mais qu’il reste du N&B, le circuit peut quand
-      // même être couvert avec le stock réellement disponible.
       let missing = Math.max(0, totalNeed - color - bw);
       if (missing && bwLeft) {
         const extra = Math.min(missing, bwLeft);
@@ -133,27 +128,43 @@
     if (rerender) render();
   }
 
+  function readPoolInputs(root) {
+    return {
+      color: Math.max(0, parseInt(root.querySelector("#plannerPoolColorV4")?.value || "0", 10) || 0),
+      bw: Math.max(0, parseInt(root.querySelector("#plannerPoolBwV4")?.value || "0", 10) || 0)
+    };
+  }
+
   async function savePool() {
     const root = document.getElementById("stockPlannerV4");
     if (!root) return;
-    const color = Math.max(0, parseInt(root.querySelector("#plannerPoolColorV4")?.value || "0", 10) || 0);
-    const bw = Math.max(0, parseInt(root.querySelector("#plannerPoolBwV4")?.value || "0", 10) || 0);
+    const nextPool = readPoolInputs(root);
+    const previousPool = { ...pool };
     const key = accessCode();
     const status = root.querySelector("#plannerPoolStatusV4");
     const save = root.querySelector("#plannerPoolSaveV4");
     if (!key) return void (status.textContent = "Code d’accès requis.");
-    save.disabled = true;
-    save.textContent = "Enregistrement…";
-    status.textContent = "";
+
+    pool = nextPool;
+    buildSuggestedPlan();
+    render();
+    const liveStatus = document.getElementById("plannerPoolStatusV4");
+    if (liveStatus) liveStatus.textContent = "Enregistrement…";
+    const liveSave = document.getElementById("plannerPoolSaveV4");
+    if (liveSave) { liveSave.disabled = true; liveSave.textContent = "Enregistrement…"; }
+
     try {
-      const payload = await jsonp({ action: "stockUpsert", key, name: POOL_NAME, color: String(color), bw: String(bw), contact: "", mutationId: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}` });
+      const payload = await jsonp({ action: "stockUpsert", key, name: POOL_NAME, color: String(nextPool.color), bw: String(nextPool.bw), contact: "", mutationId: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}` });
       if (!payload?.ok) throw new Error(payload?.error || "Enregistrement impossible.");
-      pool = { color, bw };
+      const currentStatus = document.getElementById("plannerPoolStatusV4");
+      if (currentStatus) currentStatus.textContent = "Stock choisi pour ce passage enregistré.";
+      window.dispatchEvent(new CustomEvent("aq:stock-updated", { detail: { color: nextPool.color, bw: nextPool.bw } }));
+    } catch (error) {
+      pool = previousPool;
       buildSuggestedPlan();
       render();
-      document.getElementById("plannerPoolStatusV4").textContent = "Stock choisi pour ce passage enregistré.";
-    } catch (error) {
-      status.textContent = error?.message || "Enregistrement impossible.";
+      const currentStatus = document.getElementById("plannerPoolStatusV4");
+      if (currentStatus) currentStatus.textContent = error?.message || "Enregistrement impossible.";
     } finally {
       const current = document.getElementById("plannerPoolSaveV4");
       if (current) { current.disabled = false; current.textContent = "Enregistrer ce stock pour le passage."; }
@@ -247,19 +258,23 @@
     }, true);
 
     document.addEventListener("input", event => {
-      const input = event.target instanceof HTMLInputElement && event.target.matches("#stockPlannerV4 .planner-step-input") ? event.target : null;
+      const input = event.target instanceof HTMLInputElement ? event.target : null;
       if (!input) return;
-      const node = input.closest(".planner-stepper");
-      if (!node) return;
-      setValue(node.dataset.letter, node.dataset.type, input.value, false);
+      if (input.matches("#stockPlannerV4 .planner-step-input")) {
+        const node = input.closest(".planner-stepper");
+        if (!node) return;
+        setValue(node.dataset.letter, node.dataset.type, input.value, false);
+      }
     }, true);
 
     document.addEventListener("change", event => {
-      const input = event.target instanceof HTMLInputElement && event.target.matches("#stockPlannerV4 .planner-step-input") ? event.target : null;
+      const input = event.target instanceof HTMLInputElement ? event.target : null;
       if (!input) return;
-      const node = input.closest(".planner-stepper");
-      if (!node) return;
-      setValue(node.dataset.letter, node.dataset.type, input.value, true);
+      if (input.matches("#stockPlannerV4 .planner-step-input")) {
+        const node = input.closest(".planner-stepper");
+        if (!node) return;
+        setValue(node.dataset.letter, node.dataset.type, input.value, true);
+      }
     }, true);
 
     document.addEventListener("keydown", event => {
