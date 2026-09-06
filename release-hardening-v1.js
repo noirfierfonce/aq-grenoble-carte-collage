@@ -7,9 +7,10 @@
   const QUEUE_KEY = "aq-grenoble-sync-queue-v2";
   const STOCK_HASH_KEY = "aq-release-stock-hash-v1";
   const RESET_MARKER = "aq-release-reset-test-pool-v1";
+  const SCROLL_KEY = "aq-release-scroll-restore-v1";
   const POOL_NAME = "Stock collectif";
-  const POLL_MS = 30000;
-  const MIN_GAP_MS = 4000;
+  const POLL_MS = 15000;
+  const MIN_GAP_MS = 3000;
 
   let lastCheck = 0;
   let checking = false;
@@ -148,6 +149,28 @@
     });
   }
 
+  function reloadPreservingPosition() {
+    try {
+      sessionStorage.setItem(SCROLL_KEY, JSON.stringify({
+        x: window.scrollX || 0,
+        y: window.scrollY || 0,
+        view: currentView(),
+        at: Date.now()
+      }));
+    } catch (_) {}
+    location.reload();
+  }
+
+  function restorePosition() {
+    const saved = parseJson(read(sessionStorage, SCROLL_KEY), null);
+    if (!saved || saved.view !== currentView() || Date.now() - Number(saved.at || 0) > 10000) return;
+    try { sessionStorage.removeItem(SCROLL_KEY); } catch (_) {}
+    const restore = () => window.scrollTo({ left: Number(saved.x) || 0, top: Number(saved.y) || 0, behavior: "auto" });
+    requestAnimationFrame(restore);
+    setTimeout(restore, 250);
+    setTimeout(restore, 900);
+  }
+
   async function resetKnownTestPoolOnce() {
     if (!API || !accessCode() || read(localStorage, RESET_MARKER)) return;
     try {
@@ -186,7 +209,7 @@
           const local = parseJson(read(localStorage, TRACKING_KEY), {});
           if (stable(remote.tracking) !== stable(local)) {
             try { localStorage.setItem(TRACKING_KEY, JSON.stringify(remote.tracking)); } catch (_) {}
-            location.reload();
+            reloadPreservingPosition();
             return;
           }
         }
@@ -205,7 +228,7 @@
         const previous = read(sessionStorage, STOCK_HASH_KEY);
         try { sessionStorage.setItem(STOCK_HASH_KEY, hash); } catch (_) {}
         if (previous && previous !== hash) {
-          location.reload();
+          reloadPreservingPosition();
           return;
         }
       }
@@ -218,6 +241,7 @@
 
   function start() {
     scheduleUiPatch();
+    restorePosition();
     resetKnownTestPoolOnce().finally(() => refreshSharedState(true));
 
     const observer = new MutationObserver(scheduleUiPatch);
@@ -228,7 +252,7 @@
       setTimeout(() => {
         scheduleUiPatch();
         refreshSharedState(true);
-      }, 450);
+      }, 350);
     }, true);
 
     window.addEventListener("focus", () => refreshSharedState(true));
