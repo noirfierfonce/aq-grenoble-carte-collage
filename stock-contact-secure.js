@@ -24,7 +24,7 @@
       if (!API) return reject(new Error("Synchronisation indisponible."));
       const callback = `__aqcontact_${Date.now()}_${Math.random().toString(36).slice(2)}`;
       const script = document.createElement("script");
-      const timer = setTimeout(() => cleanup(new Error("Délai de synchronisation dépassé.")), 10000);
+      const timer = setTimeout(() => cleanup(new Error("Délai de synchronisation dépassé.")), 15000);
 
       function cleanup(error, data) {
         clearTimeout(timer);
@@ -40,6 +40,58 @@
       query.set("_", String(Date.now()));
       script.src = `${API}?${query.toString()}`;
       document.head.appendChild(script);
+    });
+  }
+
+  function postViaHiddenForm(params) {
+    return new Promise((resolve, reject) => {
+      if (!API) return reject(new Error("Synchronisation indisponible."));
+
+      const frameName = `aqstockframe_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+      const iframe = document.createElement("iframe");
+      iframe.name = frameName;
+      iframe.hidden = true;
+      iframe.setAttribute("aria-hidden", "true");
+
+      const form = document.createElement("form");
+      form.method = "POST";
+      form.action = API;
+      form.target = frameName;
+      form.hidden = true;
+
+      Object.entries(params).forEach(([key, value]) => {
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = key;
+        input.value = String(value ?? "");
+        form.appendChild(input);
+      });
+
+      const cleanup = () => {
+        setTimeout(() => {
+          try { form.remove(); } catch (_) {}
+          try { iframe.remove(); } catch (_) {}
+        }, 100);
+      };
+
+      let submitted = false;
+      iframe.addEventListener("load", () => {
+        if (!submitted) return;
+        cleanup();
+        resolve();
+      }, { once: true });
+
+      const timer = setTimeout(() => {
+        cleanup();
+        reject(new Error("Délai d’enregistrement dépassé."));
+      }, 12000);
+
+      document.body.appendChild(iframe);
+      document.body.appendChild(form);
+      submitted = true;
+      form.submit();
+
+      iframe.addEventListener("load", () => clearTimeout(timer), { once: true });
     });
   }
 
@@ -113,6 +165,23 @@
     }
   }
 
+  async function confirmSaved(name, color, bw, contact, key) {
+    for (let attempt = 0; attempt < 5; attempt++) {
+      if (attempt) await new Promise(resolve => setTimeout(resolve, 700));
+      const payload = await jsonp({ action: "stockSnapshot", key });
+      if (!payload?.ok || !Array.isArray(payload.holders)) continue;
+      holders = payload.holders;
+      const saved = holderByName(name);
+      if (
+        saved &&
+        Number(saved.color) === color &&
+        Number(saved.bw) === bw &&
+        String(saved.contact || "") === contact
+      ) return true;
+    }
+    return false;
+  }
+
   async function handleSubmit(event) {
     const form = event.target;
     if (!(form instanceof HTMLFormElement) || form.id !== "stockEditForm") return;
@@ -144,7 +213,7 @@
     if (errorBox) errorBox.textContent = "";
 
     try {
-      const body = new URLSearchParams({
+      await postViaHiddenForm({
         action: "stockUpsert",
         key,
         name,
@@ -154,21 +223,8 @@
         mutationId: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
       });
 
-      await fetch(API, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-        body
-      });
-
-      await new Promise(resolve => setTimeout(resolve, 900));
-      const payload = await jsonp({ action: "stockSnapshot", key });
-      if (!payload?.ok || !Array.isArray(payload.holders)) throw new Error(payload?.error || "Le stock n’a pas été enregistré.");
-      holders = payload.holders;
-      const saved = holderByName(name);
-      if (!saved || Number(saved.color) !== color || Number(saved.bw) !== bw || String(saved.contact || "") !== contact) {
-        throw new Error("La mise à jour n’a pas pu être confirmée.");
-      }
+      const confirmed = await confirmSaved(name, color, bw, contact, key);
+      if (!confirmed) throw new Error("La mise à jour n’a pas pu être confirmée.");
 
       try { localStorage.setItem(HOLDER_NAME_KEY, name); } catch (_) {}
       document.getElementById("stockEditModal").hidden = true;
