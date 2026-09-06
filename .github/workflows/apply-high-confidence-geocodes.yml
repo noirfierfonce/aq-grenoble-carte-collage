@@ -1,0 +1,40 @@
+name: Appliquer les corrections géographiques à haute confiance.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-high-confidence-geocodes.mjs'
+      - '.github/workflows/apply-high-confidence-geocodes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Appliquer uniquement les corrections à haute confiance.
+        run: node scripts/apply-high-confidence-geocodes.mjs
+      - name: Vérifier les contraintes Grenoble.
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const points=JSON.parse(fs.readFileSync('data/points.json','utf8'));
+          if(points.length!==209) throw new Error(`209 attendus, ${points.length}`);
+          const bad=points.filter(p=>p.citycode!=='38185'||!Number.isFinite(p.lat)||!Number.isFinite(p.lon)||p.lat<45.14||p.lat>45.23||p.lon<5.67||p.lon>5.79);
+          if(bad.length){ console.error(bad); throw new Error(`${bad.length} point(s) invalide(s)`); }
+          console.log('Validation Grenoble OK : 209/209.');
+          NODE
+      - name: Enregistrer les corrections.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/points.json data/geocode-corrections-v2.json geocode-cache-v1.js
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Corriger les coordonnées Grenoble à haute confiance'
+          git push
