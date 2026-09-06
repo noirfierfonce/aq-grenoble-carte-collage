@@ -1,0 +1,194 @@
+name: Analyser les circuits par distance.
+
+on:
+  push:
+    branches:
+      - analysis-circuit-distances-20260906
+
+permissions:
+  contents: write
+
+jobs:
+  analyse:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: analysis-circuit-distances-20260906
+      - name: Calculer une optimisation conservative.
+        shell: python
+        run: |
+          import json, math, csv, random
+          from collections import defaultdict
+          from pathlib import Path
+
+          pts=json.load(open('data/points.json',encoding='utf-8'))
+          assert len(pts)==209
+          for p in pts:
+              assert p.get('citycode')=='38185' and isinstance(p.get('lat'),(int,float)) and isinstance(p.get('lon'),(int,float))
+
+          letters=sorted(set(p['circuit'] for p in pts))
+          assert letters==list('ABCDEFGHIJKLM')
+          R=6371.0088
+          lat0=sum(p['lat'] for p in pts)/len(pts)
+          # Local metric coordinates in km, good enough at Grenoble scale.
+          for p in pts:
+              p['_x']=R*math.radians(p['lon'])*math.cos(math.radians(lat0))
+              p['_y']=R*math.radians(p['lat'])
+
+          def centroid(groups,c):
+              q=[p for p in pts if groups[p['name']]==c]
+              return (sum(p['_x'] for p in q)/len(q),sum(p['_y'] for p in q)/len(q))
+          def dist2(p,cen):
+              return (p['_x']-cen[0])**2+(p['_y']-cen[1])**2
+          def stats(groups):
+              cs={c:centroid(groups,c) for c in letters}
+              per={}
+              total=0.0
+              for c in letters:
+                  q=[p for p in pts if groups[p['name']]==c]
+                  ds=[math.sqrt(dist2(p,cs[c])) for p in q]
+                  total+=sum(d*d for d in ds)
+                  per[c]={'n':len(q),'mean_km':sum(ds)/len(ds),'max_km':max(ds),'rms_km':math.sqrt(sum(d*d for d in ds)/len(ds))}
+              return total,per,cs
+
+          current={p['name']:p['circuit'] for p in pts}
+          base_obj,base_per,base_cent=stats(current)
+
+          # Conservative local search: preserve 13 circuits, aim for 13..19 points,
+          # penalise each reassignment so we only propose geographically meaningful changes.
+          groups=current.copy()
+          move_penalty=0.18 # km²-equivalent per changed point.
+          min_n,max_n=13,19
+
+          def score(g):
+              obj,per,_=stats(g)
+              changed=sum(g[p['name']]!=p['circuit'] for p in pts)
+              # Very strong penalty for circuits outside desired operational range.
+              cap=sum((max(0,min_n-v['n'])**2 + max(0,v['n']-max_n)**2)*8.0 for v in per.values())
+              return obj + move_penalty*changed + cap
+
+          best_score=score(groups)
+          # First, allow single-point moves that improve score.
+          for _ in range(80):
+              improved=False
+              _,per,cs=stats(groups)
+              sizes={c:per[c]['n'] for c in letters}
+              candidates=[]
+              for p in pts:
+                  a=groups[p['name']]
+                  for b in letters:
+                      if b==a: continue
+                      if sizes[a]<=min_n and sizes[b]>=min_n: continue
+                      if sizes[b]>=max_n: continue
+                      # only test nearby destinations
+                      if math.sqrt(dist2(p,cs[b])) > math.sqrt(dist2(p,cs[a]))+1.2: continue
+                      g=groups.copy(); g[p['name']]=b
+                      s=score(g)
+                      candidates.append((s,p['name'],a,b))
+              if candidates:
+                  s,name,a,b=min(candidates)
+                  if s < best_score-1e-9:
+                      groups[name]=b; best_score=s; improved=True
+              if not improved: break
+
+          # Then pairwise swaps near circuit borders.
+          for _ in range(40):
+              improved=False
+              _,per,cs=stats(groups)
+              byc=defaultdict(list)
+              for p in pts: byc[groups[p['name']]].append(p)
+              cand=[]
+              for i,a in enumerate(letters):
+                  for b in letters[i+1:]:
+                      # restrict to circuits whose centroids are within 3.5 km
+                      if math.dist(cs[a],cs[b])>3.5: continue
+                      aa=sorted(byc[a], key=lambda p: dist2(p,cs[b])-dist2(p,cs[a]))[:6]
+                      bb=sorted(byc[b], key=lambda p: dist2(p,cs[a])-dist2(p,cs[b]))[:6]
+                      for pa in aa:
+                          for pb in bb:
+                              g=groups.copy(); g[pa['name']]=b; g[pb['name']]=a
+                              s=score(g)
+                              cand.append((s,pa['name'],pb['name'],a,b))
+              if cand:
+                  s,na,nb,a,b=min(cand)
+                  if s < best_score-1e-9:
+                      groups[na]=b; groups[nb]=a; best_score=s; improved=True
+              if not improved: break
+
+          opt_obj,opt_per,opt_cent=stats(groups)
+          moves=[]
+          for p in pts:
+              old=p['circuit']; new=groups[p['name']]
+              if old!=new:
+                  d_old=math.sqrt(dist2(p,base_cent[old]))
+                  d_new=math.sqrt(dist2(p,opt_cent[new]))
+                  moves.append({'point':p['name'],'address':p['address'],'from':old,'to':new,'old_centroid_km':round(d_old,3),'new_centroid_km':round(d_new,3),'gain_km':round(d_old-d_new,3)})
+          moves.sort(key=lambda m:m['gain_km'],reverse=True)
+
+          # Identify suspicious current assignments even if not selected, using nearest current centroid.
+          anomalies=[]
+          for p in pts:
+              own=p['circuit']
+              d_own=math.sqrt(dist2(p,base_cent[own]))
+              nearest=min((math.sqrt(dist2(p,base_cent[c])),c) for c in letters if c!=own)
+              gain=d_own-nearest[0]
+              if gain>=0.35:
+                  anomalies.append({'point':p['name'],'address':p['address'],'current':own,'nearer':nearest[1],'own_km':round(d_own,3),'other_km':round(nearest[0],3),'potential_gain_km':round(gain,3)})
+          anomalies.sort(key=lambda x:x['potential_gain_km'],reverse=True)
+
+          Path('analysis').mkdir(exist_ok=True)
+          with open('analysis/circuit-distance-moves.csv','w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=['point','address','from','to','old_centroid_km','new_centroid_km','gain_km']); w.writeheader(); w.writerows(moves)
+          with open('analysis/circuit-distance-anomalies.csv','w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=['point','address','current','nearer','own_km','other_km','potential_gain_km']); w.writeheader(); w.writerows(anomalies)
+
+          improvement=(base_obj-opt_obj)/base_obj*100 if base_obj else 0
+          lines=[]
+          lines.append('# Analyse géographique des circuits A–M')
+          lines.append('')
+          lines.append('Analyse non destructive basée sur les 209 coordonnées figées de `points.json`.')
+          lines.append('')
+          lines.append(f'- Compacité actuelle (somme des distances² aux centroïdes) : **{base_obj:.2f} km²**.')
+          lines.append(f'- Compacité après optimisation conservative : **{opt_obj:.2f} km²**.')
+          lines.append(f'- Gain de compacité : **{improvement:.1f} %**.')
+          lines.append(f'- Points proposés au changement de circuit : **{len(moves)} / 209**.')
+          lines.append(f'- Affectations actuelles nettement plus proches d’un autre centroïde (≥ 350 m) : **{len(anomalies)}**.')
+          lines.append('')
+          lines.append('## Tailles des circuits')
+          lines.append('')
+          lines.append('| Circuit | Actuel | Proposition | Rayon moyen actuel | Rayon moyen proposé | Max actuel | Max proposé |')
+          lines.append('|---|---:|---:|---:|---:|---:|---:|')
+          for c in letters:
+              lines.append(f"| {c} | {base_per[c]['n']} | {opt_per[c]['n']} | {base_per[c]['mean_km']:.2f} km | {opt_per[c]['mean_km']:.2f} km | {base_per[c]['max_km']:.2f} km | {opt_per[c]['max_km']:.2f} km |")
+          lines.append('')
+          lines.append('## Changements proposés')
+          lines.append('')
+          if not moves:
+              lines.append('Aucun changement proposé par le seuil conservateur.')
+          else:
+              lines.append('| Point | De | Vers | Gain approx. | Adresse |')
+              lines.append('|---|---:|---:|---:|---|')
+              for m in moves:
+                  lines.append(f"| {m['point']} | {m['from']} | {m['to']} | {m['gain_km']:.2f} km | {m['address']} |")
+          lines.append('')
+          lines.append('## Points à examiner en priorité')
+          lines.append('')
+          lines.append('Ce tableau ne signifie pas automatiquement « à déplacer » : il repère les affectations actuelles qui paraissent géographiquement atypiques.')
+          lines.append('')
+          lines.append('| Point | Circuit | Plus proche de | Écart | Adresse |')
+          lines.append('|---|---:|---:|---:|---|')
+          for a in anomalies[:30]:
+              lines.append(f"| {a['point']} | {a['current']} | {a['nearer']} | {a['potential_gain_km']:.2f} km | {a['address']} |")
+          lines.append('')
+          lines.append('Méthode : distances euclidiennes locales sur latitude/longitude projetées à l’échelle de Grenoble ; ce n’est pas encore un calcul d’itinéraire routier/piéton. Le but est d’identifier les regroupements manifestement perfectibles sans modifier les circuits en production.')
+          open('analysis/circuit-distance-report.md','w',encoding='utf-8').write('\n'.join(lines)+'\n')
+
+      - name: Enregistrer le rapport sur la branche d'analyse.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/
+          git commit -m "Produire le rapport de compacité des circuits" || exit 0
+          git push origin HEAD:analysis-circuit-distances-20260906
