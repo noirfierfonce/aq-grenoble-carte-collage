@@ -1,4 +1,4 @@
-const CACHE="aq-collage-pwa-v42";
+const CACHE="aq-collage-pwa-v43";
 
 const SHELL=[
   "./",
