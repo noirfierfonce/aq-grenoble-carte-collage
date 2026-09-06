@@ -88,13 +88,34 @@
     const needs = needByCircuit();
     let colorLeft = pool.color, bwLeft = pool.bw;
     plan = {};
+
     LETTERS.forEach(letter => {
       const need = needs[letter] || { color: 0, bw: 0 };
-      const color = Math.min(need.color, colorLeft);
-      const bw = Math.min(need.bw, bwLeft);
-      plan[letter] = { color, bw };
+      const totalNeed = need.color + need.bw;
+
+      // On respecte d’abord la répartition conseillée couleur / N&B.
+      let color = Math.min(need.color, colorLeft);
+      let bw = Math.min(need.bw, bwLeft);
       colorLeft -= color;
       bwLeft -= bw;
+
+      // Puis on autorise le remplacement d’un type par l’autre. Si, par exemple,
+      // il n’y a plus de couleur mais qu’il reste du N&B, le circuit peut quand
+      // même être couvert avec le stock réellement disponible.
+      let missing = Math.max(0, totalNeed - color - bw);
+      if (missing && bwLeft) {
+        const extra = Math.min(missing, bwLeft);
+        bw += extra;
+        bwLeft -= extra;
+        missing -= extra;
+      }
+      if (missing && colorLeft) {
+        const extra = Math.min(missing, colorLeft);
+        color += extra;
+        colorLeft -= extra;
+      }
+
+      plan[letter] = { color, bw };
     });
   }
 
@@ -130,12 +151,12 @@
       pool = { color, bw };
       buildSuggestedPlan();
       render();
-      document.getElementById("plannerPoolStatusV4").textContent = "Stock collectif enregistré.";
+      document.getElementById("plannerPoolStatusV4").textContent = "Stock choisi pour ce passage enregistré.";
     } catch (error) {
       status.textContent = error?.message || "Enregistrement impossible.";
     } finally {
       const current = document.getElementById("plannerPoolSaveV4");
-      if (current) { current.disabled = false; current.textContent = "Enregistrer le stock collectif."; }
+      if (current) { current.disabled = false; current.textContent = "Enregistrer ce stock pour le passage."; }
     }
   }
 
@@ -172,19 +193,34 @@
     if (!root) return;
     const needs = needByCircuit();
     const used = totals();
+    const needTotals = LETTERS.reduce((sum, letter) => {
+      sum.color += needs[letter].color;
+      sum.bw += needs[letter].bw;
+      return sum;
+    }, { color: 0, bw: 0 });
+    needTotals.total = needTotals.color + needTotals.bw;
+
     const balance = { color: pool.color - used.color, bw: pool.bw - used.bw };
     const overColor = Math.max(0, -balance.color), overBw = Math.max(0, -balance.bw);
     const reserveColor = Math.max(0, balance.color), reserveBw = Math.max(0, balance.bw);
-    const fullCircuits = LETTERS.filter(letter => (plan[letter]?.color || 0) >= needs[letter].color && (plan[letter]?.bw || 0) >= needs[letter].bw).length;
+    const fullCircuits = LETTERS.filter(letter => {
+      const planned = (plan[letter]?.color || 0) + (plan[letter]?.bw || 0);
+      const required = needs[letter].color + needs[letter].bw;
+      return planned >= required;
+    }).length;
     const balanceBox = overColor || overBw
-      ? `<div class="planner-balance-alert"><span>Dépassement du stock.</span><strong>🎨 ${overColor} · ⚫ ${overBw} à trouver ou à retirer de la répartition.</strong></div>`
-      : `<div><span>Réserve.</span><strong>🎨 ${reserveColor} · ⚫ ${reserveBw}.</strong></div>`;
+      ? `<div class="planner-balance-alert"><span>Dépassement du stock choisi.</span><strong>🎨 ${overColor} · ⚫ ${overBw} à trouver ou à retirer de la répartition.</strong></div>`
+      : `<div><span>Réserve après répartition.</span><strong>🎨 ${reserveColor} · ⚫ ${reserveBw}.</strong></div>`;
 
-    root.innerHTML = `<div class="planner-head"><div><h3>🧭 Aide à la répartition.</h3><p>L’appli propose. Vous gardez la main sur chaque quantité.</p></div></div>
-      <section class="planner-pool"><div class="planner-section-title">Stock collectif à répartir.</div><p class="planner-help">Entre ce que vous avez réellement au départ. Modifiable à tout moment.</p><div class="planner-pool-grid"><label>🎨 Couleur.<input id="plannerPoolColorV4" type="number" min="0" step="1" inputmode="numeric" value="${pool.color}"></label><label>⚫ N&B.<input id="plannerPoolBwV4" type="number" min="0" step="1" inputmode="numeric" value="${pool.bw}"></label></div><button type="button" class="primary planner-save" id="plannerPoolSaveV4">Enregistrer le stock collectif.</button><div class="planner-status" id="plannerPoolStatusV4" aria-live="polite"></div></section>
-      <section class="planner-summary"><div><span>Proposition.</span><strong>${fullCircuits} circuits couverts entièrement.</strong></div><div><span>À distribuer.</span><strong>🎨 ${used.color} · ⚫ ${used.bw}.</strong></div>${balanceBox}</section>
-      <div class="planner-section-row"><div><div class="planner-section-title">Quantités conseillées par circuit.</div><p class="planner-help">Utilise − / + ou saisis directement le nombre. L’appli conseille, elle ne bloque pas.</p></div><div class="planner-reset-wrap"><button type="button" class="planner-reset" id="plannerResetV4">↺ Revenir à la proposition auto.</button><div class="planner-reset-status" id="plannerResetStatusV4" aria-live="polite"></div></div></div>
-      <div class="planner-circuits">${LETTERS.map(letter => `<div class="planner-circuit-row"><div class="planner-circuit-head"><strong>Circuit ${letter}.</strong><span>Besoin : 🎨 ${needs[letter].color} · ⚫ ${needs[letter].bw}.</span></div><div class="planner-steppers">${stepper(letter, "color", plan[letter]?.color || 0, "Couleur", "🎨")}${stepper(letter, "bw", plan[letter]?.bw || 0, "N&B", "⚫")}</div></div>`).join("")}</div>`;
+    root.innerHTML = `<div class="planner-head"><div><h3>🧭 Aide à la répartition.</h3><p>L’appli calcule le besoin. Vous choisissez librement la quantité de couleur et de N&B réellement disponible pour ce passage.</p></div></div>
+      <section class="planner-pool"><div class="planner-section-title">Stock à préparer pour ce passage.</div><p class="planner-help">Indique séparément ce que vous aurez réellement. Tu peux mettre 0 en couleur, 0 en N&B, ou n’importe quelle combinaison. L’un peut remplacer l’autre pour couvrir un emplacement.</p><div class="planner-pool-grid"><label>🎨 Couleur à préparer.<input id="plannerPoolColorV4" type="number" min="0" step="1" inputmode="numeric" value="${pool.color}"></label><label>⚫ N&B à préparer.<input id="plannerPoolBwV4" type="number" min="0" step="1" inputmode="numeric" value="${pool.bw}"></label></div><button type="button" class="primary planner-save" id="plannerPoolSaveV4">Enregistrer ce stock pour le passage.</button><div class="planner-status" id="plannerPoolStatusV4" aria-live="polite"></div></section>
+      <section class="planner-summary"><div><span>Besoin terrain calculé.</span><strong>${needTotals.total} A3 · repère conseillé : 🎨 ${needTotals.color} · ⚫ ${needTotals.bw}.</strong></div><div><span>Proposition avec votre stock.</span><strong>${fullCircuits} circuits couverts entièrement.</strong></div><div><span>À distribuer.</span><strong>🎨 ${used.color} · ⚫ ${used.bw}.</strong></div>${balanceBox}</section>
+      <div class="planner-section-row"><div><div class="planner-section-title">Quantités conseillées par circuit.</div><p class="planner-help">La couleur/N&B affichée dans le besoin reste un repère. Si un type manque, l’appli complète automatiquement avec l’autre. Tu peux ensuite modifier chaque quantité à la main.</p></div><div class="planner-reset-wrap"><button type="button" class="planner-reset" id="plannerResetV4">↺ Revenir à la proposition auto.</button><div class="planner-reset-status" id="plannerResetStatusV4" aria-live="polite"></div></div></div>
+      <div class="planner-circuits">${LETTERS.map(letter => {
+        const totalNeed = needs[letter].color + needs[letter].bw;
+        const planned = (plan[letter]?.color || 0) + (plan[letter]?.bw || 0);
+        return `<div class="planner-circuit-row"><div class="planner-circuit-head"><strong>Circuit ${letter}.</strong><span>Besoin total : ${totalNeed} A3 · repère 🎨 ${needs[letter].color} · ⚫ ${needs[letter].bw} · prévu ${planned}.</span></div><div class="planner-steppers">${stepper(letter, "color", plan[letter]?.color || 0, "Couleur", "🎨")}${stepper(letter, "bw", plan[letter]?.bw || 0, "N&B", "⚫")}</div></div>`;
+      }).join("")}</div>`;
   }
 
   function bindGlobalControls() {
@@ -197,7 +233,7 @@
         buildSuggestedPlan();
         render();
         const msg = document.getElementById("plannerResetStatusV4");
-        if (msg) msg.textContent = "Proposition automatique rétablie.";
+        if (msg) msg.textContent = "Proposition automatique rétablie selon le stock choisi.";
         return;
       }
       const button = target.closest("#stockPlannerV4 .planner-step-btn");
