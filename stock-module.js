@@ -347,16 +347,26 @@
     queueRender();
     setTimeout(refreshHolders, 700);
 
-    const observer = new MutationObserver(() => {
-      fixLabels();
-      queueRender();
-    });
-    observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+    const stockStat = document.getElementById("statStock");
+    if (stockStat) {
+      const observer = new MutationObserver(() => {
+        fixLabels();
+        if (isStockView()) queueRender();
+      });
+      observer.observe(stockStat, { childList: true, subtree: true, characterData: true });
+    }
 
     document.addEventListener("click", event => {
+      const stockButton = event.target.closest?.("#stockUpdateBtn");
+      if (stockButton) {
+        openEditor();
+        return;
+      }
+
       const button = event.target.closest?.(".circuit-btn");
       if (!button) return;
       setTimeout(() => {
+        fixLabels();
         queueRender();
         if (button.dataset.circuit === "STOCK") refreshHolders();
       }, 80);
