@@ -1,4 +1,4 @@
-const CACHE="aq-collage-pwa-v40";
+const CACHE="aq-collage-pwa-v41";
 
 const SHELL=[
   "./",
@@ -23,9 +23,9 @@ const SHELL=[
   "./circuit-colors-v1.js",
   "./manifest.webmanifest",
   "./data/points.json",
-  "./icons/icon-180.png",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icon-180.png",
+  "./icon-192.png",
+  "./icon-512.png"
 ];
 
 self.addEventListener("install",event=>{
