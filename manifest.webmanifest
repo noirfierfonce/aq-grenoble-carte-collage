@@ -1,6 +1,6 @@
 {
-  "name": "Collage AQ Grenoble",
-  "short_name": "AQ Collage",
+  "name": "AQ38 Collage",
+  "short_name": "AQ38 Collage",
   "description": "Application terrain mobile pour le suivi du collage AQ Grenoble.",
   "start_url": "./?c=ALL",
   "scope": "./",
@@ -10,15 +10,15 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "./icons/icon-192.svg",
+      "src": "./icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/icon-512.svg",
+      "src": "./icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
