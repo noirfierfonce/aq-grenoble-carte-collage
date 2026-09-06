@@ -63,7 +63,8 @@
 .stock-balance .missing{
   color:#ffb4a9;
 }
-.stock-balance .not-planned{
+.stock-balance .not-planned,
+.stock-balance .neutral{
   color:#a9adb5;
 }
 .stock-update-btn{
