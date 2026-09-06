@@ -1,0 +1,1372 @@
+{
+  "generatedAt": "2026-09-06T20:06:12.913Z",
+  "count": 19,
+  "points": [
+    {
+      "name": "A – Point 10",
+      "address": "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France",
+      "current": {
+        "lat": 45.186103,
+        "lon": 5.718387,
+        "label": "Cours Jean Jaurès 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Avenue Alsace LORRAINE 37, avenue Jean JAURES, Grenoble",
+          "results": [
+            {
+              "label": "Cours Jean Jaurès 38000 Grenoble",
+              "name": "Cours Jean Jaurès",
+              "street": "Cours Jean Jaurès",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.4405934890071167,
+              "citycode": "38185",
+              "lat": 45.186103,
+              "lon": 5.718387
+            }
+          ]
+        },
+        {
+          "q": "Avenue Alsace LORRAINE 37, Grenoble",
+          "results": [
+            {
+              "label": "Avenue Alsace Lorraine 38000 Grenoble",
+              "name": "Avenue Alsace Lorraine",
+              "street": "Avenue Alsace Lorraine",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9026958127731616,
+              "citycode": "38185",
+              "lat": 45.189526,
+              "lon": 5.719387
+            }
+          ]
+        },
+        {
+          "q": "avenue Jean JAURES, Grenoble",
+          "results": [
+            {
+              "label": "Cours Jean Jaurès 38000 Grenoble",
+              "name": "Cours Jean Jaurès",
+              "street": "Cours Jean Jaurès",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.6858302367905538,
+              "citycode": "38185",
+              "lat": 45.186103,
+              "lon": 5.718387
+            }
+          ]
+        },
+        {
+          "q": "Avenue Alsace Lorraine 37, avenue Jean JAURES, Grenoble",
+          "results": [
+            {
+              "label": "Cours Jean Jaurès 38000 Grenoble",
+              "name": "Cours Jean Jaurès",
+              "street": "Cours Jean Jaurès",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.4405934890071167,
+              "citycode": "38185",
+              "lat": 45.186103,
+              "lon": 5.718387
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A – Point 14",
+      "address": "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours BERRIAT 129, angle rue du DRAC, Grenoble",
+          "results": [
+            {
+              "label": "Cours Berriat 38000 Grenoble",
+              "name": "Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5570032142107693,
+              "citycode": "38185",
+              "lat": 45.188412,
+              "lon": 5.712687
+            },
+            {
+              "label": "Rue du Drac 38000 Grenoble",
+              "name": "Rue du Drac",
+              "street": "Rue du Drac",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5139987717037731,
+              "citycode": "38185",
+              "lat": 45.185838,
+              "lon": 5.707196
+            },
+            {
+              "label": "Pont du Drac 38000 Grenoble",
+              "name": "Pont du Drac",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.43934212348197577,
+              "citycode": "38185",
+              "lat": 45.189007,
+              "lon": 5.70242
+            }
+          ]
+        },
+        {
+          "q": "Cours BERRIAT 129, Grenoble",
+          "results": [
+            {
+              "label": "Cours Berriat 38000 Grenoble",
+              "name": "Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8500264700247228,
+              "citycode": "38185",
+              "lat": 45.188412,
+              "lon": 5.712687
+            }
+          ]
+        },
+        {
+          "q": "rue du DRAC, Grenoble",
+          "results": [
+            {
+              "label": "Rue du Drac 38000 Grenoble",
+              "name": "Rue du Drac",
+              "street": "Rue du Drac",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9791150507735407,
+              "citycode": "38185",
+              "lat": 45.185838,
+              "lon": 5.707196
+            },
+            {
+              "label": "Pont du Drac 38000 Grenoble",
+              "name": "Pont du Drac",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.7110812539167584,
+              "citycode": "38185",
+              "lat": 45.189007,
+              "lon": 5.70242
+            }
+          ]
+        },
+        {
+          "q": "Cours Berriat 129, angle rue du DRAC, Grenoble",
+          "results": [
+            {
+              "label": "Cours Berriat 38000 Grenoble",
+              "name": "Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5570032142107693,
+              "citycode": "38185",
+              "lat": 45.188412,
+              "lon": 5.712687
+            },
+            {
+              "label": "Rue du Drac 38000 Grenoble",
+              "name": "Rue du Drac",
+              "street": "Rue du Drac",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5139987717037731,
+              "citycode": "38185",
+              "lat": 45.185838,
+              "lon": 5.707196
+            },
+            {
+              "label": "Pont du Drac 38000 Grenoble",
+              "name": "Pont du Drac",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.43934212348197577,
+              "citycode": "38185",
+              "lat": 45.189007,
+              "lon": 5.70242
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A – Point 16",
+      "address": "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180858,
+        "lon": 5.711338,
+        "label": "91 Rue Abbé Grégoire 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours BERRIAT 91, rue Abbé GREGOIRE, Grenoble",
+          "results": [
+            {
+              "label": "91 Rue Abbé Grégoire 38000 Grenoble",
+              "name": "91 Rue Abbé Grégoire",
+              "street": "Rue Abbé Grégoire",
+              "housenumber": "91",
+              "type": "housenumber",
+              "score": 0.703431112852494,
+              "citycode": "38185",
+              "lat": 45.180858,
+              "lon": 5.711338
+            }
+          ]
+        },
+        {
+          "q": "Cours BERRIAT 91, Grenoble",
+          "results": [
+            {
+              "label": "Cours Berriat 38000 Grenoble",
+              "name": "Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8791931366913893,
+              "citycode": "38185",
+              "lat": 45.188412,
+              "lon": 5.712687
+            }
+          ]
+        },
+        {
+          "q": "rue Abbé GREGOIRE, Grenoble",
+          "results": [
+            {
+              "label": "Rue Abbé Grégoire 38000 Grenoble",
+              "name": "Rue Abbé Grégoire",
+              "street": "Rue Abbé Grégoire",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9812320216680275,
+              "citycode": "38185",
+              "lat": 45.185155,
+              "lon": 5.712046
+            }
+          ]
+        },
+        {
+          "q": "Cours Berriat 91, rue Abbé GREGOIRE, Grenoble",
+          "results": [
+            {
+              "label": "91 Rue Abbé Grégoire 38000 Grenoble",
+              "name": "91 Rue Abbé Grégoire",
+              "street": "Rue Abbé Grégoire",
+              "housenumber": "91",
+              "type": "housenumber",
+              "score": 0.703431112852494,
+              "citycode": "38185",
+              "lat": 45.180858,
+              "lon": 5.711338
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B – Point 03",
+      "address": "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",
+      "current": {
+        "lat": 45.179193,
+        "lon": 5.74016,
+        "label": "13 Rue de la Bajatière 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Henri LE CHATELIER 13, Grenoble",
+          "results": [
+            {
+              "label": "Rue Henry Le Chatelier 38000 Grenoble",
+              "name": "Rue Henry Le Chatelier",
+              "street": "Rue Henry Le Chatelier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8070194545595291,
+              "citycode": "38185",
+              "lat": 45.186547,
+              "lon": 5.711608
+            }
+          ]
+        },
+        {
+          "q": "Rue Henry Le Chatelier 13, Grenoble",
+          "results": [
+            {
+              "label": "Rue Henry Le Chatelier 38000 Grenoble",
+              "name": "Rue Henry Le Chatelier",
+              "street": "Rue Henry Le Chatelier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8979285454686198,
+              "citycode": "38185",
+              "lat": 45.186547,
+              "lon": 5.711608
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B – Point 10",
+      "address": "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France",
+      "current": {
+        "lat": 45.185866,
+        "lon": 5.71518,
+        "label": "23 Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Avenue de VIZILLE 23, rue Nicolas CHORIER, Grenoble",
+          "results": [
+            {
+              "label": "23 Rue Nicolas Chorier 38000 Grenoble",
+              "name": "23 Rue Nicolas Chorier",
+              "street": "Rue Nicolas Chorier",
+              "housenumber": "23",
+              "type": "housenumber",
+              "score": 0.6688660527531377,
+              "citycode": "38185",
+              "lat": 45.185866,
+              "lon": 5.71518
+            }
+          ]
+        },
+        {
+          "q": "Avenue de VIZILLE 23, Grenoble",
+          "results": [
+            {
+              "label": "Avenue de Vizille 38000 Grenoble",
+              "name": "Avenue de Vizille",
+              "street": "Avenue de Vizille",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8873077224198089,
+              "citycode": "38185",
+              "lat": 45.185968,
+              "lon": 5.716498
+            },
+            {
+              "label": "Impasse de Vizille 38000 Grenoble",
+              "name": "Impasse de Vizille",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.6216498392479016,
+              "citycode": "38185",
+              "lat": 45.185569,
+              "lon": 5.716363
+            }
+          ]
+        },
+        {
+          "q": "rue Nicolas CHORIER, Grenoble",
+          "results": [
+            {
+              "label": "Rue Nicolas Chorier 38000 Grenoble",
+              "name": "Rue Nicolas Chorier",
+              "street": "Rue Nicolas Chorier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9813420725298221,
+              "citycode": "38185",
+              "lat": 45.184577,
+              "lon": 5.710819
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B – Point 18",
+      "address": "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180898,
+        "lon": 5.708859,
+        "label": "Rue Docteur Calmette 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Docteur CALMETTE 6, angle rue Abbé GREGOIRE, Grenoble",
+          "results": [
+            {
+              "label": "Rue Abbé Grégoire 38000 Grenoble",
+              "name": "Rue Abbé Grégoire",
+              "street": "Rue Abbé Grégoire",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5337011574704965,
+              "citycode": "38185",
+              "lat": 45.185155,
+              "lon": 5.712046
+            }
+          ]
+        },
+        {
+          "q": "Rue Docteur CALMETTE 6, Grenoble",
+          "results": [
+            {
+              "label": "Rue Docteur Calmette 38000 Grenoble",
+              "name": "Rue Docteur Calmette",
+              "street": "Rue Docteur Calmette",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9203173300380413,
+              "citycode": "38185",
+              "lat": 45.180898,
+              "lon": 5.708859
+            }
+          ]
+        },
+        {
+          "q": "rue Abbé GREGOIRE, Grenoble",
+          "results": [
+            {
+              "label": "Rue Abbé Grégoire 38000 Grenoble",
+              "name": "Rue Abbé Grégoire",
+              "street": "Rue Abbé Grégoire",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9812320216680275,
+              "citycode": "38185",
+              "lat": 45.185155,
+              "lon": 5.712046
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "D – Point 11",
+      "address": "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",
+      "current": {
+        "lat": 45.19975,
+        "lon": 5.740176,
+        "label": "1 Avenue Maréchal Randon 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue HAUQUELIN 1, Avenue Maréchal RANDON, Grenoble",
+          "results": [
+            {
+              "label": "1 Avenue Maréchal Randon 38000 Grenoble",
+              "name": "1 Avenue Maréchal Randon",
+              "street": "Avenue Maréchal Randon",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.7253870447393371,
+              "citycode": "38185",
+              "lat": 45.19975,
+              "lon": 5.740176
+            }
+          ]
+        },
+        {
+          "q": "Rue HAUQUELIN 1, Grenoble",
+          "results": [
+            {
+              "label": "Rue Hauquelin 38000 Grenoble",
+              "name": "Rue Hauquelin",
+              "street": "Rue Hauquelin",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8975370451678522,
+              "citycode": "38185",
+              "lat": 45.19347,
+              "lon": 5.732532
+            },
+            {
+              "label": "Rue du 140ème R.I.A. 38100 Grenoble",
+              "name": "Rue du 140ème R.I.A.",
+              "street": "Rue du 140ème R.I.A.",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.4028953227137136,
+              "citycode": "38185",
+              "lat": 45.175331,
+              "lon": 5.741334
+            }
+          ]
+        },
+        {
+          "q": "Avenue Maréchal RANDON, Grenoble",
+          "results": [
+            {
+              "label": "Avenue Maréchal Randon 38000 Grenoble",
+              "name": "Avenue Maréchal Randon",
+              "street": "Avenue Maréchal Randon",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9790542722785671,
+              "citycode": "38185",
+              "lat": 45.196957,
+              "lon": 5.736371
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E – Point 17",
+      "address": "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France",
+      "current": {
+        "lat": 45.187865,
+        "lon": 5.720769,
+        "label": "25 Cours Berriat 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours Jean JAURES 25, cours BERRIAT, Grenoble",
+          "results": [
+            {
+              "label": "25 Cours Berriat 38000 Grenoble",
+              "name": "25 Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "25",
+              "type": "housenumber",
+              "score": 0.6262424640925603,
+              "citycode": "38185",
+              "lat": 45.187865,
+              "lon": 5.720769
+            }
+          ]
+        },
+        {
+          "q": "Cours Jean JAURES 25, Grenoble",
+          "results": [
+            {
+              "label": "Cours Jean Jaurès 38000 Grenoble",
+              "name": "Cours Jean Jaurès",
+              "street": "Cours Jean Jaurès",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8922434472360223,
+              "citycode": "38185",
+              "lat": 45.186103,
+              "lon": 5.718387
+            }
+          ]
+        },
+        {
+          "q": "cours BERRIAT, Grenoble",
+          "results": [
+            {
+              "label": "Cours Berriat 38000 Grenoble",
+              "name": "Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.983359803358056,
+              "citycode": "38185",
+              "lat": 45.188412,
+              "lon": 5.712687
+            }
+          ]
+        },
+        {
+          "q": "Cours Jean JAURES 25, Cours Berriat, Grenoble",
+          "results": [
+            {
+              "label": "25 Cours Berriat 38000 Grenoble",
+              "name": "25 Cours Berriat",
+              "street": "Cours Berriat",
+              "housenumber": "25",
+              "type": "housenumber",
+              "score": 0.6262424640925603,
+              "citycode": "38185",
+              "lat": 45.187865,
+              "lon": 5.720769
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F – Point 05",
+      "address": "Rue Louis Le CARDONNEL N°2bis, bd Joseph VALLIER, Grenoble, France",
+      "current": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Louis Le CARDONNEL 2bis, bd Joseph VALLIER, Grenoble",
+          "results": [
+            {
+              "label": "Boulevard Joseph Vallier 38000 Grenoble",
+              "name": "Boulevard Joseph Vallier",
+              "street": "Boulevard Joseph Vallier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5545652439391157,
+              "citycode": "38185",
+              "lat": 45.180154,
+              "lon": 5.710026
+            }
+          ]
+        },
+        {
+          "q": "Rue Louis Le CARDONNEL 2bis, Grenoble",
+          "results": [
+            {
+              "label": "Rue Louis Le Cardonnel 38100 Grenoble",
+              "name": "Rue Louis Le Cardonnel",
+              "street": "Rue Louis Le Cardonnel",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8524130678637597,
+              "citycode": "38185",
+              "lat": 45.179597,
+              "lon": 5.71524
+            }
+          ]
+        },
+        {
+          "q": "bd Joseph VALLIER, Grenoble",
+          "results": [
+            {
+              "label": "Boulevard Joseph Vallier 38000 Grenoble",
+              "name": "Boulevard Joseph Vallier",
+              "street": "Boulevard Joseph Vallier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.7512691248535229,
+              "citycode": "38185",
+              "lat": 45.180154,
+              "lon": 5.710026
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F – Point 10",
+      "address": "Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",
+      "current": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours de la LIBERATION 32, angle rue des MARRONNIERS, Grenoble",
+          "results": [
+            {
+              "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+              "name": "Cours de la Libération et du Général de Gaulle",
+              "street": "Cours de la Libération et du Général de Gaulle",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5400969487662307,
+              "citycode": "38185",
+              "lat": 45.17098,
+              "lon": 5.71332
+            },
+            {
+              "label": "Esplanade des Communes Compagnon de la Libération 38100 Grenoble",
+              "name": "Esplanade des Communes Compagnon de la Libération",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.47697599692871306,
+              "citycode": "38185",
+              "lat": 45.184325,
+              "lon": 5.733379
+            },
+            {
+              "label": "Chemin des Marronniers 38100 Grenoble",
+              "name": "Chemin des Marronniers",
+              "street": "Chemin des Marronniers",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.4653137484778452,
+              "citycode": "38185",
+              "lat": 45.177447,
+              "lon": 5.713781
+            }
+          ]
+        },
+        {
+          "q": "Cours de la LIBERATION 32, Grenoble",
+          "results": [
+            {
+              "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+              "name": "Cours de la Libération et du Général de Gaulle",
+              "street": "Cours de la Libération et du Général de Gaulle",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5890830503839113,
+              "citycode": "38185",
+              "lat": 45.17098,
+              "lon": 5.71332
+            },
+            {
+              "label": "Esplanade des Communes Compagnon de la Libération 38100 Grenoble",
+              "name": "Esplanade des Communes Compagnon de la Libération",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.4885903987870174,
+              "citycode": "38185",
+              "lat": 45.184325,
+              "lon": 5.733379
+            }
+          ]
+        },
+        {
+          "q": "rue des MARRONNIERS, Grenoble",
+          "results": [
+            {
+              "label": "Chemin des Marronniers 38100 Grenoble",
+              "name": "Chemin des Marronniers",
+              "street": "Chemin des Marronniers",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.7458535212051179,
+              "citycode": "38185",
+              "lat": 45.177447,
+              "lon": 5.713781
+            }
+          ]
+        },
+        {
+          "q": "Cours de la Libération et du Général de Gaulle 32, angle rue des MARRONNIERS, Grenoble",
+          "results": [
+            {
+              "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+              "name": "Cours de la Libération et du Général de Gaulle",
+              "street": "Cours de la Libération et du Général de Gaulle",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.6926552338546363,
+              "citycode": "38185",
+              "lat": 45.17098,
+              "lon": 5.71332
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 01",
+      "address": "Avenue RHIN et DANUBE N°84, rue Paul STRAUSS, Grenoble, France",
+      "current": {
+        "lat": 45.168762,
+        "lon": 5.703613,
+        "label": "Rue Paul Strauss 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Avenue RHIN et DANUBE 84, rue Paul STRAUSS, Grenoble",
+          "results": [
+            {
+              "label": "Rue Paul Strauss 38100 Grenoble",
+              "name": "Rue Paul Strauss",
+              "street": "Rue Paul Strauss",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5422732108505043,
+              "citycode": "38185",
+              "lat": 45.168762,
+              "lon": 5.703613
+            }
+          ]
+        },
+        {
+          "q": "Avenue RHIN et DANUBE 84, Grenoble",
+          "results": [
+            {
+              "label": "Avenue Rhin et Danube 38100 Grenoble",
+              "name": "Avenue Rhin et Danube",
+              "street": "Avenue Rhin et Danube",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9017927165615895,
+              "citycode": "38185",
+              "lat": 45.175001,
+              "lon": 5.705149
+            }
+          ]
+        },
+        {
+          "q": "rue Paul STRAUSS, Grenoble",
+          "results": [
+            {
+              "label": "Rue Paul Strauss 38100 Grenoble",
+              "name": "Rue Paul Strauss",
+              "street": "Rue Paul Strauss",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9674432788777153,
+              "citycode": "38185",
+              "lat": 45.168762,
+              "lon": 5.703613
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 02",
+      "address": "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Albert REYNIER 63, Grenoble",
+          "results": [
+            {
+              "label": "Rue Albert Reynier 38100 Grenoble",
+              "name": "Rue Albert Reynier",
+              "street": "Rue Albert Reynier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8867310883603343,
+              "citycode": "38185",
+              "lat": 45.166473,
+              "lon": 5.70699
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 03",
+      "address": "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Albert REYNIER 59, Grenoble",
+          "results": [
+            {
+              "label": "Rue Albert Reynier 38100 Grenoble",
+              "name": "Rue Albert Reynier",
+              "street": "Rue Albert Reynier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8867310883603343,
+              "citycode": "38185",
+              "lat": 45.166473,
+              "lon": 5.70699
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 04",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours de la LIBERATION 176, sous le pont rue Albert REYNIER, Grenoble",
+          "results": [
+            {
+              "label": "Rue Albert Reynier 38100 Grenoble",
+              "name": "Rue Albert Reynier",
+              "street": "Rue Albert Reynier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.46788747986155327,
+              "citycode": "38185",
+              "lat": 45.166473,
+              "lon": 5.70699
+            }
+          ]
+        },
+        {
+          "q": "Cours de la LIBERATION 176, Grenoble",
+          "results": [
+            {
+              "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+              "name": "Cours de la Libération et du Général de Gaulle",
+              "street": "Cours de la Libération et du Général de Gaulle",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5815210419144619,
+              "citycode": "38185",
+              "lat": 45.17098,
+              "lon": 5.71332
+            },
+            {
+              "label": "Esplanade des Communes Compagnon de la Libération 38100 Grenoble",
+              "name": "Esplanade des Communes Compagnon de la Libération",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.48301004164416017,
+              "citycode": "38185",
+              "lat": 45.184325,
+              "lon": 5.733379
+            }
+          ]
+        },
+        {
+          "q": "le pont rue Albert REYNIER, Grenoble",
+          "results": [
+            {
+              "label": "Rue Albert Reynier 38100 Grenoble",
+              "name": "Rue Albert Reynier",
+              "street": "Rue Albert Reynier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.7768595535395094,
+              "citycode": "38185",
+              "lat": 45.166473,
+              "lon": 5.70699
+            }
+          ]
+        },
+        {
+          "q": "Cours de la Libération et du Général de Gaulle 176, sous le pont rue Albert REYNIER, Grenoble",
+          "results": []
+        }
+      ]
+    },
+    {
+      "name": "G – Point 05",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours de la LIBERATION 176, sous le pont rue Albert REYNIER, Grenoble",
+          "results": [
+            {
+              "label": "Rue Albert Reynier 38100 Grenoble",
+              "name": "Rue Albert Reynier",
+              "street": "Rue Albert Reynier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.46788747986155327,
+              "citycode": "38185",
+              "lat": 45.166473,
+              "lon": 5.70699
+            }
+          ]
+        },
+        {
+          "q": "Cours de la LIBERATION 176, Grenoble",
+          "results": [
+            {
+              "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+              "name": "Cours de la Libération et du Général de Gaulle",
+              "street": "Cours de la Libération et du Général de Gaulle",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5815210419144619,
+              "citycode": "38185",
+              "lat": 45.17098,
+              "lon": 5.71332
+            },
+            {
+              "label": "Esplanade des Communes Compagnon de la Libération 38100 Grenoble",
+              "name": "Esplanade des Communes Compagnon de la Libération",
+              "street": "",
+              "housenumber": "",
+              "type": "locality",
+              "score": 0.48301004164416017,
+              "citycode": "38185",
+              "lat": 45.184325,
+              "lon": 5.733379
+            }
+          ]
+        },
+        {
+          "q": "le pont rue Albert REYNIER, Grenoble",
+          "results": [
+            {
+              "label": "Rue Albert Reynier 38100 Grenoble",
+              "name": "Rue Albert Reynier",
+              "street": "Rue Albert Reynier",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.7768595535395094,
+              "citycode": "38185",
+              "lat": 45.166473,
+              "lon": 5.70699
+            }
+          ]
+        },
+        {
+          "q": "Cours de la Libération et du Général de Gaulle 176, sous le pont rue Albert REYNIER, Grenoble",
+          "results": []
+        }
+      ]
+    },
+    {
+      "name": "H – Point 01",
+      "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
+      "current": {
+        "lat": 45.186385,
+        "lon": 5.743884,
+        "label": "1 Boulevard Clemenceau 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Léon JOUHAUX face 1, boulevard CLEMENCEAU, Grenoble",
+          "results": [
+            {
+              "label": "1 Boulevard Clemenceau 38100 Grenoble",
+              "name": "1 Boulevard Clemenceau",
+              "street": "Boulevard Clemenceau",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.6255739337715902,
+              "citycode": "38185",
+              "lat": 45.186385,
+              "lon": 5.743884
+            }
+          ]
+        },
+        {
+          "q": "Rue Léon JOUHAUX, Grenoble",
+          "results": [
+            {
+              "label": "Rue Léon Jouhaux 38100 Grenoble",
+              "name": "Rue Léon Jouhaux",
+              "street": "Rue Léon Jouhaux",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.98238462585656,
+              "citycode": "38185",
+              "lat": 45.17722,
+              "lon": 5.742969
+            }
+          ]
+        },
+        {
+          "q": "1, Grenoble",
+          "results": [
+            {
+              "label": "Grenoble",
+              "name": "Grenoble",
+              "street": "",
+              "housenumber": "",
+              "type": "municipality",
+              "score": 0.7767182317652715,
+              "citycode": "38185",
+              "lat": 45.182828,
+              "lon": 5.724301
+            },
+            {
+              "label": "1 Rue Monge 38100 Grenoble",
+              "name": "1 Rue Monge",
+              "street": "Rue Monge",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5387513301796858,
+              "citycode": "38185",
+              "lat": 45.180412,
+              "lon": 5.7329
+            },
+            {
+              "label": "1 Rue Revol 38000 Grenoble",
+              "name": "1 Rue Revol",
+              "street": "Rue Revol",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5386307859987023,
+              "citycode": "38185",
+              "lat": 45.191529,
+              "lon": 5.708004
+            },
+            {
+              "label": "1 Rue Ampère 38000 Grenoble",
+              "name": "1 Rue Ampère",
+              "street": "Rue Ampère",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5219745828249933,
+              "citycode": "38185",
+              "lat": 45.188451,
+              "lon": 5.705938
+            },
+            {
+              "label": "1 Rue Thiers 38000 Grenoble",
+              "name": "1 Rue Thiers",
+              "street": "Rue Thiers",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5217883561874583,
+              "citycode": "38185",
+              "lat": 45.188726,
+              "lon": 5.722535
+            },
+            {
+              "label": "1 Rue Turgot 38100 Grenoble",
+              "name": "1 Rue Turgot",
+              "street": "Rue Turgot",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5184435004638331,
+              "citycode": "38185",
+              "lat": 45.169739,
+              "lon": 5.738512
+            },
+            {
+              "label": "1 Rue Pascal 38100 Grenoble",
+              "name": "1 Rue Pascal",
+              "street": "Rue Pascal",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5180507613376544,
+              "citycode": "38185",
+              "lat": 45.167132,
+              "lon": 5.738028
+            },
+            {
+              "label": "1 Rue Bizanet 38000 Grenoble",
+              "name": "1 Rue Bizanet",
+              "street": "Rue Bizanet",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5032079150614398,
+              "citycode": "38185",
+              "lat": 45.197762,
+              "lon": 5.742174
+            },
+            {
+              "label": "1 Rue Charrel 38000 Grenoble",
+              "name": "1 Rue Charrel",
+              "street": "Rue Charrel",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5014622994819822,
+              "citycode": "38185",
+              "lat": 45.181906,
+              "lon": 5.716375
+            },
+            {
+              "label": "1 Rue Ponsard 38100 Grenoble",
+              "name": "1 Rue Ponsard",
+              "street": "Rue Ponsard",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.5013880785691942,
+              "citycode": "38185",
+              "lat": 45.175303,
+              "lon": 5.737392
+            }
+          ]
+        },
+        {
+          "q": "boulevard CLEMENCEAU, Grenoble",
+          "results": [
+            {
+              "label": "Boulevard Clemenceau 38100 Grenoble",
+              "name": "Boulevard Clemenceau",
+              "street": "Boulevard Clemenceau",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9781609434271482,
+              "citycode": "38185",
+              "lat": 45.184289,
+              "lon": 5.739892
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "I – Point 02",
+      "address": "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France",
+      "current": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue des ALLIES 117, angle rue MARQUIAN, Grenoble",
+          "results": [
+            {
+              "label": "Rue des Alliés 38100 Grenoble",
+              "name": "Rue des Alliés",
+              "street": "Rue des Alliés",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5545346806987704,
+              "citycode": "38185",
+              "lat": 45.172124,
+              "lon": 5.722589
+            },
+            {
+              "label": "Rue Marquian 38100 Grenoble",
+              "name": "Rue Marquian",
+              "street": "Rue Marquian",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.5091642572736718,
+              "citycode": "38185",
+              "lat": 45.170382,
+              "lon": 5.718332
+            }
+          ]
+        },
+        {
+          "q": "Rue des ALLIES 117, Grenoble",
+          "results": [
+            {
+              "label": "Rue des Alliés 38100 Grenoble",
+              "name": "Rue des Alliés",
+              "street": "Rue des Alliés",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.8522554784195682,
+              "citycode": "38185",
+              "lat": 45.172124,
+              "lon": 5.722589
+            }
+          ]
+        },
+        {
+          "q": "rue MARQUIAN, Grenoble",
+          "results": [
+            {
+              "label": "Rue Marquian 38100 Grenoble",
+              "name": "Rue Marquian",
+              "street": "Rue Marquian",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9721272202366348,
+              "citycode": "38185",
+              "lat": 45.170382,
+              "lon": 5.718332
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "L – Point 02",
+      "address": "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France",
+      "current": {
+        "lat": 45.16851,
+        "lon": 5.731581,
+        "label": "1 Avenue Marie Reynoard 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue des Alliés 1, avenue Marie REYNOARD, Grenoble",
+          "results": [
+            {
+              "label": "1 Avenue Marie Reynoard 38100 Grenoble",
+              "name": "1 Avenue Marie Reynoard",
+              "street": "Avenue Marie Reynoard",
+              "housenumber": "1",
+              "type": "housenumber",
+              "score": 0.7066996447553381,
+              "citycode": "38185",
+              "lat": 45.16851,
+              "lon": 5.731581
+            }
+          ]
+        },
+        {
+          "q": "Rue des Alliés 1, Grenoble",
+          "results": [
+            {
+              "label": "Rue des Alliés 38100 Grenoble",
+              "name": "Rue des Alliés",
+              "street": "Rue des Alliés",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9110161621802519,
+              "citycode": "38185",
+              "lat": 45.172124,
+              "lon": 5.722589
+            },
+            {
+              "label": "Rue du 140ème R.I.A. 38100 Grenoble",
+              "name": "Rue du 140ème R.I.A.",
+              "street": "Rue du 140ème R.I.A.",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.45505274329218687,
+              "citycode": "38185",
+              "lat": 45.175331,
+              "lon": 5.741334
+            }
+          ]
+        },
+        {
+          "q": "avenue Marie REYNOARD, Grenoble",
+          "results": [
+            {
+              "label": "Avenue Marie Reynoard 38100 Grenoble",
+              "name": "Avenue Marie Reynoard",
+              "street": "Avenue Marie Reynoard",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9783570461067476,
+              "citycode": "38185",
+              "lat": 45.163711,
+              "lon": 5.728776
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "L – Point 09",
+      "address": "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",
+      "current": {
+        "lat": 45.184819,
+        "lon": 5.721453,
+        "label": "8 Rue de Turenne 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Aimé PUPIN 8, Grenoble",
+          "results": [
+            {
+              "label": "Rue Aimé Pupin 38100 Grenoble",
+              "name": "Rue Aimé Pupin",
+              "street": "Rue Aimé Pupin",
+              "housenumber": "",
+              "type": "street",
+              "score": 0.9017670769707103,
+              "citycode": "38185",
+              "lat": 45.161512,
+              "lon": 5.724048
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
