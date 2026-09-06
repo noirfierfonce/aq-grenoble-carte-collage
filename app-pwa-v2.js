@@ -2,7 +2,7 @@
   "use strict";
 
   const CIRCUITS = {
-    A:{zone:"Gare / Europole / Berriat",count:18},B:{zone:"Saint-Bruno / Chorier / Drac / Vallier",count:19},C:{zone:"Île Verte / Jean-Pain / Chavant",count:18},D:{zone:"Centre / Notre-Dame / Saint-Laurent",count:20},E:{zone:"Victor-Hugo / Championnet / Jaurès",count:19},F:{zone:"Vallier / Eaux-Claires / Rhin-et-Danube",count:18},G:{zone:"Bachelard / Libération / Louise-Michel",count:13},H:{zone:"Clemenceau / Jean-Perrot / MC2",count:10},I:{zone:"Alliés / Stalingrad / Foch",count:17},J:{zone:"Clemenceau / Abbaye / Jouhaux",count:16},K:{zone:"Teisseire / Malherbe / MC2",count:15},L:{zone:"Malherbe / Village Olympique / Prémol",count:13},M:{zone:"Arlequin / Géants / Europe",count:13}
+    A:{zone:"Gare / Europole / Berriat",count:18},B:{zone:"Saint-Bruno / Chorier / Drac / Vallier",count:19},C:{zone:"Île Verte / Jean-Pain / Chavant",count:18},D:{zone:"Centre / Notre-Dame / Saint-Laurent",count:19},E:{zone:"Victor-Hugo / Championnet / Jaurès",count:19},F:{zone:"Vallier / Eaux-Claires / Rhin-et-Danube",count:17},G:{zone:"Bachelard / Libération / Louise-Michel",count:13},H:{zone:"Jean-Perrot / Déportés / MC2",count:13},I:{zone:"Alliés / Stalingrad / Sidi-Brahim",count:14},J:{zone:"Clemenceau / Abbaye / Jouhaux",count:17},K:{zone:"Teisseire / Malherbe / MC2",count:16},L:{zone:"Village Olympique / Prémol / Léon-Blum",count:13},M:{zone:"Arlequin / Géants / Europe",count:13}
   };
 
   const STATUS_OPTIONS = [
@@ -69,13 +69,34 @@
   }
 
   function normalizeLegacyTracking(){
-    let changed = false;
+    let changed = false, queueChanged = false;
     Object.keys(state.tracking).forEach(id=>{
       const entry = state.tracking[id] || {};
       if(entry.status === "vandalized"){ entry.status = "repost"; changed = true; }
       if(entry.status === "covered"){ entry.status = "skip"; changed = true; }
     });
+    const movedIds={
+      "L|L – Point 01":"K|L – Point 01",
+      "H|H – Point 10":"I|H – Point 10",
+      "H|H – Point 01":"J|H – Point 01",
+      "F|F – Point 10":"G|F – Point 10",
+      "G|G – Point 13":"I|G – Point 13",
+      "I|I – Point 05":"L|I – Point 05",
+      "I|I – Point 14":"H|I – Point 14",
+      "I|I – Point 15":"H|I – Point 15",
+      "I|I – Point 12":"H|I – Point 12",
+      "D|D – Point 02":"H|D – Point 02",
+      "I|I – Point 17":"H|I – Point 17"
+    };
+    Object.entries(movedIds).forEach(([oldId,newId])=>{
+      if(state.tracking[oldId] && !state.tracking[newId]){ state.tracking[newId]=state.tracking[oldId]; changed=true; }
+      if(state.tracking[oldId]){ delete state.tracking[oldId]; changed=true; }
+      state.queue.forEach(item=>{
+        if(item.id===oldId){ item.id=newId; item.circuit=newId.slice(0,1); queueChanged=true; }
+      });
+    });
     if(changed) saveJson(TRACKING_KEY,state.tracking);
+    if(queueChanged) saveJson(QUEUE_KEY,state.queue);
   }
 
   function initialView(){
@@ -259,7 +280,7 @@
       const tracking=getTracking(point);
       const li=document.createElement("li"); li.className=`point-card status-${tracking.status}`; li.dataset.point=point.name;
       const top=document.createElement("div"); top.className="point-top";
-      const name=document.createElement("div"); name.className="point-name"; name.textContent=`${index+1}. ${point.name}`;
+      const name=document.createElement("div"); name.className="point-name"; name.textContent=`${index+1}. Circuit ${point.circuit} · point ${String(index+1).padStart(2,"0")}`;
       const poster=document.createElement("span"); poster.className=`poster ${point.poster.includes("Couleur")?"color":"bw"}`; poster.textContent=point.poster; top.append(name,poster);
       const address=document.createElement("p"); address.className="address"; address.textContent=point.address;
       const actions=document.createElement("div"); actions.className="card-actions";
@@ -364,6 +385,7 @@
         throw new Error(remote?.error||"Synchronisation impossible.");
       }
       state.tracking=remote.tracking||{};
+      normalizeLegacyTracking();
       saveJson(TRACKING_KEY,state.tracking);
       await flushQueue(false);
       updateDashboard();

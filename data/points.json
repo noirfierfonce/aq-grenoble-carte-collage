@@ -674,7 +674,7 @@
   {
     "name": "D – Point 02",
     "address": "Rue du 4ième REGIMENT du GENIE N°11, Grenoble, France",
-    "circuit": "D",
+    "circuit": "H",
     "zone": "Centre / Notre-Dame / Saint-Laurent",
     "poster": "⚫ N&B",
     "lat": 45.18444,
@@ -1238,7 +1238,7 @@
   {
     "name": "F – Point 10",
     "address": "Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",
-    "circuit": "F",
+    "circuit": "G",
     "zone": "Vallier / Eaux-Claires / Rhin-et-Danube",
     "poster": "🎨 Couleur",
     "lat": 45.17098,
@@ -1490,7 +1490,7 @@
   {
     "name": "G – Point 13",
     "address": "Rue SIDI BRAHIM N°45, Grenoble, France",
-    "circuit": "G",
+    "circuit": "I",
     "zone": "Bachelard / Libération / Louise-Michel",
     "poster": "⚫ N&B",
     "lat": 45.176885,
@@ -1502,7 +1502,7 @@
   {
     "name": "H – Point 01",
     "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
-    "circuit": "H",
+    "circuit": "J",
     "zone": "Clemenceau / Jean-Perrot / MC2",
     "poster": "🎨 Couleur",
     "lat": 45.186385,
@@ -1610,7 +1610,7 @@
   {
     "name": "H – Point 10",
     "address": "Rue de STALINGRAD parking Clos d'Or, Grenoble, France",
-    "circuit": "H",
+    "circuit": "I",
     "zone": "Clemenceau / Jean-Perrot / MC2",
     "poster": "🎨 Couleur",
     "lat": 45.174181,
@@ -1670,7 +1670,7 @@
   {
     "name": "I – Point 05",
     "address": "Avenue Léon BLUM N°82, Grenoble, France",
-    "circuit": "I",
+    "circuit": "L",
     "zone": "Alliés / Stalingrad / Foch",
     "poster": "🎨 Couleur",
     "lat": 45.165506,
@@ -1754,7 +1754,7 @@
   {
     "name": "I – Point 12",
     "address": "Rue Edouard VAILLANT N°33, rue des DEPORTES du 11/11/1943, Grenoble, France",
-    "circuit": "I",
+    "circuit": "H",
     "zone": "Alliés / Stalingrad / Foch",
     "poster": "⚫ N&B",
     "lat": 45.17764,
@@ -1778,7 +1778,7 @@
   {
     "name": "I – Point 14",
     "address": "Rue des DEPORTES du 11/11/1943, face rue Paul BOURGET, Grenoble, France",
-    "circuit": "I",
+    "circuit": "H",
     "zone": "Alliés / Stalingrad / Foch",
     "poster": "⚫ N&B",
     "lat": 45.178722,
@@ -1790,7 +1790,7 @@
   {
     "name": "I – Point 15",
     "address": "Rue Paul BOURGET N°5 (groupe scolaire Ferdinand Buisson), Grenoble, France",
-    "circuit": "I",
+    "circuit": "H",
     "zone": "Alliés / Stalingrad / Foch",
     "poster": "⚫ N&B",
     "lat": 45.177777,
@@ -1814,7 +1814,7 @@
   {
     "name": "I – Point 17",
     "address": "Boulevard Maréchal FOCH N°51, Grenoble, France",
-    "circuit": "I",
+    "circuit": "H",
     "zone": "Alliés / Stalingrad / Foch",
     "poster": "🎨 Couleur",
     "lat": 45.180931,
@@ -2198,7 +2198,7 @@
   {
     "name": "L – Point 01",
     "address": "Avenue MALHERBE N°31, Grenoble, France",
-    "circuit": "L",
+    "circuit": "K",
     "zone": "Malherbe / Village Olympique / Prémol",
     "poster": "🎨 Couleur",
     "lat": 45.169739,
