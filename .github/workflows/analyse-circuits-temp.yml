@@ -1,0 +1,103 @@
+name: Analyse temporaire des circuits.
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/analyse-circuits-temp.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Calculer les regroupements.
+        shell: python
+        run: |
+          import json, math, csv
+          from collections import defaultdict
+          from pathlib import Path
+          pts=json.load(open('data/points.json',encoding='utf-8'))
+          assert len(pts)==209
+          for p in pts: assert p.get('citycode')=='38185'
+          letters=list('ABCDEFGHIJKLM'); R=6371.0088; lat0=sum(p['lat'] for p in pts)/len(pts)
+          for p in pts:
+              p['_x']=R*math.radians(p['lon'])*math.cos(math.radians(lat0)); p['_y']=R*math.radians(p['lat'])
+          def centroid(g,c):
+              q=[p for p in pts if g[p['name']]==c]; return sum(p['_x'] for p in q)/len(q),sum(p['_y'] for p in q)/len(q)
+          def d2(p,c): return (p['_x']-c[0])**2+(p['_y']-c[1])**2
+          def stats(g):
+              cs={c:centroid(g,c) for c in letters}; per={}; obj=0
+              for c in letters:
+                  q=[p for p in pts if g[p['name']]==c]; ds=[math.sqrt(d2(p,cs[c])) for p in q]
+                  obj+=sum(x*x for x in ds); per[c]={'n':len(q),'mean':sum(ds)/len(ds),'max':max(ds)}
+              return obj,per,cs
+          current={p['name']:p['circuit'] for p in pts}; base_obj,base_per,base_cs=stats(current)
+          g=current.copy(); min_n,max_n=13,19; move_penalty=.18
+          def score(h):
+              obj,per,_=stats(h); ch=sum(h[p['name']]!=p['circuit'] for p in pts)
+              cap=sum((max(0,min_n-v['n'])**2+max(0,v['n']-max_n)**2)*8 for v in per.values())
+              return obj+move_penalty*ch+cap
+          best=score(g)
+          for _ in range(100):
+              _,per,cs=stats(g); sizes={c:per[c]['n'] for c in letters}; cand=[]
+              for p in pts:
+                  a=g[p['name']]
+                  for b in letters:
+                      if b==a or sizes[b]>=max_n: continue
+                      if sizes[a]<=min_n and sizes[b]>=min_n: continue
+                      if math.sqrt(d2(p,cs[b]))>math.sqrt(d2(p,cs[a]))+1.0: continue
+                      h=g.copy(); h[p['name']]=b; s=score(h)
+                      cand.append((s,p['name'],b))
+              if not cand: break
+              s,n,b=min(cand)
+              if s>=best-1e-9: break
+              g[n]=b; best=s
+          for _ in range(50):
+              _,per,cs=stats(g); by=defaultdict(list)
+              for p in pts: by[g[p['name']]].append(p)
+              cand=[]
+              for i,a in enumerate(letters):
+                  for b in letters[i+1:]:
+                      if math.dist(cs[a],cs[b])>3.5: continue
+                      aa=sorted(by[a],key=lambda p:d2(p,cs[b])-d2(p,cs[a]))[:5]
+                      bb=sorted(by[b],key=lambda p:d2(p,cs[a])-d2(p,cs[b]))[:5]
+                      for pa in aa:
+                          for pb in bb:
+                              h=g.copy(); h[pa['name']]=b; h[pb['name']]=a; s=score(h)
+                              cand.append((s,pa['name'],pb['name'],a,b))
+              if not cand: break
+              s,na,nb,a,b=min(cand)
+              if s>=best-1e-9: break
+              g[na]=b; g[nb]=a; best=s
+          opt_obj,opt_per,opt_cs=stats(g)
+          moves=[]
+          for p in pts:
+              o=p['circuit']; n=g[p['name']]
+              if o!=n:
+                  old=math.sqrt(d2(p,base_cs[o])); new=math.sqrt(d2(p,opt_cs[n]))
+                  moves.append((old-new,p['name'],p['address'],o,n,old,new))
+          moves.sort(reverse=True)
+          anomalies=[]
+          for p in pts:
+              o=p['circuit']; own=math.sqrt(d2(p,base_cs[o])); other=min((math.sqrt(d2(p,base_cs[c])),c) for c in letters if c!=o)
+              if own-other[0]>=.35: anomalies.append((own-other[0],p['name'],p['address'],o,other[1],own,other[0]))
+          anomalies.sort(reverse=True)
+          Path('analysis').mkdir(exist_ok=True)
+          lines=['# Analyse géographique des circuits A–M','',f'209 points vérifiés, tous citycode 38185.', '',f'- Compacité actuelle : **{base_obj:.2f} km²**.',f'- Compacité proposition : **{opt_obj:.2f} km²**.',f'- Gain : **{(base_obj-opt_obj)/base_obj*100:.1f} %**.',f'- Changements proposés : **{len(moves)}**.','', '## Tailles et rayons moyens','', '|Circuit|Actuel|Proposé|Moy. actuel|Moy. proposé|Max actuel|Max proposé|','|---|---:|---:|---:|---:|---:|---:|']
+          for c in letters: lines.append(f"|{c}|{base_per[c]['n']}|{opt_per[c]['n']}|{base_per[c]['mean']:.2f} km|{opt_per[c]['mean']:.2f} km|{base_per[c]['max']:.2f} km|{opt_per[c]['max']:.2f} km|")
+          lines += ['', '## Changements proposés','', '|Point|De|Vers|Gain approx.|Adresse|','|---|---:|---:|---:|---|']
+          for gain,name,address,o,n,old,new in moves: lines.append(f'|{name}|{o}|{n}|{gain:.2f} km|{address}|')
+          lines += ['', '## Affectations atypiques actuelles (autre centroïde ≥ 350 m plus proche)','', '|Point|Actuel|Plus proche|Écart|Adresse|','|---|---:|---:|---:|---|']
+          for gain,name,address,o,n,old,new in anomalies[:40]: lines.append(f'|{name}|{o}|{n}|{gain:.2f} km|{address}|')
+          lines += ['', 'Méthode : distances géographiques locales aux centroïdes, optimisation conservative avec 13 à 19 points par circuit. Aucun circuit de production n’est modifié.']
+          open('analysis/circuit-distance-report.md','w',encoding='utf-8').write('\n'.join(lines)+'\n')
+      - name: Enregistrer le rapport.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis/circuit-distance-report.md
+          git commit -m "Ajouter le rapport de distances des circuits"
+          git push
