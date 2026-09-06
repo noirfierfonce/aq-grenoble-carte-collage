@@ -1,0 +1,24 @@
+point,address,from,to,old_centroid_km,new_centroid_km,gain_km
+G – Point 03,"Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",G,C,2.843,0.475,2.368
+G – Point 02,"Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",G,D,2.843,0.538,2.305
+B – Point 03,"Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",B,J,2.285,0.354,1.931
+L – Point 09,"Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",L,E,2.144,0.233,1.91
+H – Point 10,"Rue de STALINGRAD parking Clos d'Or, Grenoble, France",H,I,0.884,0.148,0.736
+A – Point 16,"Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",A,B,1.097,0.396,0.701
+F – Point 10,"Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",F,G,0.713,0.159,0.554
+H – Point 01,"Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",H,J,1.139,0.624,0.515
+D – Point 11,"Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",D,C,1.214,0.803,0.411
+I – Point 05,"Avenue Léon BLUM N°82, Grenoble, France",I,L,0.992,0.616,0.376
+D – Point 02,"Rue du 4ième REGIMENT du GENIE N°11, Grenoble, France",D,H,0.862,0.491,0.371
+D – Point 18,"Route de LYON N°19, Grenoble, France",D,A,0.95,0.644,0.306
+A – Point 13,"Esplanade ANDRY-FARCY N°5 (face au Magasin), Grenoble, France",A,B,0.787,0.532,0.255
+I – Point 14,"Rue des DEPORTES du 11/11/1943, face rue Paul BOURGET, Grenoble, France",I,H,0.655,0.426,0.229
+C – Point 18,"Boulevard Maréchal LYAUTEY N°11, angle rue BECCARIA, Grenoble, France",C,H,0.814,0.601,0.212
+D – Point 01,"Place André MALRAUX N°7, Grenoble, France",D,H,0.785,0.595,0.189
+J – Point 03,"Rue du 19 MARS 1962, angle Jean PAIN, Grenoble, France",J,C,0.858,0.685,0.174
+I – Point 03,"Rue Général MANGIN N°73Ter, Grenoble, France",I,G,0.543,0.437,0.106
+I – Point 04,"Rue Général MANGIN N°73Ter, Grenoble, France",I,G,0.543,0.437,0.106
+C – Point 17,"Rue du Manège (Cinéma Chavant), Grenoble, France",C,H,0.711,0.621,0.089
+B – Point 01,"Place Saint BRUNO N°22, face rue GERIN, Grenoble, France",B,A,0.361,0.478,-0.117
+E – Point 18,"Rue BILLEREY N°8, angle rue JAY, Grenoble, France",E,A,0.383,0.524,-0.141
+G – Point 13,"Rue SIDI BRAHIM N°45, Grenoble, France",G,I,0.319,0.57,-0.25

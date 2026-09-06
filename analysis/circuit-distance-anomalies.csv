@@ -1,0 +1,10 @@
+point,address,current,nearer,own_km,other_km,potential_gain_km
+G – Point 02,"Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",G,C,2.843,0.545,2.298
+G – Point 03,"Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",G,C,2.843,0.545,2.298
+B – Point 03,"Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",B,J,2.285,0.385,1.9
+L – Point 09,"Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",L,E,2.144,0.256,1.888
+A – Point 16,"Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",A,B,1.097,0.371,0.726
+H – Point 10,"Rue de STALINGRAD parking Clos d'Or, Grenoble, France",H,I,0.884,0.175,0.709
+L – Point 01,"Avenue MALHERBE N°31, Grenoble, France",L,K,0.851,0.249,0.602
+H – Point 01,"Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",H,J,1.139,0.598,0.541
+I – Point 05,"Avenue Léon BLUM N°82, Grenoble, France",I,L,0.992,0.621,0.371
