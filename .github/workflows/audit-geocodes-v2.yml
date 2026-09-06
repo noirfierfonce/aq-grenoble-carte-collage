@@ -1,0 +1,30 @@
+name: Audit renforcé des coordonnées Grenoble.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit-geocodes-v2.mjs'
+      - '.github/workflows/audit-geocodes-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Auditer les 209 coordonnées.
+        run: node scripts/audit-geocodes-v2.mjs
+      - name: Enregistrer le rapport d'audit.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/geocode-audit-v2.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Ajouter le rapport d audit geographique v2'
+          git push
