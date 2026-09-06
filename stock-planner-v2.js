@@ -124,7 +124,6 @@
   }
 
   function change(letter, type, delta) {
-    const needs = needByCircuit();
     const current = Number(plan[letter]?.[type]) || 0;
     const used = totals()[type];
     const spare = Math.max(0, pool[type] - used);
@@ -172,7 +171,7 @@
   }
 
   function stepper(letter, type, value, label) {
-    return `<div class="planner-stepper" data-letter="${letter}" data-type="${type}"><span class="planner-step-label">${label}</span><button type="button" class="planner-step-btn" data-delta="-1">−</button><strong class="planner-step-value">${value}</strong><button type="button" class="planner-step-btn" data-delta="1">+</button></div>`;
+    return `<div class="planner-stepper" data-letter="${letter}" data-type="${type}"><span class="planner-step-label">${label}</span><button type="button" class="planner-step-btn" data-delta="-1" aria-label="Retirer une affiche ${label}">−</button><strong class="planner-step-value">${value}</strong><button type="button" class="planner-step-btn" data-delta="1" aria-label="Ajouter une affiche ${label}">+</button></div>`;
   }
 
   function ensureRoot() {
@@ -209,11 +208,16 @@
     root.innerHTML = `<div class="planner-head"><div><h3>🧭 Aide à la répartition.</h3><p>L’appli propose. Vous gardez la main sur chaque quantité.</p></div></div>
       <section class="planner-pool"><div class="planner-section-title">Stock collectif à répartir.</div><p class="planner-help">Entre ce que vous avez réellement au départ. Modifiable à tout moment.</p><div class="planner-pool-grid"><label>🎨 Couleur.<input id="plannerPoolColorV2" type="number" min="0" step="1" inputmode="numeric" value="${pool.color}"></label><label>⚫ N&B.<input id="plannerPoolBwV2" type="number" min="0" step="1" inputmode="numeric" value="${pool.bw}"></label></div><button type="button" class="primary planner-save" id="plannerPoolSaveV2">Enregistrer le stock collectif.</button><div class="planner-status" id="plannerPoolStatusV2" aria-live="polite"></div></section>
       <section class="planner-summary"><div><span>Proposition.</span><strong>${fullCircuits} circuits couverts entièrement.</strong></div><div><span>À distribuer.</span><strong>🎨 ${used.color} · ⚫ ${used.bw}.</strong></div><div><span>Réserve.</span><strong>🎨 ${rest.color} · ⚫ ${rest.bw}.</strong></div></section>
-      <div class="planner-section-row"><div><div class="planner-section-title">Quantités conseillées par circuit.</div><p class="planner-help">Les gros boutons jaunes + et − ajustent seulement la proposition.</p></div><button type="button" class="planner-reset" id="plannerResetV2">Revenir au conseil.</button></div>
-      <div class="planner-circuits">${LETTERS.map(letter => `<div class="planner-circuit-row"><div class="planner-circuit-head"><strong>Circuit ${letter}.</strong><span>Besoin : 🎨 ${needs[letter].color} · ⚫ ${needs[letter].bw}.</span></div><div class="planner-steppers">${stepper(letter, "color", plan[letter]?.color || 0, "Couleur")}${stepper(letter, "bw", plan[letter]?.bw || 0, "N&B")}</div></div>`).join("")}</div>`;
+      <div class="planner-section-row"><div><div class="planner-section-title">Quantités conseillées par circuit.</div><p class="planner-help">Chaque couleur a son réglage. Les boutons jaunes + et − ajustent seulement la proposition.</p></div><div class="planner-reset-wrap"><button type="button" class="planner-reset" id="plannerResetV2">↺ Revenir à la proposition auto.</button><div class="planner-reset-status" id="plannerResetStatusV2" aria-live="polite"></div></div></div>
+      <div class="planner-circuits">${LETTERS.map(letter => `<div class="planner-circuit-row"><div class="planner-circuit-head"><strong>Circuit ${letter}.</strong><span>Besoin : 🎨 ${needs[letter].color} · ⚫ ${needs[letter].bw}.</span></div><div class="planner-steppers">${stepper(letter, "color", plan[letter]?.color || 0, "🎨 Couleur")}${stepper(letter, "bw", plan[letter]?.bw || 0, "⚫ N&B")}</div></div>`).join("")}</div>`;
 
     root.querySelector("#plannerPoolSaveV2")?.addEventListener("click", savePool);
-    root.querySelector("#plannerResetV2")?.addEventListener("click", () => { buildSuggestedPlan(); render(); });
+    root.querySelector("#plannerResetV2")?.addEventListener("click", () => {
+      buildSuggestedPlan();
+      render();
+      const message = document.getElementById("plannerResetStatusV2");
+      if (message) message.textContent = "Proposition automatique rétablie.";
+    });
     root.querySelectorAll(".planner-step-btn").forEach(button => button.addEventListener("click", () => {
       const node = button.closest(".planner-stepper");
       change(node.dataset.letter, node.dataset.type, Number(button.dataset.delta));
