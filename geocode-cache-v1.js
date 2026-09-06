@@ -214,8 +214,8 @@
     "fixed": true
   },
   "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France": {
-    "lat": 45.180354,
-    "lon": 5.751401,
+    "lat": 45.180898,
+    "lon": 5.708859,
     "approx": false,
     "fixed": true
   },
@@ -736,8 +736,8 @@
     "fixed": true
   },
   "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France": {
-    "lat": 45.17722,
-    "lon": 5.742969,
+    "lat": 45.186385,
+    "lon": 5.743884,
     "approx": false,
     "fixed": true
   },
@@ -1066,8 +1066,8 @@
     "fixed": true
   },
   "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France": {
-    "lat": 45.190004,
-    "lon": 5.688617,
+    "lat": 45.16851,
+    "lon": 5.731581,
     "approx": false,
     "fixed": true
   },

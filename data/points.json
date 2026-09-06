@@ -425,11 +425,11 @@
     "circuit": "B",
     "zone": "Saint-Bruno / Chorier / Drac / Vallier",
     "poster": "⚫ N&B",
-    "lat": 45.180354,
-    "lon": 5.751401,
+    "lat": 45.180898,
+    "lon": 5.708859,
     "citycode": "38185",
-    "geocodeLabel": "6, Rue Docteur Calmette, Croix Rouge, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38400, France",
-    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
+    "geocodeLabel": "Rue Docteur Calmette 38000 Grenoble",
+    "geocodeSource": "IGN / Géoplateforme (Grenoble 38185)"
   },
   {
     "name": "B – Point 19",
@@ -1505,11 +1505,11 @@
     "circuit": "H",
     "zone": "Clemenceau / Jean-Perrot / MC2",
     "poster": "🎨 Couleur",
-    "lat": 45.17722,
-    "lon": 5.742969,
+    "lat": 45.186385,
+    "lon": 5.743884,
     "citycode": "38185",
-    "geocodeLabel": "Rue Léon Jouhaux 38100 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme (audit renforcé)"
+    "geocodeLabel": "1 Boulevard Clemenceau 38100 Grenoble",
+    "geocodeSource": "IGN / Géoplateforme (Grenoble 38185)"
   },
   {
     "name": "H – Point 02",
@@ -2213,11 +2213,11 @@
     "circuit": "L",
     "zone": "Malherbe / Village Olympique / Prémol",
     "poster": "🎨 Couleur",
-    "lat": 45.190004,
-    "lon": 5.688617,
+    "lat": 45.16851,
+    "lon": 5.731581,
     "citycode": "38185",
-    "geocodeLabel": "1, Rue des Alliés, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
-    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
+    "geocodeLabel": "1 Avenue Marie Reynoard 38100 Grenoble",
+    "geocodeSource": "IGN / Géoplateforme (Grenoble 38185)"
   },
   {
     "name": "L – Point 03",
