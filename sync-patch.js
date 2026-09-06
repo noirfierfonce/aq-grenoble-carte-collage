@@ -41,6 +41,15 @@
       ? new URLSearchParams(init.body.toString())
       : new URLSearchParams(String(init?.body || ""));
 
+    const action = String(body.get("action") || "").trim();
+
+    // Le correctif JSONP historique ne concerne que les mutations de points.
+    // Les autres POST (notamment le stock avec contact facultatif) restent de vrais POST,
+    // afin de ne pas transformer les coordonnées en paramètres d’URL.
+    if (action && action !== "mutate") {
+      return nativeFetch(input, init);
+    }
+
     const payload = await jsonp(apiUrl, body);
     if (!payload?.ok) {
       throw new Error(payload?.error || "La modification n’a pas été enregistrée.");
