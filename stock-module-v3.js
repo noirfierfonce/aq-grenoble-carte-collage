@@ -181,6 +181,9 @@
   }
 
   function balanceLine(label, available, needed) {
+    if (available === 0 && needed > 0) {
+      return `<span class="not-planned">${escapeHtml(label)} : non prévu pour ce passage.</span>`;
+    }
     const difference = available - needed;
     if (difference >= 0) return `<span class="ok">${escapeHtml(label)} : ${difference} en marge après le besoin actuel.</span>`;
     const n = Math.abs(difference);
