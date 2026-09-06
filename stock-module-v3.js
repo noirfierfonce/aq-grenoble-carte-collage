@@ -180,14 +180,16 @@
     }
   }
 
-  function balanceLine(label, available, needed) {
-    if (available === 0 && needed > 0) {
-      return `<span class="not-planned">${escapeHtml(label)} : non prévu pour ce passage.</span>`;
-    }
-    const difference = available - needed;
-    if (difference >= 0) return `<span class="ok">${escapeHtml(label)} : ${difference} en marge après le besoin actuel.</span>`;
+  function plannedTypeLine(label, available) {
+    if (available === 0) return `<span class="not-planned">${escapeHtml(label)} : non prévu pour ce passage.</span>`;
+    return `<span class="neutral">${escapeHtml(label)} : ${available} prévue${available > 1 ? "s" : ""} pour ce passage.</span>`;
+  }
+
+  function totalBalanceLine(totalAvailable, totalNeeded) {
+    const difference = totalAvailable - totalNeeded;
+    if (difference >= 0) return `<span class="ok">Couverture totale : ${difference} affiche${difference > 1 ? "s" : ""} en marge.</span>`;
     const n = Math.abs(difference);
-    return `<span class="missing">${escapeHtml(label)} : il manque ${n} affiche${n > 1 ? "s" : ""}.</span>`;
+    return `<span class="missing">Couverture totale : il manque ${n} affiche${n > 1 ? "s" : ""} au total.</span>`;
   }
 
   function ensureEditor() {
@@ -263,15 +265,7 @@
     errorBox.textContent = "";
 
     try {
-      await postForm({
-        action: "stockUpsert",
-        key,
-        name,
-        color,
-        bw,
-        contact,
-        mutationId: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
-      });
+      await postForm({ action: "stockUpsert", key, name, color, bw, contact, mutationId: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}` });
 
       let confirmed = false;
       for (let attempt = 0; attempt < 5; attempt++) {
@@ -331,7 +325,7 @@
       const progress = document.getElementById("progress");
       if (progress) progress.style.display = "none";
       const hint = document.querySelector(".hint");
-      if (hint) hint.textContent = "Disponible = stock physique déclaré. Nécessaire = besoin calculé automatiquement à partir des circuits.";
+      if (hint) hint.textContent = "La couleur et le N&B sont interchangeables pour couvrir un emplacement. L’alerte se base donc sur le total réellement prévu.";
 
       const rows = holders.length ? holders.map(holder => {
         const contact = holder.contact ? `<span class="stock-holder-contact" style="grid-column:1/-1;color:#c7cbd2;font-size:.82rem;overflow-wrap:anywhere">Contact : ${escapeHtml(holder.contact)}</span>` : "";
@@ -360,22 +354,23 @@
           <div class="stock-summary-box">
             <span class="stock-summary-label">Nécessaire pour les collages.</span>
             <div class="stock-summary-values">
-              <span>🎨 Couleur : <strong>${needed.color}</strong>.</span>
-              <span>⚫ Noir et blanc : <strong>${needed.bw}</strong>.</span>
+              <span>🎨 Repère couleur : <strong>${needed.color}</strong>.</span>
+              <span>⚫ Repère N&B : <strong>${needed.bw}</strong>.</span>
               <span>📦 Total : <strong>${needed.total}</strong>.</span>
             </div>
           </div>
         </div>
         <div class="stock-balance">
-          ${balanceLine("Couleur", available.color, needed.color)}
-          ${balanceLine("Noir et blanc", available.bw, needed.bw)}
+          ${plannedTypeLine("Couleur", available.color)}
+          ${plannedTypeLine("Noir et blanc", available.bw)}
+          ${totalBalanceLine(totalAvailable, needed.total)}
         </div>
         <button type="button" class="primary stock-update-btn" id="stockUpdateBtnV3">Mettre à jour mon stock.</button>
         <details class="stock-distribution">
           <summary><span>Répartition du stock.</span><span>${holders.length} emplacement${holders.length > 1 ? "s" : ""}.</span></summary>
           <div class="stock-holder-list">${rows}</div>
         </details>
-        <p class="stock-module-note">Chaque personne peut mettre à jour ce qu’elle a réellement chez elle. Le total disponible se recalcule automatiquement.</p>`;
+        <p class="stock-module-note">Les quantités couleur/N&B sont un choix de préparation. Seul un manque sur le total déclenche une alerte.</p>`;
 
       root.querySelector("#stockUpdateBtnV3")?.addEventListener("click", openEditor);
     } catch (error) {
@@ -412,6 +407,7 @@
       observer.observe(list, { childList: true });
     }
 
+    window.addEventListener("aq:stock-updated", () => { if (isStockView()) refreshHolders(); });
     window.addEventListener("online", () => { if (isStockView()) refreshHolders(); });
     document.addEventListener("visibilitychange", () => {
       if (document.visibilityState === "visible" && isStockView()) refreshHolders();
