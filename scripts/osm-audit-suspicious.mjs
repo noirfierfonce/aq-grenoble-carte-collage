@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises';
+const pts=JSON.parse(await fs.readFile('data/points.json','utf8'));
+const audit=JSON.parse(await fs.readFile('data/geocode-audit-v2.json','utf8'));
+const names=new Set(audit.suspicious.map(x=>x.name));
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function clean(a){return a.replace(/,\s*Grenoble,\s*France$/i,'').replace(/N[°º]\s*/gi,' ').replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();}
+function vars(a){const b=clean(a),o=[];const add=q=>{q=q.replace(/\s+/g,' ').trim();if(q&&!o.includes(q))o.push(q)};add(b+', Grenoble, France');for(const s of b.split(/,|\bangle\b|\bface\b|\bvers\b|\bsous\b/i).map(x=>x.trim()).filter(Boolean))add(s+', Grenoble, France');add(b.replace(/Henri LE CHATELIER/ig,'Henry Le Chatelier')+', Grenoble, France');add(b.replace(/Cours de la LIBERATION/ig,'Cours de la Libération et du Général de Gaulle')+', Grenoble, France');return o;}
+async function nom(q){const u=new URL('https://nominatim.openstreetmap.org/search');for(const [k,v] of Object.entries({format:'jsonv2',q,countrycodes:'fr',limit:'5',viewbox:'5.67,45.23,5.79,45.14',bounded:'1',addressdetails:'1'}))u.searchParams.set(k,v);const r=await fetch(u,{headers:{'user-agent':'AQ-Grenoble-coordinate-audit/1.0 (public mapping project)'}});if(!r.ok)throw new Error('HTTP '+r.status);return await r.json();}
+const out=[];for(const p of pts.filter(x=>names.has(x.name))){const qs=[];for(const q of vars(p.address)){let res=[];try{res=(await nom(q)).map(x=>({display_name:x.display_name,lat:+x.lat,lon:+x.lon,type:x.type,category:x.category,address:x.address}));}catch(e){res=[{error:String(e)}]};qs.push({q,results:res});await sleep(1100);}out.push({name:p.name,address:p.address,current:{lat:p.lat,lon:p.lon,label:p.geocodeLabel},queries:qs});console.log(p.name);}await fs.writeFile('data/osm-audit-suspicious.json',JSON.stringify({generatedAt:new Date().toISOString(),points:out},null,2)+'\n');
