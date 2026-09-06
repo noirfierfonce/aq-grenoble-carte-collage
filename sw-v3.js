@@ -1,4 +1,4 @@
-const CACHE="aq-collage-pwa-v24";
+const CACHE="aq-collage-pwa-v25";
 const SHELL=["./","./index.html","./app-pwa.css","./styles-gas.css","./stock-module.css","./stock-planner.css","./app-pwa-v2.js","./config.js","./sync-patch.js","./access-bridge-v3.js","./install-helper.js","./stock-module-v3.js","./stock-save-fix.js","./stock-zero-filter.js","./stock-planner-v4.js","./stock-header-polish.js","./release-hardening-v1.js","./manifest.webmanifest","./data/points.json","./icons/icon-192.svg","./icons/icon-512.svg"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)));self.skipWaiting();});
 self.addEventListener("activate",event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));self.clients.claim();});
