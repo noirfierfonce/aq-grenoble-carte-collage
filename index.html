@@ -19,10 +19,10 @@
   <link rel="stylesheet" href="./stock-module.css?v=1">
   <link rel="stylesheet" href="./stock-planner.css?v=4">
   <style>
-    .footer.footer-signature-banner{display:grid;justify-items:center;gap:8px;padding:14px 16px 10px;border-top:1px solid rgba(242,193,78,.32);background:#080a0d;color:#7f8996;overflow:hidden}
-    .footer-signature-visual{display:block;width:min(100%,980px);height:auto;max-height:190px;object-fit:contain;object-position:center;margin:0 auto;border-radius:12px}
-    .footer-signature-credit{width:min(100%,980px);text-align:right;font-size:.66rem;line-height:1.35;color:#6f7885;padding-right:4px}
-    @media(max-width:760px){.footer.footer-signature-banner{padding:10px 10px 8px}.footer-signature-visual{width:100%;max-height:150px;object-fit:contain;border-radius:10px}.footer-signature-credit{width:100%;text-align:center;padding:0;font-size:.62rem}}
+    .footer.footer-signature-banner{display:block;padding:0;border-top:1px solid rgba(242,193,78,.32);background:#080a0d;color:#7f8996;overflow:hidden}
+    .footer-signature-visual{display:block;width:100%;max-width:none;height:auto;margin:0;border:0;border-radius:0}
+    .footer-signature-credit{padding:8px 16px 10px;text-align:right;font-size:.66rem;line-height:1.35;color:#6f7885}
+    @media(max-width:760px){.footer-signature-credit{text-align:center;padding:7px 10px 9px;font-size:.62rem}}
   </style>
 </head>
 <body>
@@ -74,7 +74,7 @@
   </main>
 
   <footer class="footer footer-signature-banner">
-    <img class="footer-signature-visual" src="./assets/footer-signature.webp?v=2" alt="Propulsé par Noir Fier Foncé.">
+    <img class="footer-signature-visual" src="./assets/footer-signature.webp?v=3" alt="Propulsé par Noir Fier Foncé.">
     <div class="footer-signature-credit">Données cartographiques © OpenStreetMap contributors.</div>
   </footer>
 </div>
