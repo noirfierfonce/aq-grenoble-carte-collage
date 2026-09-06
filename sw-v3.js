@@ -1,4 +1,4 @@
-const CACHE="aq-collage-pwa-v38";
+const CACHE="aq-collage-pwa-v39";
 
 const SHELL=[
   "./",
@@ -15,6 +15,7 @@ const SHELL=[
   "./install-helper.js",
   "./geocode-guard-v1.js",
   "./geocode-cache-v1.js",
+  "./map-stability-v1.js",
   "./stock-module-v3.js",
   "./stock-save-fix.js",
   "./stock-zero-filter.js",
