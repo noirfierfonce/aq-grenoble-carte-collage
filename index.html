@@ -19,10 +19,11 @@
   <link rel="stylesheet" href="./stock-module.css?v=1">
   <link rel="stylesheet" href="./stock-planner.css?v=4">
   <style>
-    .footer.footer-signature-banner{display:block;padding:0;border-top:1px solid rgba(242,193,78,.32);background:#080a0d;color:#7f8996;overflow:hidden}
-    .footer-signature-visual{display:block;width:100%;max-width:none;height:auto;margin:0;border:0;border-radius:0}
-    .footer-signature-credit{padding:8px 16px 10px;text-align:right;font-size:.66rem;line-height:1.35;color:#6f7885}
-    @media(max-width:760px){.footer-signature-credit{text-align:center;padding:7px 10px 9px;font-size:.62rem}}
+    .footer.footer-clean{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;padding:12px 16px;border-top:1px solid #303946;background:#0e1116;color:#7f8996}
+    .footer-clean-aq{justify-self:start;display:grid;gap:2px}.footer-clean-aq strong{color:#f5f7fa;font-size:.74rem;letter-spacing:.06em;font-weight:800}.footer-clean-aq span{font-size:.64rem;color:#7f8996}
+    .footer-clean-brand{justify-self:center;display:grid;gap:1px;text-align:center;line-height:1.15}.footer-clean-brand small{font-size:.62rem;color:#8f99a6;font-weight:500;letter-spacing:.02em}.footer-clean-brand strong{font-size:.82rem;color:#f2c14e;font-weight:600;letter-spacing:.015em}
+    .footer-clean-map{justify-self:end;text-align:right;font-size:.64rem;line-height:1.35;color:#6f7885;max-width:290px}
+    @media(max-width:760px){.footer.footer-clean{grid-template-columns:1fr;gap:8px;padding:11px 14px;text-align:center}.footer-clean-aq,.footer-clean-brand,.footer-clean-map{justify-self:center;text-align:center}.footer-clean-brand{order:1}.footer-clean-aq{order:2}.footer-clean-map{order:3}.footer-clean-aq span{display:none}}
   </style>
 </head>
 <body>
@@ -73,9 +74,10 @@
     </aside>
   </main>
 
-  <footer class="footer footer-signature-banner">
-    <img class="footer-signature-visual" src="./assets/footer-signature.webp?v=3" alt="Propulsé par Noir Fier Foncé.">
-    <div class="footer-signature-credit">Données cartographiques © OpenStreetMap contributors.</div>
+  <footer class="footer footer-clean">
+    <div class="footer-clean-aq"><strong>AQ GRENOBLE.</strong><span>Terrain · organisation · action.</span></div>
+    <div class="footer-clean-brand"><small>Propulsé par</small><strong>Noir Fier Foncé.</strong></div>
+    <div class="footer-clean-map">Données cartographiques © OpenStreetMap contributors.</div>
   </footer>
 </div>
 
