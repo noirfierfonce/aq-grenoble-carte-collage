@@ -7,7 +7,7 @@
   const QUEUE_KEY = "aq-grenoble-sync-queue-v2";
   const STOCK_HASH_KEY = "aq-release-stock-hash-v1";
   const RESET_MARKER = "aq-release-reset-test-pool-v1";
-  const SCROLL_KEY = "aq-release-scroll-restore-v1";
+  const SCROLL_KEY = "aq-release-scroll-restore-v2";
   const POOL_NAME = "Stock collectif";
   const POLL_MS = 15000;
   const MIN_GAP_MS = 3000;
@@ -150,10 +150,13 @@
   }
 
   function reloadPreservingPosition() {
+    const panel = document.querySelector(".list-panel");
     try {
       sessionStorage.setItem(SCROLL_KEY, JSON.stringify({
         x: window.scrollX || 0,
         y: window.scrollY || 0,
+        panelTop: panel ? panel.scrollTop : 0,
+        panelLeft: panel ? panel.scrollLeft : 0,
         view: currentView(),
         at: Date.now()
       }));
@@ -165,9 +168,23 @@
     const saved = parseJson(read(sessionStorage, SCROLL_KEY), null);
     if (!saved || saved.view !== currentView() || Date.now() - Number(saved.at || 0) > 10000) return;
     try { sessionStorage.removeItem(SCROLL_KEY); } catch (_) {}
-    const restore = () => window.scrollTo({ left: Number(saved.x) || 0, top: Number(saved.y) || 0, behavior: "auto" });
+
+    const restore = () => {
+      window.scrollTo({
+        left: Number(saved.x) || 0,
+        top: Number(saved.y) || 0,
+        behavior: "auto"
+      });
+      const panel = document.querySelector(".list-panel");
+      if (panel) {
+        panel.scrollLeft = Number(saved.panelLeft) || 0;
+        panel.scrollTop = Number(saved.panelTop) || 0;
+      }
+    };
+
     requestAnimationFrame(restore);
-    setTimeout(restore, 250);
+    setTimeout(restore, 120);
+    setTimeout(restore, 350);
     setTimeout(restore, 900);
   }
 
