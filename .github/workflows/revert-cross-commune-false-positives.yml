@@ -1,0 +1,39 @@
+name: Corriger les faux positifs hors commune.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/revert-cross-commune-false-positives.mjs'
+      - '.github/workflows/revert-cross-commune-false-positives.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Restaurer les trois points ambigus dans Grenoble.
+        run: node scripts/revert-cross-commune-false-positives.mjs
+      - name: Vérifier Grenoble commune.
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const p=JSON.parse(fs.readFileSync('data/points.json','utf8'));
+          if(p.length!==209) throw new Error('Nombre de points invalide');
+          const bad=p.filter(x=>x.citycode!=='38185'||x.lat<45.14||x.lat>45.23||x.lon<5.67||x.lon>5.79);
+          if(bad.length) throw new Error(JSON.stringify(bad));
+          console.log('209/209 dans les contraintes Grenoble.');
+          NODE
+      - name: Enregistrer.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/points.json geocode-cache-v1.js
+          git commit -m 'Restaurer les faux positifs hors commune' || exit 0
+          git push
