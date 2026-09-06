@@ -1,0 +1,30 @@
+name: Audit approfondi des coordonnées suspectes.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/deep-audit-suspicious.mjs'
+      - '.github/workflows/deep-audit-suspicious.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Auditer les points suspects.
+        run: node scripts/deep-audit-suspicious.mjs
+      - name: Enregistrer le rapport.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/geocode-deep-audit.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Ajouter le rapport geocodage approfondi'
+          git push
