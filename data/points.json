@@ -113,11 +113,11 @@
     "circuit": "A",
     "zone": "Gare / Europole / Berriat",
     "poster": "🎨 Couleur",
-    "lat": 45.186103,
-    "lon": 5.718387,
+    "lat": 45.189371,
+    "lon": 5.719109,
     "citycode": "38185",
-    "geocodeLabel": "Cours Jean Jaurès 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "37, Avenue Alsace Lorraine, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "A – Point 11",
@@ -161,11 +161,11 @@
     "circuit": "A",
     "zone": "Gare / Europole / Berriat",
     "poster": "🎨 Couleur",
-    "lat": 45.188412,
-    "lon": 5.712687,
+    "lat": 45.188565,
+    "lon": 5.707943,
     "citycode": "38185",
-    "geocodeLabel": "Cours Berriat 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "129, Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "A – Point 15",
@@ -185,11 +185,11 @@
     "circuit": "A",
     "zone": "Gare / Europole / Berriat",
     "poster": "🎨 Couleur",
-    "lat": 45.180858,
-    "lon": 5.711338,
+    "lat": 45.188278,
+    "lon": 5.712866,
     "citycode": "38185",
-    "geocodeLabel": "91 Rue Abbé Grégoire 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "91, Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "A – Point 17",
@@ -245,11 +245,11 @@
     "circuit": "B",
     "zone": "Saint-Bruno / Chorier / Drac / Vallier",
     "poster": "⚫ N&B",
-    "lat": 45.179193,
-    "lon": 5.74016,
+    "lat": 45.186272,
+    "lon": 5.711651,
     "citycode": "38185",
-    "geocodeLabel": "13 Rue de la Bajatière 38100 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "13, Rue Henri le Châtelier, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "B – Point 04",
@@ -329,11 +329,11 @@
     "circuit": "B",
     "zone": "Saint-Bruno / Chorier / Drac / Vallier",
     "poster": "🎨 Couleur",
-    "lat": 45.185866,
-    "lon": 5.71518,
+    "lat": 45.186112,
+    "lon": 5.716323,
     "citycode": "38185",
-    "geocodeLabel": "23 Rue Nicolas Chorier 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "23, Avenue de Vizille, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "B – Point 11",
@@ -425,11 +425,11 @@
     "circuit": "B",
     "zone": "Saint-Bruno / Chorier / Drac / Vallier",
     "poster": "⚫ N&B",
-    "lat": 45.180898,
-    "lon": 5.708859,
+    "lat": 45.180354,
+    "lon": 5.751401,
     "citycode": "38185",
-    "geocodeLabel": "Rue Docteur Calmette 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "6, Rue Docteur Calmette, Croix Rouge, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38400, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "B – Point 19",
@@ -785,11 +785,11 @@
     "circuit": "D",
     "zone": "Centre / Notre-Dame / Saint-Laurent",
     "poster": "⚫ N&B",
-    "lat": 45.19975,
-    "lon": 5.740176,
+    "lat": 45.193696,
+    "lon": 5.732564,
     "citycode": "38185",
-    "geocodeLabel": "1 Avenue Maréchal Randon 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "Jazz Club de Grenoble, 1, Rue Hauquelin, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "D – Point 12",
@@ -1097,11 +1097,11 @@
     "circuit": "E",
     "zone": "Victor-Hugo / Championnet / Jaurès",
     "poster": "🎨 Couleur",
-    "lat": 45.187865,
-    "lon": 5.720769,
+    "lat": 45.188359,
+    "lon": 5.719511,
     "citycode": "38185",
-    "geocodeLabel": "25 Cours Berriat 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "25, Cours Jean Jaurès, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "E – Point 18",
@@ -1361,11 +1361,11 @@
     "circuit": "G",
     "zone": "Bachelard / Libération / Louise-Michel",
     "poster": "⚫ N&B",
-    "lat": 45.19616,
-    "lon": 5.733765,
+    "lat": 45.166812,
+    "lon": 5.705082,
     "citycode": "38185",
-    "geocodeLabel": "Parc Albert Michallon 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "Le Prunier Sauvage, 63, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "G – Point 03",
@@ -1373,11 +1373,11 @@
     "circuit": "G",
     "zone": "Bachelard / Libération / Louise-Michel",
     "poster": "⚫ N&B",
-    "lat": 45.19616,
-    "lon": 5.733765,
+    "lat": 45.16683,
+    "lon": 5.705064,
     "citycode": "38185",
-    "geocodeLabel": "Parc Albert Michallon 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "59, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "G – Point 04",
@@ -1505,11 +1505,11 @@
     "circuit": "H",
     "zone": "Clemenceau / Jean-Perrot / MC2",
     "poster": "🎨 Couleur",
-    "lat": 45.186385,
-    "lon": 5.743884,
+    "lat": 45.17722,
+    "lon": 5.742969,
     "citycode": "38185",
-    "geocodeLabel": "1 Boulevard Clemenceau 38100 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "Rue Léon Jouhaux 38100 Grenoble",
+    "geocodeSource": "IGN / Géoplateforme (audit renforcé)"
   },
   {
     "name": "H – Point 02",
@@ -1637,11 +1637,11 @@
     "circuit": "I",
     "zone": "Alliés / Stalingrad / Foch",
     "poster": "🎨 Couleur",
-    "lat": 45.172124,
-    "lon": 5.722589,
+    "lat": 45.17304,
+    "lon": 5.717551,
     "citycode": "38185",
-    "geocodeLabel": "Rue des Alliés 38100 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "Still, 117, Rue des Alliés, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "I – Point 03",
@@ -2213,11 +2213,11 @@
     "circuit": "L",
     "zone": "Malherbe / Village Olympique / Prémol",
     "poster": "🎨 Couleur",
-    "lat": 45.16851,
-    "lon": 5.731581,
+    "lat": 45.190004,
+    "lon": 5.688617,
     "citycode": "38185",
-    "geocodeLabel": "1 Avenue Marie Reynoard 38100 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "1, Rue des Alliés, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "L – Point 03",
@@ -2297,11 +2297,11 @@
     "circuit": "L",
     "zone": "Malherbe / Village Olympique / Prémol",
     "poster": "⚫ N&B",
-    "lat": 45.184819,
-    "lon": 5.721453,
+    "lat": 45.161978,
+    "lon": 5.723691,
     "citycode": "38185",
-    "geocodeLabel": "8 Rue de Turenne 38000 Grenoble",
-    "geocodeSource": "IGN / Géoplateforme"
+    "geocodeLabel": "E2C Isère - Grenoble, 8, Rue Aimé Pupin, Village Olympique, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+    "geocodeSource": "OpenStreetMap / Nominatim (vérifié IGN)"
   },
   {
     "name": "L – Point 10",

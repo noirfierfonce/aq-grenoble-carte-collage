@@ -1,0 +1,230 @@
+{
+  "generatedAt": "2026-09-06T20:11:14.696Z",
+  "count": 14,
+  "changes": [
+    {
+      "name": "A – Point 10",
+      "address": "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France",
+      "before": {
+        "lat": 45.186103,
+        "lon": 5.718387,
+        "label": "Cours Jean Jaurès 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.189371,
+        "lon": 5.719109,
+        "label": "37, Avenue Alsace Lorraine, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.367
+    },
+    {
+      "name": "A – Point 14",
+      "address": "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France",
+      "before": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.188565,
+        "lon": 5.707943,
+        "label": "129, Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.373
+    },
+    {
+      "name": "A – Point 16",
+      "address": "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",
+      "before": {
+        "lat": 45.180858,
+        "lon": 5.711338,
+        "label": "91 Rue Abbé Grégoire 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.188278,
+        "lon": 5.712866,
+        "label": "91, Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.832
+    },
+    {
+      "name": "B – Point 03",
+      "address": "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",
+      "before": {
+        "lat": 45.179193,
+        "lon": 5.74016,
+        "label": "13 Rue de la Bajatière 38100 Grenoble"
+      },
+      "after": {
+        "lat": 45.186272,
+        "lon": 5.711651,
+        "label": "13, Rue Henri le Châtelier, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 2.372
+    },
+    {
+      "name": "B – Point 10",
+      "address": "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France",
+      "before": {
+        "lat": 45.185866,
+        "lon": 5.71518,
+        "label": "23 Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.186112,
+        "lon": 5.716323,
+        "label": "23, Avenue de Vizille, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.094
+    },
+    {
+      "name": "B – Point 18",
+      "address": "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France",
+      "before": {
+        "lat": 45.180898,
+        "lon": 5.708859,
+        "label": "Rue Docteur Calmette 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.180354,
+        "lon": 5.751401,
+        "label": "6, Rue Docteur Calmette, Croix Rouge, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38400, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 3.34
+    },
+    {
+      "name": "D – Point 11",
+      "address": "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",
+      "before": {
+        "lat": 45.19975,
+        "lon": 5.740176,
+        "label": "1 Avenue Maréchal Randon 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.193696,
+        "lon": 5.732564,
+        "label": "Jazz Club de Grenoble, 1, Rue Hauquelin, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.899
+    },
+    {
+      "name": "E – Point 17",
+      "address": "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France",
+      "before": {
+        "lat": 45.187865,
+        "lon": 5.720769,
+        "label": "25 Cours Berriat 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.188359,
+        "lon": 5.719511,
+        "label": "25, Cours Jean Jaurès, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.113
+    },
+    {
+      "name": "G – Point 02",
+      "address": "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",
+      "before": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.166812,
+        "lon": 5.705082,
+        "label": "Le Prunier Sauvage, 63, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 3.96
+    },
+    {
+      "name": "G – Point 03",
+      "address": "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",
+      "before": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.16683,
+        "lon": 5.705064,
+        "label": "59, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 3.959
+    },
+    {
+      "name": "H – Point 01",
+      "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
+      "before": {
+        "lat": 45.186385,
+        "lon": 5.743884,
+        "label": "1 Boulevard Clemenceau 38100 Grenoble"
+      },
+      "after": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble"
+      },
+      "reason": "IGN voie principale, erreur actuelle manifeste >1 km",
+      "shiftKm": 1.02
+    },
+    {
+      "name": "I – Point 02",
+      "address": "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France",
+      "before": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble"
+      },
+      "after": {
+        "lat": 45.17304,
+        "lon": 5.717551,
+        "label": "Still, 117, Rue des Alliés, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 0.408
+    },
+    {
+      "name": "L – Point 02",
+      "address": "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France",
+      "before": {
+        "lat": 45.16851,
+        "lon": 5.731581,
+        "label": "1 Avenue Marie Reynoard 38100 Grenoble"
+      },
+      "after": {
+        "lat": 45.190004,
+        "lon": 5.688617,
+        "label": "1, Rue des Alliés, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 4.131
+    },
+    {
+      "name": "L – Point 09",
+      "address": "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",
+      "before": {
+        "lat": 45.184819,
+        "lon": 5.721453,
+        "label": "8 Rue de Turenne 38000 Grenoble"
+      },
+      "after": {
+        "lat": 45.161978,
+        "lon": 5.723691,
+        "label": "E2C Isère - Grenoble, 8, Rue Aimé Pupin, Village Olympique, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France"
+      },
+      "reason": "OSM exact numéro + voie",
+      "shiftKm": 2.541
+    }
+  ]
+}

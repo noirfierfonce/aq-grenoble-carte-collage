@@ -58,8 +58,8 @@
     "fixed": true
   },
   "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France": {
-    "lat": 45.186103,
-    "lon": 5.718387,
+    "lat": 45.189371,
+    "lon": 5.719109,
     "approx": false,
     "fixed": true
   },
@@ -82,8 +82,8 @@
     "fixed": true
   },
   "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France": {
-    "lat": 45.188412,
-    "lon": 5.712687,
+    "lat": 45.188565,
+    "lon": 5.707943,
     "approx": false,
     "fixed": true
   },
@@ -94,8 +94,8 @@
     "fixed": true
   },
   "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France": {
-    "lat": 45.180858,
-    "lon": 5.711338,
+    "lat": 45.188278,
+    "lon": 5.712866,
     "approx": false,
     "fixed": true
   },
@@ -124,8 +124,8 @@
     "fixed": true
   },
   "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France": {
-    "lat": 45.179193,
-    "lon": 5.74016,
+    "lat": 45.186272,
+    "lon": 5.711651,
     "approx": false,
     "fixed": true
   },
@@ -166,8 +166,8 @@
     "fixed": true
   },
   "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France": {
-    "lat": 45.185866,
-    "lon": 5.71518,
+    "lat": 45.186112,
+    "lon": 5.716323,
     "approx": false,
     "fixed": true
   },
@@ -214,8 +214,8 @@
     "fixed": true
   },
   "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France": {
-    "lat": 45.180898,
-    "lon": 5.708859,
+    "lat": 45.180354,
+    "lon": 5.751401,
     "approx": false,
     "fixed": true
   },
@@ -394,8 +394,8 @@
     "fixed": true
   },
   "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France": {
-    "lat": 45.19975,
-    "lon": 5.740176,
+    "lat": 45.193696,
+    "lon": 5.732564,
     "approx": false,
     "fixed": true
   },
@@ -550,8 +550,8 @@
     "fixed": true
   },
   "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France": {
-    "lat": 45.187865,
-    "lon": 5.720769,
+    "lat": 45.188359,
+    "lon": 5.719511,
     "approx": false,
     "fixed": true
   },
@@ -670,14 +670,14 @@
     "fixed": true
   },
   "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France": {
-    "lat": 45.19616,
-    "lon": 5.733765,
+    "lat": 45.166812,
+    "lon": 5.705082,
     "approx": false,
     "fixed": true
   },
   "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France": {
-    "lat": 45.19616,
-    "lon": 5.733765,
+    "lat": 45.16683,
+    "lon": 5.705064,
     "approx": false,
     "fixed": true
   },
@@ -736,8 +736,8 @@
     "fixed": true
   },
   "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France": {
-    "lat": 45.186385,
-    "lon": 5.743884,
+    "lat": 45.17722,
+    "lon": 5.742969,
     "approx": false,
     "fixed": true
   },
@@ -802,8 +802,8 @@
     "fixed": true
   },
   "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France": {
-    "lat": 45.172124,
-    "lon": 5.722589,
+    "lat": 45.17304,
+    "lon": 5.717551,
     "approx": false,
     "fixed": true
   },
@@ -1066,8 +1066,8 @@
     "fixed": true
   },
   "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France": {
-    "lat": 45.16851,
-    "lon": 5.731581,
+    "lat": 45.190004,
+    "lon": 5.688617,
     "approx": false,
     "fixed": true
   },
@@ -1108,8 +1108,8 @@
     "fixed": true
   },
   "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France": {
-    "lat": 45.184819,
-    "lon": 5.721453,
+    "lat": 45.161978,
+    "lon": 5.723691,
     "approx": false,
     "fixed": true
   },
@@ -1216,8 +1216,5 @@
     "fixed": true
   }
 };
-  try {
-    localStorage.setItem(KEY, JSON.stringify(FIXED));
-    localStorage.setItem(RESET, "1");
-  } catch (_) {}
+  try { localStorage.setItem(KEY, JSON.stringify(FIXED)); localStorage.setItem(RESET, "1"); } catch (_) {}
 })();
