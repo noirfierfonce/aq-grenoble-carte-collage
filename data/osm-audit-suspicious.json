@@ -1,0 +1,2215 @@
+{
+  "generatedAt": "2026-09-06T20:09:25.306Z",
+  "points": [
+    {
+      "name": "A – Point 10",
+      "address": "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France",
+      "current": {
+        "lat": 45.186103,
+        "lon": 5.718387,
+        "label": "Cours Jean Jaurès 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Avenue Alsace LORRAINE 37, avenue Jean JAURES, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Avenue Alsace LORRAINE 37, Grenoble, France",
+          "results": [
+            {
+              "display_name": "37, Avenue Alsace Lorraine, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1893706,
+              "lon": 5.719109,
+              "type": "apartments",
+              "category": "building",
+              "address": {
+                "house_number": "37",
+                "road": "Avenue Alsace Lorraine",
+                "neighbourhood": "L'Estacade",
+                "suburb": "Polygone Scientifique",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "L'Horloger, 37, Avenue Alsace Lorraine, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1892597,
+              "lon": 5.7191628,
+              "type": "watches",
+              "category": "shop",
+              "address": {
+                "shop": "L'Horloger",
+                "house_number": "37",
+                "road": "Avenue Alsace Lorraine",
+                "neighbourhood": "L'Estacade",
+                "suburb": "Polygone Scientifique",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Le Vésuve, 37, Avenue Alsace Lorraine, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1894444,
+              "lon": 5.719089,
+              "type": "newsagent",
+              "category": "shop",
+              "address": {
+                "shop": "Le Vésuve",
+                "house_number": "37",
+                "road": "Avenue Alsace Lorraine",
+                "neighbourhood": "L'Estacade",
+                "suburb": "Polygone Scientifique",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "avenue Jean JAURES, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Avenue Jean Jaurès, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
+              "lat": 45.1896654,
+              "lon": 5.697197,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Jean Jaurès",
+                "town": "Fontaine",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38600",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Jean Jaurès, Malherbe, Eybens, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38320, France",
+              "lat": 45.1659918,
+              "lon": 5.7422146,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Jean Jaurès",
+                "suburb": "Malherbe",
+                "town": "Eybens",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38320",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Jean Jaurès, Eybens, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38320, France",
+              "lat": 45.1650377,
+              "lon": 5.7427251,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Jean Jaurès",
+                "town": "Eybens",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38320",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Jean Jaurès, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38400, France",
+              "lat": 45.1804601,
+              "lon": 5.7668174,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Jean Jaurès",
+                "town": "Saint-Martin-d'Hères",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38400",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A – Point 14",
+      "address": "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours BERRIAT 129, angle rue du DRAC, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours BERRIAT 129, Grenoble, France",
+          "results": [
+            {
+              "display_name": "129, Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1885647,
+              "lon": 5.7079431,
+              "type": "office",
+              "category": "building",
+              "address": {
+                "house_number": "129",
+                "road": "Cours Berriat",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue du DRAC, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue du Drac, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1881024,
+              "lon": 5.7076922,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Rue du Drac",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue du Drac, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1851513,
+              "lon": 5.7070538,
+              "type": "living_street",
+              "category": "highway",
+              "address": {
+                "road": "Rue du Drac",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue du Drac, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1855728,
+              "lon": 5.7070953,
+              "type": "pedestrian",
+              "category": "highway",
+              "address": {
+                "road": "Rue du Drac",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A – Point 16",
+      "address": "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180858,
+        "lon": 5.711338,
+        "label": "91 Rue Abbé Grégoire 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours BERRIAT 91, rue Abbé GREGOIRE, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours BERRIAT 91, Grenoble, France",
+          "results": [
+            {
+              "display_name": "91, Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1882776,
+              "lon": 5.7128662,
+              "type": "apartments",
+              "category": "building",
+              "address": {
+                "house_number": "91",
+                "road": "Cours Berriat",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue Abbé GREGOIRE, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Abbé Grégoire, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1839455,
+              "lon": 5.7117789,
+              "type": "unclassified",
+              "category": "highway",
+              "address": {
+                "road": "Rue Abbé Grégoire",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B – Point 03",
+      "address": "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",
+      "current": {
+        "lat": 45.179193,
+        "lon": 5.74016,
+        "label": "13 Rue de la Bajatière 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Henri LE CHATELIER 13, Grenoble, France",
+          "results": [
+            {
+              "display_name": "13, Rue Henri le Châtelier, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1862716,
+              "lon": 5.7116505,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "13",
+                "road": "Rue Henri le Châtelier",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "Rue Henry Le Chatelier 13, Grenoble, France",
+          "results": []
+        }
+      ]
+    },
+    {
+      "name": "B – Point 10",
+      "address": "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France",
+      "current": {
+        "lat": 45.185866,
+        "lon": 5.71518,
+        "label": "23 Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Avenue de VIZILLE 23, rue Nicolas CHORIER, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Avenue de VIZILLE 23, Grenoble, France",
+          "results": [
+            {
+              "display_name": "23, Avenue de Vizille, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1861124,
+              "lon": 5.7163228,
+              "type": "apartments",
+              "category": "building",
+              "address": {
+                "house_number": "23",
+                "road": "Avenue de Vizille",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Ayutthaya, 23, Avenue de Vizille, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1861109,
+              "lon": 5.7163783,
+              "type": "restaurant",
+              "category": "amenity",
+              "address": {
+                "amenity": "Ayutthaya",
+                "house_number": "23",
+                "road": "Avenue de Vizille",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Le jungle, 23, Avenue de Vizille, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1861374,
+              "lon": 5.7163669,
+              "type": "bar",
+              "category": "amenity",
+              "address": {
+                "amenity": "Le jungle",
+                "house_number": "23",
+                "road": "Avenue de Vizille",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue Nicolas CHORIER, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Nicolas Chorier, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1854345,
+              "lon": 5.7113838,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Rue Nicolas Chorier",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue Nicolas Chorier, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1859025,
+              "lon": 5.7171447,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Rue Nicolas Chorier",
+                "neighbourhood": "L'Estacade",
+                "suburb": "Polygone Scientifique",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B – Point 18",
+      "address": "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180898,
+        "lon": 5.708859,
+        "label": "Rue Docteur Calmette 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Docteur CALMETTE 6, angle rue Abbé GREGOIRE, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Rue Docteur CALMETTE 6, Grenoble, France",
+          "results": [
+            {
+              "display_name": "6, Rue Docteur Calmette, Croix Rouge, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38400, France",
+              "lat": 45.1803545,
+              "lon": 5.7514014,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "6",
+                "road": "Rue Docteur Calmette",
+                "suburb": "Croix Rouge",
+                "town": "Saint-Martin-d'Hères",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38400",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue Abbé GREGOIRE, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Abbé Grégoire, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1839455,
+              "lon": 5.7117789,
+              "type": "unclassified",
+              "category": "highway",
+              "address": {
+                "road": "Rue Abbé Grégoire",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "D – Point 11",
+      "address": "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",
+      "current": {
+        "lat": 45.19975,
+        "lon": 5.740176,
+        "label": "1 Avenue Maréchal Randon 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue HAUQUELIN 1, Avenue Maréchal RANDON, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Rue HAUQUELIN 1, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Jazz Club de Grenoble, 1, Rue Hauquelin, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1936958,
+              "lon": 5.732564,
+              "type": "association",
+              "category": "office",
+              "address": {
+                "office": "Jazz Club de Grenoble",
+                "house_number": "1",
+                "road": "Rue Hauquelin",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "MJC Allobroges, 1, Rue Hauquelin, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1937815,
+              "lon": 5.7326511,
+              "type": "arts_centre",
+              "category": "amenity",
+              "address": {
+                "amenity": "MJC Allobroges",
+                "house_number": "1",
+                "road": "Rue Hauquelin",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "1, Rue Hauquelin, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1936939,
+              "lon": 5.7325418,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "1",
+                "road": "Rue Hauquelin",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Union Locale des Initiatives Solidaires au Service de, 1, Rue Hauquelin, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1933411,
+              "lon": 5.7324743,
+              "type": "association",
+              "category": "office",
+              "address": {
+                "office": "Union Locale des Initiatives Solidaires au Service de",
+                "house_number": "1",
+                "road": "Rue Hauquelin",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "Avenue Maréchal RANDON, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Avenue Maréchal Randon, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1947559,
+              "lon": 5.7335748,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Maréchal Randon",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Maréchal Randon, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1955209,
+              "lon": 5.7345779,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Maréchal Randon",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "E – Point 17",
+      "address": "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France",
+      "current": {
+        "lat": 45.187865,
+        "lon": 5.720769,
+        "label": "25 Cours Berriat 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours Jean JAURES 25, cours BERRIAT, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours Jean JAURES 25, Grenoble, France",
+          "results": [
+            {
+              "display_name": "25, Cours Jean Jaurès, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1883588,
+              "lon": 5.7195113,
+              "type": "apartments",
+              "category": "building",
+              "address": {
+                "house_number": "25",
+                "road": "Cours Jean Jaurès",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "25, Cours Jean Jaurès, Échirolles, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38130, France",
+              "lat": 45.1545674,
+              "lon": 5.7081767,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "25",
+                "road": "Cours Jean Jaurès",
+                "town": "Échirolles",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38130",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "cours BERRIAT, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Cours Berriat, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1879532,
+              "lon": 5.7204901,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Cours Berriat",
+                "residential": "Hyper Centre",
+                "suburb": "Secteur 2",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Cours Berriat, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.188327,
+              "lon": 5.7159927,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Cours Berriat",
+                "neighbourhood": "L'Estacade",
+                "suburb": "Polygone Scientifique",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1881749,
+              "lon": 5.715779,
+              "type": "pedestrian",
+              "category": "highway",
+              "address": {
+                "road": "Cours Berriat",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Cours Berriat, L'Estacade, Polygone Scientifique, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1879906,
+              "lon": 5.7190334,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Cours Berriat",
+                "neighbourhood": "L'Estacade",
+                "suburb": "Polygone Scientifique",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Cours Berriat, Berriat Saint-Bruno, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1887684,
+              "lon": 5.7060517,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Cours Berriat",
+                "suburb": "Berriat Saint-Bruno",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F – Point 05",
+      "address": "Rue Louis Le CARDONNEL N°2bis, bd Joseph VALLIER, Grenoble, France",
+      "current": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Louis Le CARDONNEL 2bis, bd Joseph VALLIER, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Rue Louis Le CARDONNEL 2bis, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Louis le Cardonnel, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1793855,
+              "lon": 5.7151211,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Rue Louis le Cardonnel",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "bd Joseph VALLIER, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Boulevard Joseph Vallier, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1801904,
+              "lon": 5.7089518,
+              "type": "primary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Joseph Vallier",
+                "suburb": "Secteur 1",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Boulevard Joseph Vallier, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.179954,
+              "lon": 5.7045479,
+              "type": "primary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Joseph Vallier",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Boulevard Joseph Vallier, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1801281,
+              "lon": 5.7102439,
+              "type": "unclassified",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Joseph Vallier",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Boulevard Joseph Vallier, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1799593,
+              "lon": 5.7032142,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Joseph Vallier",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Boulevard Joseph Vallier, Secteur 1, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1801081,
+              "lon": 5.7037778,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Joseph Vallier",
+                "suburb": "Secteur 1",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "F – Point 10",
+      "address": "Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",
+      "current": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours de la LIBERATION 32, angle rue des MARRONNIERS, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours de la LIBERATION 32, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Cours de la Libération et du Général de Gaulle, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.172426,
+              "lon": 5.7136934,
+              "type": "primary",
+              "category": "highway",
+              "address": {
+                "road": "Cours de la Libération et du Général de Gaulle",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Cours de la Libération et du Général de Gaulle, Foch Aigle Libération, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1783369,
+              "lon": 5.7158698,
+              "type": "primary",
+              "category": "highway",
+              "address": {
+                "road": "Cours de la Libération et du Général de Gaulle",
+                "residential": "Foch Aigle Libération",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue des MARRONNIERS, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue des Marronniers, Chamandier, Gières, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38610, France",
+              "lat": 45.1797498,
+              "lon": 5.7861541,
+              "type": "unclassified",
+              "category": "highway",
+              "address": {
+                "road": "Rue des Marronniers",
+                "neighbourhood": "Chamandier",
+                "village": "Gières",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38610",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue des Marronniers, Eybens, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38320, France",
+              "lat": 45.1450969,
+              "lon": 5.756289,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Rue des Marronniers",
+                "town": "Eybens",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38320",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue des Marronniers, Quartier Bastille, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
+              "lat": 45.1930743,
+              "lon": 5.6892944,
+              "type": "living_street",
+              "category": "highway",
+              "address": {
+                "road": "Rue des Marronniers",
+                "neighbourhood": "Quartier Bastille",
+                "town": "Fontaine",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38600",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue des Marronniers, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
+              "lat": 45.1917958,
+              "lon": 5.6897331,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Rue des Marronniers",
+                "town": "Fontaine",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38600",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue des Marronniers, Eybens, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38320, France",
+              "lat": 45.1452404,
+              "lon": 5.7550629,
+              "type": "service",
+              "category": "highway",
+              "address": {
+                "road": "Rue des Marronniers",
+                "town": "Eybens",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38320",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "Cours de la Libération et du Général de Gaulle 32, angle rue des MARRONNIERS, Grenoble, France",
+          "results": []
+        }
+      ]
+    },
+    {
+      "name": "G – Point 01",
+      "address": "Avenue RHIN et DANUBE N°84, rue Paul STRAUSS, Grenoble, France",
+      "current": {
+        "lat": 45.168762,
+        "lon": 5.703613,
+        "label": "Rue Paul Strauss 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Avenue RHIN et DANUBE 84, rue Paul STRAUSS, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Avenue RHIN et DANUBE 84, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Avenue Rhin et Danube, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1764292,
+              "lon": 5.7052308,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Rhin et Danube",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Rhin et Danube, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1679215,
+              "lon": 5.7047057,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Rhin et Danube",
+                "neighbourhood": "Rondeau",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Rhin et Danube, Rondeau Libération, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1692054,
+              "lon": 5.7048799,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Rhin et Danube",
+                "residential": "Rondeau Libération",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Rhin et Danube, Cité Paul Mistral, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1720614,
+              "lon": 5.7044295,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Rhin et Danube",
+                "residential": "Cité Paul Mistral",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue Paul STRAUSS, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Paul Strauss, Cité Paul Mistral, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1687749,
+              "lon": 5.7040825,
+              "type": "unclassified",
+              "category": "highway",
+              "address": {
+                "road": "Rue Paul Strauss",
+                "residential": "Cité Paul Mistral",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue Paul Strauss, La Châtelière, Saint-Martin-d'Hères, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38400, France",
+              "lat": 45.1669381,
+              "lon": 5.7471144,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Rue Paul Strauss",
+                "quarter": "La Châtelière",
+                "suburb": "La Châtelière",
+                "town": "Saint-Martin-d'Hères",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38400",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 02",
+      "address": "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Albert REYNIER 63, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Le Prunier Sauvage, 63, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1668125,
+              "lon": 5.7050825,
+              "type": "arts_centre",
+              "category": "amenity",
+              "address": {
+                "amenity": "Le Prunier Sauvage",
+                "house_number": "63",
+                "road": "Rue Albert Reynier",
+                "neighbourhood": "Rondeau",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "63, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1669723,
+              "lon": 5.7052423,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "63",
+                "road": "Rue Albert Reynier",
+                "neighbourhood": "Rondeau",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 03",
+      "address": "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Albert REYNIER 59, Grenoble, France",
+          "results": [
+            {
+              "display_name": "59, Rue Albert Reynier, Rondeau, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.16683,
+              "lon": 5.705064,
+              "type": "defibrillator",
+              "category": "emergency",
+              "address": {
+                "house_number": "59",
+                "road": "Rue Albert Reynier",
+                "neighbourhood": "Rondeau",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "G – Point 04",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours de la LIBERATION 176, sous le pont rue Albert REYNIER, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours de la LIBERATION 176, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Cours de la Libération et du Général de Gaulle, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.172426,
+              "lon": 5.7136934,
+              "type": "primary",
+              "category": "highway",
+              "address": {
+                "road": "Cours de la Libération et du Général de Gaulle",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "le pont rue Albert REYNIER, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours de la Libération et du Général de Gaulle 176, sous le pont rue Albert REYNIER, Grenoble, France",
+          "results": []
+        }
+      ]
+    },
+    {
+      "name": "G – Point 05",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Cours de la LIBERATION 176, sous le pont rue Albert REYNIER, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours de la LIBERATION 176, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Cours de la Libération et du Général de Gaulle, Secteur 3, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.172426,
+              "lon": 5.7136934,
+              "type": "primary",
+              "category": "highway",
+              "address": {
+                "road": "Cours de la Libération et du Général de Gaulle",
+                "suburb": "Secteur 3",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "le pont rue Albert REYNIER, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Cours de la Libération et du Général de Gaulle 176, sous le pont rue Albert REYNIER, Grenoble, France",
+          "results": []
+        }
+      ]
+    },
+    {
+      "name": "H – Point 01",
+      "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
+      "current": {
+        "lat": 45.186385,
+        "lon": 5.743884,
+        "label": "1 Boulevard Clemenceau 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Léon JOUHAUX face 1, boulevard CLEMENCEAU, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Rue Léon JOUHAUX, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Léon Jouhaux, Exposition Bajatière, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1821275,
+              "lon": 5.7408756,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Rue Léon Jouhaux",
+                "residential": "Exposition Bajatière",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue Léon Jouhaux, Châtelet Abbaye Jouhaux, Secteur 5, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1764976,
+              "lon": 5.7434142,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Rue Léon Jouhaux",
+                "residential": "Châtelet Abbaye Jouhaux",
+                "suburb": "Secteur 5",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue Léon Jouhaux, Exposition Bajatière, Secteur 5, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1841172,
+              "lon": 5.7409773,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Rue Léon Jouhaux",
+                "residential": "Exposition Bajatière",
+                "suburb": "Secteur 5",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "1, Grenoble, France",
+          "results": [
+            {
+              "display_name": "1, Parc Paul Mistral, Exposition Bajatière, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.186127,
+              "lon": 5.7394094,
+              "type": "shed",
+              "category": "building",
+              "address": {
+                "house_number": "1",
+                "locality": "Parc Paul Mistral",
+                "residential": "Exposition Bajatière",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Association départementale pour la sauvegarde des enfants et des adultes 38, 1, Allée Belle Rive, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
+              "lat": 45.1883491,
+              "lon": 5.7000938,
+              "type": "association",
+              "category": "office",
+              "address": {
+                "office": "Association départementale pour la sauvegarde des enfants et des adultes 38",
+                "house_number": "1",
+                "road": "Allée Belle Rive",
+                "town": "Fontaine",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38600",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Basilic & Co, 1, Avenue Albert 1er de Belgique, Exposition Bajatière, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+              "lat": 45.1818226,
+              "lon": 5.7341731,
+              "type": "restaurant",
+              "category": "amenity",
+              "address": {
+                "amenity": "Basilic & Co",
+                "house_number": "1",
+                "road": "Avenue Albert 1er de Belgique",
+                "residential": "Exposition Bajatière",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38000",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "1, Rue Aristide Bruant, La Galochère, Gières, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38610, France",
+              "lat": 45.1790975,
+              "lon": 5.7784784,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "1",
+                "road": "Rue Aristide Bruant",
+                "suburb": "La Galochère",
+                "village": "Gières",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38610",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "1, Rue Eugène Riban, La Galochère, Gières, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38610, France",
+              "lat": 45.1772281,
+              "lon": 5.7757749,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "1",
+                "road": "Rue Eugène Riban",
+                "suburb": "La Galochère",
+                "village": "Gières",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38610",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "boulevard CLEMENCEAU, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Boulevard Clémenceau, Exposition Bajatière, Secteur 5, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1852046,
+              "lon": 5.7419262,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Clémenceau",
+                "residential": "Exposition Bajatière",
+                "suburb": "Secteur 5",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Boulevard Clémenceau, Châtelet Abbaye Jouhaux, Secteur 5, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1864622,
+              "lon": 5.7438499,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Clémenceau",
+                "residential": "Châtelet Abbaye Jouhaux",
+                "suburb": "Secteur 5",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Boulevard Clémenceau, Exposition Bajatière, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1820393,
+              "lon": 5.7345657,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Boulevard Clémenceau",
+                "residential": "Exposition Bajatière",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "I – Point 02",
+      "address": "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France",
+      "current": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue des ALLIES 117, angle rue MARQUIAN, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Rue des ALLIES 117, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Still, 117, Rue des Alliés, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1730398,
+              "lon": 5.7175506,
+              "type": "artwork",
+              "category": "tourism",
+              "address": {
+                "tourism": "Still",
+                "house_number": "117",
+                "road": "Rue des Alliés",
+                "residential": "Alliés Alpins",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "117, Rue des Alliés, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38030, France",
+              "lat": 45.1727625,
+              "lon": 5.7175608,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "117",
+                "road": "Rue des Alliés",
+                "residential": "Alliés Alpins",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38030",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "rue MARQUIAN, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Rue Marquian, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1721108,
+              "lon": 5.7182107,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Rue Marquian",
+                "residential": "Alliés Alpins",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Rue Marquian, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1696336,
+              "lon": 5.7178113,
+              "type": "unclassified",
+              "category": "highway",
+              "address": {
+                "road": "Rue Marquian",
+                "residential": "Alliés Alpins",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "L – Point 02",
+      "address": "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France",
+      "current": {
+        "lat": 45.16851,
+        "lon": 5.731581,
+        "label": "1 Avenue Marie Reynoard 38100 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue des Alliés 1, avenue Marie REYNOARD, Grenoble, France",
+          "results": []
+        },
+        {
+          "q": "Rue des Alliés 1, Grenoble, France",
+          "results": [
+            {
+              "display_name": "1, Rue des Alliés, Fontaine, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38600, France",
+              "lat": 45.1900036,
+              "lon": 5.6886174,
+              "type": "house",
+              "category": "place",
+              "address": {
+                "house_number": "1",
+                "road": "Rue des Alliés",
+                "town": "Fontaine",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38600",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        },
+        {
+          "q": "avenue Marie REYNOARD, Grenoble, France",
+          "results": [
+            {
+              "display_name": "Avenue Marie Reynoard, Vigny Musset, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1655436,
+              "lon": 5.7285776,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Marie Reynoard",
+                "residential": "Vigny Musset",
+                "suburb": "Secteur 6",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Marie Reynoard, Village Olympique, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1628046,
+              "lon": 5.7288234,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Marie Reynoard",
+                "residential": "Village Olympique",
+                "suburb": "Secteur 6",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Marie Reynoard, Alliés Alpins, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1682312,
+              "lon": 5.7287666,
+              "type": "residential",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Marie Reynoard",
+                "residential": "Alliés Alpins",
+                "suburb": "Secteur 6",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Marie Reynoard, Villeneuve, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1685598,
+              "lon": 5.7312743,
+              "type": "secondary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Marie Reynoard",
+                "residential": "Villeneuve",
+                "suburb": "Secteur 6",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            },
+            {
+              "display_name": "Avenue Marie Reynoard, Alliés Alpins, Secteur 4, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.1689304,
+              "lon": 5.7320043,
+              "type": "tertiary",
+              "category": "highway",
+              "address": {
+                "road": "Avenue Marie Reynoard",
+                "residential": "Alliés Alpins",
+                "suburb": "Secteur 4",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "L – Point 09",
+      "address": "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",
+      "current": {
+        "lat": 45.184819,
+        "lon": 5.721453,
+        "label": "8 Rue de Turenne 38000 Grenoble"
+      },
+      "queries": [
+        {
+          "q": "Rue Aimé PUPIN 8, Grenoble, France",
+          "results": [
+            {
+              "display_name": "E2C Isère - Grenoble, 8, Rue Aimé Pupin, Village Olympique, Secteur 6, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38100, France",
+              "lat": 45.161978,
+              "lon": 5.7236907,
+              "type": "college",
+              "category": "amenity",
+              "address": {
+                "amenity": "E2C Isère - Grenoble",
+                "house_number": "8",
+                "road": "Rue Aimé Pupin",
+                "residential": "Village Olympique",
+                "suburb": "Secteur 6",
+                "city": "Grenoble",
+                "municipality": "Grenoble",
+                "county": "Isère",
+                "ISO3166-2-lvl6": "FR-38",
+                "state": "Auvergne-Rhône-Alpes",
+                "ISO3166-2-lvl4": "FR-ARA",
+                "region": "France métropolitaine",
+                "postcode": "38100",
+                "country": "France",
+                "country_code": "fr"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
