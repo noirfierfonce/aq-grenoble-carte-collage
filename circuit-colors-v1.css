@@ -7,13 +7,30 @@
 .circuit-btn[data-circuit][aria-current="true"]:not([data-circuit="ALL"]):not([data-circuit="STOCK"]){background:var(--c);border-color:var(--c);color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 24%,transparent)}
 .circuit-btn[data-circuit][aria-current="true"]:not([data-circuit="ALL"]):not([data-circuit="STOCK"]) .circuit-label{color:inherit;opacity:.82}
 
-/* Couleur active du circuit dans les cartouches et commandes secondaires. */
+/* Couleur active du circuit. */
 html[data-active-circuit="A"]{--circuit:#3b82f6;--circuit-ink:#fff}html[data-active-circuit="B"]{--circuit:#06b6d4;--circuit-ink:#071318}html[data-active-circuit="C"]{--circuit:#10b981;--circuit-ink:#071510}html[data-active-circuit="D"]{--circuit:#84cc16;--circuit-ink:#111}html[data-active-circuit="E"]{--circuit:#eab308;--circuit-ink:#111}html[data-active-circuit="F"]{--circuit:#f97316;--circuit-ink:#111}html[data-active-circuit="G"]{--circuit:#f43f5e;--circuit-ink:#fff}html[data-active-circuit="H"]{--circuit:#ec4899;--circuit-ink:#fff}html[data-active-circuit="I"]{--circuit:#a855f7;--circuit-ink:#fff}html[data-active-circuit="J"]{--circuit:#6366f1;--circuit-ink:#fff}html[data-active-circuit="K"]{--circuit:#64748b;--circuit-ink:#fff}html[data-active-circuit="L"]{--circuit:#14b8a6;--circuit-ink:#071412}html[data-active-circuit="M"]{--circuit:#c2410c;--circuit-ink:#fff}
+
 html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .badge{background:color-mix(in srgb,var(--circuit) 13%,transparent);border-color:color-mix(in srgb,var(--circuit) 42%,transparent);color:var(--circuit)}
 html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .mini-pill{border-color:color-mix(in srgb,var(--circuit) 38%,#303946)}
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .point-card{border-color:color-mix(in srgb,var(--circuit) 34%,#465160)}
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .point-card.status-todo::before{background:var(--circuit)}
+
+/* Actions neutres du point : même identité que le circuit. */
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .card-actions .primary{background:var(--circuit);border-color:var(--circuit);color:var(--circuit-ink);box-shadow:0 0 0 1px color-mix(in srgb,var(--circuit) 18%,transparent)}
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .card-actions button:not(.primary){background:color-mix(in srgb,var(--circuit) 8%,#0e1116);border-color:color-mix(in srgb,var(--circuit) 58%,#465160);color:var(--circuit)}
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .poster{background:color-mix(in srgb,var(--circuit) 9%,#252d38);border-color:color-mix(in srgb,var(--circuit) 48%,#303946);color:var(--circuit)}
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .poster.color,html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .poster.bw{color:var(--circuit)}
+
+/* Quantité estimée : circuit pour la sélection, rappel discret autour des autres cases. */
+html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .capacity-btn{border-color:color-mix(in srgb,var(--circuit) 28%,#465160)}
 html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .capacity-btn[aria-pressed="true"]{background:var(--circuit);border-color:var(--circuit);color:var(--circuit-ink);box-shadow:0 0 0 2px color-mix(in srgb,var(--circuit) 22%,transparent)}
 html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .capacity-btn[aria-pressed="true"] span{color:inherit;opacity:.78}
-html[data-active-circuit]:not([data-active-circuit="ALL"]):not([data-active-circuit="STOCK"]) .point-card.status-todo::before{background:var(--circuit)}
+
+/* Les statuts conservent leurs couleurs fonctionnelles et restent prioritaires. */
+html[data-active-circuit] .status-choice-todo[aria-pressed="true"]{background:var(--accentSoft);color:var(--accent);border-color:var(--accent)}
+html[data-active-circuit] .status-choice-done[aria-pressed="true"]{background:var(--okSoft);color:var(--ok);border-color:var(--ok)}
+html[data-active-circuit] .status-choice-repost[aria-pressed="true"]{border-color:var(--covered);background:var(--coveredSoft);color:var(--covered)}
+html[data-active-circuit] .status-choice-skip[aria-pressed="true"]{border-color:var(--muted);background:rgba(167,176,189,.10);color:var(--text)}
 
 /* Pastilles cartographiques : couleur circuit par défaut, statut prioritaire ensuite. */
 .point-dot[data-circuit="A"]{--marker-circuit:#3b82f6;--marker-ink:#fff}.point-dot[data-circuit="B"]{--marker-circuit:#06b6d4;--marker-ink:#071318}.point-dot[data-circuit="C"]{--marker-circuit:#10b981;--marker-ink:#071510}.point-dot[data-circuit="D"]{--marker-circuit:#84cc16;--marker-ink:#111}.point-dot[data-circuit="E"]{--marker-circuit:#eab308;--marker-ink:#111}.point-dot[data-circuit="F"]{--marker-circuit:#f97316;--marker-ink:#111}.point-dot[data-circuit="G"]{--marker-circuit:#f43f5e;--marker-ink:#fff}.point-dot[data-circuit="H"]{--marker-circuit:#ec4899;--marker-ink:#fff}.point-dot[data-circuit="I"]{--marker-circuit:#a855f7;--marker-ink:#fff}.point-dot[data-circuit="J"]{--marker-circuit:#6366f1;--marker-ink:#fff}.point-dot[data-circuit="K"]{--marker-circuit:#64748b;--marker-ink:#fff}.point-dot[data-circuit="L"]{--marker-circuit:#14b8a6;--marker-ink:#071412}.point-dot[data-circuit="M"]{--marker-circuit:#c2410c;--marker-ink:#fff}
