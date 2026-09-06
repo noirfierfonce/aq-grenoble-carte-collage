@@ -9,7 +9,6 @@
   const RESET_MARKER = "aq-release-reset-test-pool-v1";
   const SCROLL_KEY = "aq-release-scroll-restore-v2";
   const POOL_NAME = "Stock collectif";
-  const POLL_MS = 15000;
   const MIN_GAP_MS = 3000;
 
   let lastCheck = 0;
@@ -278,9 +277,10 @@
       if (document.visibilityState === "visible") refreshSharedState(true);
     });
 
-    setInterval(() => {
-      if (document.visibilityState === "visible") refreshSharedState(false);
-    }, POLL_MS);
+    // V1 : pas de rechargement automatique périodique. Le précédent polling de 15 s
+    // provoquait un flash complet de l'interface et réinitialisait visuellement la carte.
+    // La synchronisation reste active au retour sur l'app, au changement de circuit,
+    // au retour en ligne et après les modifications locales gérées par l'application.
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start, { once: true });
