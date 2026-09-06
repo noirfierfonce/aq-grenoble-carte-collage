@@ -1,0 +1,4497 @@
+{
+  "generatedAt": "2026-09-06T20:02:55.974Z",
+  "total": 209,
+  "suspiciousCount": 19,
+  "suspicious": [
+    {
+      "name": "G – Point 02",
+      "circuit": "G",
+      "address": "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble",
+        "query": "Rue Albert REYNIER 63, Grenoble",
+        "rank": 4.187
+      },
+      "shiftKm": 3.912,
+      "neighborDistanceKm": 2.586,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 03",
+      "circuit": "G",
+      "address": "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble",
+        "query": "Rue Albert REYNIER 59, Grenoble",
+        "rank": 4.187
+      },
+      "shiftKm": 3.912,
+      "neighborDistanceKm": 2.917,
+      "suspicious": true
+    },
+    {
+      "name": "L – Point 09",
+      "circuit": "L",
+      "address": "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",
+      "current": {
+        "lat": 45.184819,
+        "lon": 5.721453,
+        "label": "8 Rue de Turenne 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.161512,
+        "lon": 5.724048,
+        "label": "Rue Aimé Pupin 38100 Grenoble",
+        "query": "Rue Aimé PUPIN 8, Grenoble",
+        "rank": 4.452
+      },
+      "shiftKm": 2.6,
+      "neighborDistanceKm": 2.535,
+      "suspicious": true
+    },
+    {
+      "name": "H – Point 01",
+      "circuit": "H",
+      "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
+      "current": {
+        "lat": 45.186385,
+        "lon": 5.743884,
+        "label": "1 Boulevard Clemenceau 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble",
+        "query": "Rue Léon JOUHAUX, Grenoble",
+        "rank": 4.282
+      },
+      "shiftKm": 1.022,
+      "neighborDistanceKm": 0.665,
+      "suspicious": true
+    },
+    {
+      "name": "L – Point 02",
+      "circuit": "L",
+      "address": "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France",
+      "current": {
+        "lat": 45.16851,
+        "lon": 5.731581,
+        "label": "1 Avenue Marie Reynoard 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble",
+        "query": "Rue des Alliés 1, Grenoble",
+        "rank": 4.461
+      },
+      "shiftKm": 0.811,
+      "neighborDistanceKm": 0.17,
+      "suspicious": true
+    },
+    {
+      "name": "F – Point 10",
+      "circuit": "F",
+      "address": "Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",
+      "current": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177447,
+        "lon": 5.713781,
+        "label": "Chemin des Marronniers 38100 Grenoble",
+        "query": "rue des MARRONNIERS, Grenoble",
+        "rank": 4.046
+      },
+      "shiftKm": 0.72,
+      "neighborDistanceKm": 0.69,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 04",
+      "circuit": "G",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+        "query": "Cours de la LIBERATION 176, Grenoble",
+        "rank": 3.882
+      },
+      "shiftKm": 0.705,
+      "neighborDistanceKm": 2.128,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 05",
+      "circuit": "G",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+        "query": "Cours de la LIBERATION 176, Grenoble",
+        "rank": 3.882
+      },
+      "shiftKm": 0.705,
+      "neighborDistanceKm": 1.273,
+      "suspicious": true
+    },
+    {
+      "name": "E – Point 17",
+      "circuit": "E",
+      "address": "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France",
+      "current": {
+        "lat": 45.187865,
+        "lon": 5.720769,
+        "label": "25 Cours Berriat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble",
+        "query": "cours BERRIAT, Grenoble",
+        "rank": 4.283
+      },
+      "shiftKm": 0.636,
+      "neighborDistanceKm": 0.058,
+      "suspicious": true
+    },
+    {
+      "name": "B – Point 18",
+      "circuit": "B",
+      "address": "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180898,
+        "lon": 5.708859,
+        "label": "Rue Docteur Calmette 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185155,
+        "lon": 5.712046,
+        "label": "Rue Abbé Grégoire 38000 Grenoble",
+        "query": "rue Abbé GREGOIRE, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0.535,
+      "neighborDistanceKm": 0.146,
+      "suspicious": true
+    },
+    {
+      "name": "A – Point 14",
+      "circuit": "A",
+      "address": "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185838,
+        "lon": 5.707196,
+        "label": "Rue du Drac 38000 Grenoble",
+        "query": "rue du DRAC, Grenoble",
+        "rank": 4.279
+      },
+      "shiftKm": 0.517,
+      "neighborDistanceKm": 0.301,
+      "suspicious": true
+    },
+    {
+      "name": "A – Point 16",
+      "circuit": "A",
+      "address": "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180858,
+        "lon": 5.711338,
+        "label": "91 Rue Abbé Grégoire 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185155,
+        "lon": 5.712046,
+        "label": "Rue Abbé Grégoire 38000 Grenoble",
+        "query": "rue Abbé GREGOIRE, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0.481,
+      "neighborDistanceKm": 0.835,
+      "suspicious": true
+    },
+    {
+      "name": "D – Point 11",
+      "circuit": "D",
+      "address": "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",
+      "current": {
+        "lat": 45.19975,
+        "lon": 5.740176,
+        "label": "1 Avenue Maréchal Randon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196957,
+        "lon": 5.736371,
+        "label": "Avenue Maréchal Randon 38000 Grenoble",
+        "query": "Avenue Maréchal RANDON, Grenoble",
+        "rank": 4.279
+      },
+      "shiftKm": 0.431,
+      "neighborDistanceKm": 0.873,
+      "suspicious": true
+    },
+    {
+      "name": "F – Point 05",
+      "circuit": "F",
+      "address": "Rue Louis Le CARDONNEL N°2bis, bd Joseph VALLIER, Grenoble, France",
+      "current": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.179597,
+        "lon": 5.71524,
+        "label": "Rue Louis Le Cardonnel 38100 Grenoble",
+        "query": "Rue Louis Le CARDONNEL 2bis, Grenoble",
+        "rank": 4.152
+      },
+      "shiftKm": 0.413,
+      "neighborDistanceKm": 0.162,
+      "suspicious": true
+    },
+    {
+      "name": "A – Point 10",
+      "circuit": "A",
+      "address": "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France",
+      "current": {
+        "lat": 45.186103,
+        "lon": 5.718387,
+        "label": "Cours Jean Jaurès 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189526,
+        "lon": 5.719387,
+        "label": "Avenue Alsace Lorraine 38000 Grenoble",
+        "query": "Avenue Alsace LORRAINE 37, Grenoble",
+        "rank": 4.203
+      },
+      "shiftKm": 0.389,
+      "neighborDistanceKm": 0.552,
+      "suspicious": true
+    },
+    {
+      "name": "I – Point 02",
+      "circuit": "I",
+      "address": "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France",
+      "current": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.170382,
+        "lon": 5.718332,
+        "label": "Rue Marquian 38100 Grenoble",
+        "query": "rue MARQUIAN, Grenoble",
+        "rank": 4.272
+      },
+      "shiftKm": 0.386,
+      "neighborDistanceKm": 0.366,
+      "suspicious": true
+    },
+    {
+      "name": "B – Point 10",
+      "circuit": "B",
+      "address": "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France",
+      "current": {
+        "lat": 45.185866,
+        "lon": 5.71518,
+        "label": "23 Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184577,
+        "lon": 5.710819,
+        "label": "Rue Nicolas Chorier 38000 Grenoble",
+        "query": "rue Nicolas CHORIER, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0.371,
+      "neighborDistanceKm": 0.388,
+      "suspicious": true
+    },
+    {
+      "name": "B – Point 03",
+      "circuit": "B",
+      "address": "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",
+      "current": {
+        "lat": 45.179193,
+        "lon": 5.74016,
+        "label": "13 Rue de la Bajatière 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 2.434,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 01",
+      "circuit": "G",
+      "address": "Avenue RHIN et DANUBE N°84, rue Paul STRAUSS, Grenoble, France",
+      "current": {
+        "lat": 45.168762,
+        "lon": 5.703613,
+        "label": "Rue Paul Strauss 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.168762,
+        "lon": 5.703613,
+        "label": "Rue Paul Strauss 38100 Grenoble",
+        "query": "rue Paul STRAUSS, Grenoble",
+        "rank": 4.267
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 3.856,
+      "suspicious": true
+    }
+  ],
+  "all": [
+    {
+      "name": "A – Point 01",
+      "circuit": "A",
+      "address": "Rue Henri TARZE, rue Roger JOSSERAND, Grenoble, France",
+      "current": {
+        "lat": 45.198809,
+        "lon": 5.712799,
+        "label": "Rue Roger Josserand 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.199887,
+        "lon": 5.710595,
+        "label": "Rue Henri Tarze 38000 Grenoble",
+        "query": "Rue Henri TARZE, Grenoble",
+        "rank": 4.274
+      },
+      "shiftKm": 0.21,
+      "neighborDistanceKm": 0.203,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 02",
+      "circuit": "A",
+      "address": "Rue du VILLARD DE LANS N°8, Grenoble, France",
+      "current": {
+        "lat": 45.197612,
+        "lon": 5.713034,
+        "label": "Rue du Villard de Lans 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.197612,
+        "lon": 5.713034,
+        "label": "Rue du Villard de Lans 38000 Grenoble",
+        "query": "Rue du VILLARD DE LANS 8, Grenoble",
+        "rank": 4.47
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.174,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 03",
+      "circuit": "A",
+      "address": "Quai de la GRAILLE N°17, Grenoble, France",
+      "current": {
+        "lat": 45.196586,
+        "lon": 5.714371,
+        "label": "Quai de la Graille 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196586,
+        "lon": 5.714371,
+        "label": "Quai de la Graille 38000 Grenoble",
+        "query": "Quai de la GRAILLE 17, Grenoble",
+        "rank": 4.186
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.112,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 04",
+      "circuit": "A",
+      "address": "Rue ARAGO N°15, angle rue Emile GUEYMARD, Grenoble, France",
+      "current": {
+        "lat": 45.193145,
+        "lon": 5.714607,
+        "label": "Rue Émile Gueymard 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.193145,
+        "lon": 5.714607,
+        "label": "Rue Émile Gueymard 38000 Grenoble",
+        "query": "rue Emile GUEYMARD, Grenoble",
+        "rank": 4.276
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.182,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 05",
+      "circuit": "A",
+      "address": "Rue Emile GUEYMARD N°22, Grenoble, France",
+      "current": {
+        "lat": 45.193145,
+        "lon": 5.714607,
+        "label": "Rue Émile Gueymard 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.193145,
+        "lon": 5.714607,
+        "label": "Rue Émile Gueymard 38000 Grenoble",
+        "query": "Rue Emile GUEYMARD 22, Grenoble",
+        "rank": 4.19
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.099,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 06",
+      "circuit": "A",
+      "address": "Place Doyen GOSSE, Grenoble, France",
+      "current": {
+        "lat": 45.191789,
+        "lon": 5.716645,
+        "label": "Place Doyen Gosse 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.191789,
+        "lon": 5.716645,
+        "label": "Place Doyen Gosse 38000 Grenoble",
+        "query": "Place Doyen GOSSE, Grenoble",
+        "rank": 4.268
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.11,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 07",
+      "circuit": "A",
+      "address": "Rue d'ARSONVAL N°6, Grenoble, France",
+      "current": {
+        "lat": 45.192206,
+        "lon": 5.71759,
+        "label": "Rue d'Arsonval 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.192206,
+        "lon": 5.71759,
+        "label": "Rue d'Arsonval 38000 Grenoble",
+        "query": "Rue d'ARSONVAL 6, Grenoble",
+        "rank": 4.199
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.174,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 08",
+      "circuit": "A",
+      "address": "Place de la GARE, Grenoble, France",
+      "current": {
+        "lat": 45.190993,
+        "lon": 5.715253,
+        "label": "Place de la Gare 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190993,
+        "lon": 5.715253,
+        "label": "Place de la Gare 38000 Grenoble",
+        "query": "Place de la GARE, Grenoble",
+        "rank": 4.271
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.191,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 09",
+      "circuit": "A",
+      "address": "Place de la Gare, face rue André REAL, Grenoble, France",
+      "current": {
+        "lat": 45.189737,
+        "lon": 5.716202,
+        "label": "Rue Andre Real 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190993,
+        "lon": 5.715253,
+        "label": "Place de la Gare 38000 Grenoble",
+        "query": "Place de la Gare, Grenoble",
+        "rank": 4.271
+      },
+      "shiftKm": 0.158,
+      "neighborDistanceKm": 0.047,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 10",
+      "circuit": "A",
+      "address": "Avenue Alsace LORRAINE N°37, avenue Jean JAURES, Grenoble, France",
+      "current": {
+        "lat": 45.186103,
+        "lon": 5.718387,
+        "label": "Cours Jean Jaurès 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189526,
+        "lon": 5.719387,
+        "label": "Avenue Alsace Lorraine 38000 Grenoble",
+        "query": "Avenue Alsace LORRAINE 37, Grenoble",
+        "rank": 4.203
+      },
+      "shiftKm": 0.389,
+      "neighborDistanceKm": 0.552,
+      "suspicious": true
+    },
+    {
+      "name": "A – Point 11",
+      "circuit": "A",
+      "address": "Place Firmin GAUTIER, Grenoble, France",
+      "current": {
+        "lat": 45.190686,
+        "lon": 5.711659,
+        "label": "Place Firmin Gautier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190686,
+        "lon": 5.711659,
+        "label": "Place Firmin Gautier 38000 Grenoble",
+        "query": "Place Firmin GAUTIER, Grenoble",
+        "rank": 4.268
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.327,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 12",
+      "circuit": "A",
+      "address": "Cours BERRIAT N°163, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble",
+        "query": "Cours BERRIAT 163, Grenoble",
+        "rank": 4.15
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.072,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 13",
+      "circuit": "A",
+      "address": "Esplanade ANDRY-FARCY N°5 (face au Magasin), Grenoble, France",
+      "current": {
+        "lat": 45.187362,
+        "lon": 5.704703,
+        "label": "Esplanade Andry-Farcy 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.187362,
+        "lon": 5.704703,
+        "label": "Esplanade Andry-Farcy 38000 Grenoble",
+        "query": "Esplanade ANDRY-FARCY 5, Grenoble",
+        "rank": 4.218
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.632,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 14",
+      "circuit": "A",
+      "address": "Cours BERRIAT N°129, angle rue du DRAC, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185838,
+        "lon": 5.707196,
+        "label": "Rue du Drac 38000 Grenoble",
+        "query": "rue du DRAC, Grenoble",
+        "rank": 4.279
+      },
+      "shiftKm": 0.517,
+      "neighborDistanceKm": 0.301,
+      "suspicious": true
+    },
+    {
+      "name": "A – Point 15",
+      "circuit": "A",
+      "address": "Cours BERRIAT N°106-108, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble",
+        "query": "Cours BERRIAT 106-108, Grenoble",
+        "rank": 4.053
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.301,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 16",
+      "circuit": "A",
+      "address": "Cours BERRIAT N°91, rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180858,
+        "lon": 5.711338,
+        "label": "91 Rue Abbé Grégoire 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185155,
+        "lon": 5.712046,
+        "label": "Rue Abbé Grégoire 38000 Grenoble",
+        "query": "rue Abbé GREGOIRE, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0.481,
+      "neighborDistanceKm": 0.835,
+      "suspicious": true
+    },
+    {
+      "name": "A – Point 17",
+      "circuit": "A",
+      "address": "Trémie BERRIAT-GARE, Grenoble, France",
+      "current": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.299,
+      "suspicious": false
+    },
+    {
+      "name": "A – Point 18",
+      "circuit": "A",
+      "address": "Passage du MARCHE, Grenoble, France",
+      "current": {
+        "lat": 45.187908,
+        "lon": 5.713477,
+        "label": "Passage du Marché 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.187908,
+        "lon": 5.713477,
+        "label": "Passage du Marché 38000 Grenoble",
+        "query": "Passage du MARCHE, Grenoble",
+        "rank": 4.266
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.382,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 01",
+      "circuit": "B",
+      "address": "Place Saint BRUNO N°22, face rue GERIN, Grenoble, France",
+      "current": {
+        "lat": 45.187138,
+        "lon": 5.713734,
+        "label": "Place Saint Bruno 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.187494,
+        "lon": 5.711764,
+        "label": "Rue Gerin 38000 Grenoble",
+        "query": "rue GERIN, Grenoble",
+        "rank": 4.272
+      },
+      "shiftKm": 0.159,
+      "neighborDistanceKm": 1.064,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 02",
+      "circuit": "B",
+      "address": "Rue Henri LE CHATELIER N°3BIS, Grenoble, France",
+      "current": {
+        "lat": 45.186547,
+        "lon": 5.711608,
+        "label": "Rue Henry Le Chatelier 38000 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.771,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 03",
+      "circuit": "B",
+      "address": "Rue Henri LE CHATELIER N°13 (centre sportif), Grenoble, France",
+      "current": {
+        "lat": 45.179193,
+        "lon": 5.74016,
+        "label": "13 Rue de la Bajatière 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 2.434,
+      "suspicious": true
+    },
+    {
+      "name": "B – Point 04",
+      "circuit": "B",
+      "address": "Rue Marx DORMOY N°41, parc Marliave, Grenoble, France",
+      "current": {
+        "lat": 45.186936,
+        "lon": 5.709037,
+        "label": "Parc de Marliave 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.187365,
+        "lon": 5.709148,
+        "label": "Rue Marx Dormoy 38000 Grenoble",
+        "query": "Rue Marx DORMOY 41, Grenoble",
+        "rank": 4.183
+      },
+      "shiftKm": 0.048,
+      "neighborDistanceKm": 0.732,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 05",
+      "circuit": "B",
+      "address": "Rue CUVIER N°2, angle rue MOZART, Grenoble, France",
+      "current": {
+        "lat": 45.185768,
+        "lon": 5.709334,
+        "label": "Rue Mozart 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185768,
+        "lon": 5.709334,
+        "label": "Rue Mozart 38000 Grenoble",
+        "query": "rue MOZART, Grenoble",
+        "rank": 4.276
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.542,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 06",
+      "circuit": "B",
+      "address": "Rue MOZART N°4BIS, angle rue CUVIER, Grenoble, France",
+      "current": {
+        "lat": 45.185768,
+        "lon": 5.709334,
+        "label": "Rue Mozart 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186203,
+        "lon": 5.708202,
+        "label": "Rue Cuvier 38000 Grenoble",
+        "query": "rue CUVIER, Grenoble",
+        "rank": 4.273
+      },
+      "shiftKm": 0.101,
+      "neighborDistanceKm": 0.193,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 07",
+      "circuit": "B",
+      "address": "Rue Victor LASTELLA N°22, Grenoble, France",
+      "current": {
+        "lat": 45.18433,
+        "lon": 5.704698,
+        "label": "Rue Victor Lastella 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.18433,
+        "lon": 5.704698,
+        "label": "Rue Victor Lastella 38000 Grenoble",
+        "query": "Rue Victor LASTELLA 22, Grenoble",
+        "rank": 4.188
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.316,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 08",
+      "circuit": "B",
+      "address": "Rue des ARTS et METIERS N°15 (salle rouge), Grenoble, France",
+      "current": {
+        "lat": 45.184894,
+        "lon": 5.704552,
+        "label": "Rue des Arts et Métiers 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184894,
+        "lon": 5.704552,
+        "label": "Rue des Arts et Métiers 38000 Grenoble",
+        "query": "Rue des ARTS et METIERS 15, Grenoble",
+        "rank": 4.202
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.428,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 09",
+      "circuit": "B",
+      "address": "Place Saint BRUNO N°17, angle rue Nicolas CHORIER (lycée), Grenoble, France",
+      "current": {
+        "lat": 45.184577,
+        "lon": 5.710819,
+        "label": "Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184577,
+        "lon": 5.710819,
+        "label": "Rue Nicolas Chorier 38000 Grenoble",
+        "query": "rue Nicolas CHORIER, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.118,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 10",
+      "circuit": "B",
+      "address": "Avenue de VIZILLE N°23, rue Nicolas CHORIER, Grenoble, France",
+      "current": {
+        "lat": 45.185866,
+        "lon": 5.71518,
+        "label": "23 Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184577,
+        "lon": 5.710819,
+        "label": "Rue Nicolas Chorier 38000 Grenoble",
+        "query": "rue Nicolas CHORIER, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0.371,
+      "neighborDistanceKm": 0.388,
+      "suspicious": true
+    },
+    {
+      "name": "B – Point 11",
+      "circuit": "B",
+      "address": "Rue Alphonse TERRAY N°14, Grenoble, France",
+      "current": {
+        "lat": 45.184934,
+        "lon": 5.713323,
+        "label": "Rue Alphonse Terray 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184934,
+        "lon": 5.713323,
+        "label": "Rue Alphonse Terray 38000 Grenoble",
+        "query": "Rue Alphonse TERRAY 14, Grenoble",
+        "rank": 4.191
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.049,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 12",
+      "circuit": "B",
+      "address": "Rue de NEW YORK N°23, parc Paul Perrin (entrée), Grenoble, France",
+      "current": {
+        "lat": 45.1834,
+        "lon": 5.713941,
+        "label": "Parc Paul Valérien Perrin 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.18383,
+        "lon": 5.714504,
+        "label": "Rue de New York 38000 Grenoble",
+        "query": "Rue de NEW YORK 23, Grenoble",
+        "rank": 4.179
+      },
+      "shiftKm": 0.065,
+      "neighborDistanceKm": 0.24,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 13",
+      "circuit": "B",
+      "address": "Rue d'ALEMBERT N°102, Grenoble, France",
+      "current": {
+        "lat": 45.1859,
+        "lon": 5.710844,
+        "label": "Rue d'Alembert 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.1859,
+        "lon": 5.710844,
+        "label": "Rue d'Alembert 38000 Grenoble",
+        "query": "Rue d'ALEMBERT 102, Grenoble",
+        "rank": 4.153
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.14,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 14",
+      "circuit": "B",
+      "address": "Rue Nicolas CHORIER N°42, Grenoble, France",
+      "current": {
+        "lat": 45.184577,
+        "lon": 5.710819,
+        "label": "Rue Nicolas Chorier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184577,
+        "lon": 5.710819,
+        "label": "Rue Nicolas Chorier 38000 Grenoble",
+        "query": "Rue Nicolas CHORIER 42, Grenoble",
+        "rank": 4.198
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.044,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 15",
+      "circuit": "B",
+      "address": "Rue du DRAC N°72 (école Ampère), Grenoble, France",
+      "current": {
+        "lat": 45.185838,
+        "lon": 5.707196,
+        "label": "Rue du Drac 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185838,
+        "lon": 5.707196,
+        "label": "Rue du Drac 38000 Grenoble",
+        "query": "Rue du DRAC 72, Grenoble",
+        "rank": 4.165
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.395,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 16",
+      "circuit": "B",
+      "address": "Rue AMPERE N°77, angle rue Docteur HERMITE, Grenoble, France",
+      "current": {
+        "lat": 45.181713,
+        "lon": 5.710437,
+        "label": "Rue Docteur Hermite 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.181713,
+        "lon": 5.710437,
+        "label": "Rue Docteur Hermite 38000 Grenoble",
+        "query": "rue Docteur HERMITE, Grenoble",
+        "rank": 4.277
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.168,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 17",
+      "circuit": "B",
+      "address": "Rue Docteur CALMETTE, angle rue Léon DRIVIER, Grenoble, France",
+      "current": {
+        "lat": 45.180625,
+        "lon": 5.710203,
+        "label": "Rue Léon Drivier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.180898,
+        "lon": 5.708859,
+        "label": "Rue Docteur Calmette 38000 Grenoble",
+        "query": "Rue Docteur CALMETTE, Grenoble",
+        "rank": 4.276
+      },
+      "shiftKm": 0.11,
+      "neighborDistanceKm": 0.183,
+      "suspicious": false
+    },
+    {
+      "name": "B – Point 18",
+      "circuit": "B",
+      "address": "Rue Docteur CALMETTE N°6, angle rue Abbé GREGOIRE, Grenoble, France",
+      "current": {
+        "lat": 45.180898,
+        "lon": 5.708859,
+        "label": "Rue Docteur Calmette 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185155,
+        "lon": 5.712046,
+        "label": "Rue Abbé Grégoire 38000 Grenoble",
+        "query": "rue Abbé GREGOIRE, Grenoble",
+        "rank": 4.281
+      },
+      "shiftKm": 0.535,
+      "neighborDistanceKm": 0.146,
+      "suspicious": true
+    },
+    {
+      "name": "B – Point 19",
+      "circuit": "B",
+      "address": "Rue IRVOY N°26, boulevard Joseph Vallier, Grenoble, France",
+      "current": {
+        "lat": 45.180326,
+        "lon": 5.711529,
+        "label": "26 Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble",
+        "query": "boulevard Joseph Vallier, Grenoble",
+        "rank": 4.279
+      },
+      "shiftKm": 0.119,
+      "neighborDistanceKm": 0.164,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 01",
+      "circuit": "C",
+      "address": "Rue FARCONNET N°10, Grenoble, France",
+      "current": {
+        "lat": 45.19939,
+        "lon": 5.740483,
+        "label": "Rue Farconet 38000 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.279,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 02",
+      "circuit": "C",
+      "address": "Avenue Maréchal RANDON N°10 (place du GRESIVAUDAN), Grenoble, France",
+      "current": {
+        "lat": 45.198621,
+        "lon": 5.738573,
+        "label": "Place du Grésivaudan 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196957,
+        "lon": 5.736371,
+        "label": "Avenue Maréchal Randon 38000 Grenoble",
+        "query": "Avenue Maréchal RANDON 10, Grenoble",
+        "rank": 4.203
+      },
+      "shiftKm": 0.253,
+      "neighborDistanceKm": 0.122,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 03",
+      "circuit": "C",
+      "address": "Place Docteur GIRARD, Grenoble, France",
+      "current": {
+        "lat": 45.197174,
+        "lon": 5.736663,
+        "label": "Place Docteur Girard 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.197174,
+        "lon": 5.736663,
+        "label": "Place Docteur Girard 38000 Grenoble",
+        "query": "Place Docteur GIRARD, Grenoble",
+        "rank": 4.27
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.101,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 04",
+      "circuit": "C",
+      "address": "Rue Aimon de CHISSE N°6, Grenoble, France",
+      "current": {
+        "lat": 45.19623,
+        "lon": 5.736864,
+        "label": "Rue Aimon de Chissé 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.19623,
+        "lon": 5.736864,
+        "label": "Rue Aimon de Chissé 38000 Grenoble",
+        "query": "Rue Aimon de CHISSE 6, Grenoble",
+        "rank": 4.215
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.015,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 05",
+      "circuit": "C",
+      "address": "Avenue Maréchal RANDON, bd Maréchal LECLERC (parc Ile Verte), Grenoble, France",
+      "current": {
+        "lat": 45.194881,
+        "lon": 5.73587,
+        "label": "Parc de l'Ile Verte 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196957,
+        "lon": 5.736371,
+        "label": "Avenue Maréchal Randon 38000 Grenoble",
+        "query": "Avenue Maréchal RANDON, Grenoble",
+        "rank": 4.279
+      },
+      "shiftKm": 0.234,
+      "neighborDistanceKm": 0.096,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 06",
+      "circuit": "C",
+      "address": "Boulevard Maréchal LECLERC N°19 (tour Mont Blanc), Grenoble, France",
+      "current": {
+        "lat": 45.193756,
+        "lon": 5.735969,
+        "label": "Boulevard Maréchal Leclerc 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.193756,
+        "lon": 5.735969,
+        "label": "Boulevard Maréchal Leclerc 38000 Grenoble",
+        "query": "Boulevard Maréchal LECLERC 19, Grenoble",
+        "rank": 4.208
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.25,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 07",
+      "circuit": "C",
+      "address": "18 Avenue Saint-Roch, 38000 Grenoble, France",
+      "current": {
+        "lat": 45.191558,
+        "lon": 5.738768,
+        "label": "18 Avenue Saint Roch 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.191558,
+        "lon": 5.738768,
+        "label": "18 Avenue Saint Roch 38000 Grenoble",
+        "query": "18 Avenue Saint-Roch, Grenoble",
+        "rank": 4.521
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.054,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 08",
+      "circuit": "C",
+      "address": "Rue du 19 MARS 1962, angle Jean PAIN, Grenoble, France",
+      "current": {
+        "lat": 45.188736,
+        "lon": 5.744052,
+        "label": "Rue du 19 mars 1962 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188736,
+        "lon": 5.744052,
+        "label": "Rue du 19 mars 1962 38100 Grenoble",
+        "query": "Rue du 19 MARS 1962, Grenoble",
+        "rank": 4.515
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.613,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 09",
+      "circuit": "C",
+      "address": "Rue Joseph CHANRION N°18, angle boulevard Jean PAIN, Grenoble, France",
+      "current": {
+        "lat": 45.189675,
+        "lon": 5.736685,
+        "label": "Rue Joseph Chanrion 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186849,
+        "lon": 5.735706,
+        "label": "Boulevard Jean Pain 38000 Grenoble",
+        "query": "boulevard Jean PAIN, Grenoble",
+        "rank": 4.273
+      },
+      "shiftKm": 0.323,
+      "neighborDistanceKm": 0.228,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 10",
+      "circuit": "C",
+      "address": "Rue Joseph CHANRION N°35, vers Centre Social, Grenoble, France",
+      "current": {
+        "lat": 45.189675,
+        "lon": 5.736685,
+        "label": "Rue Joseph Chanrion 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189675,
+        "lon": 5.736685,
+        "label": "Rue Joseph Chanrion 38000 Grenoble",
+        "query": "Rue Joseph CHANRION 35, Grenoble",
+        "rank": 4.191
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.162,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 11",
+      "circuit": "C",
+      "address": "Rue HEBERT, angle boulevard des ADIEUX, Grenoble, France",
+      "current": {
+        "lat": 45.190008,
+        "lon": 5.738726,
+        "label": "Boulevard des Adieux 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189995,
+        "lon": 5.735287,
+        "label": "Rue Hébert 38000 Grenoble",
+        "query": "Rue HEBERT, Grenoble",
+        "rank": 4.275
+      },
+      "shiftKm": 0.27,
+      "neighborDistanceKm": 0.213,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 12",
+      "circuit": "C",
+      "address": "Rue HEBERT N°3, rue Joseph CHANRION, Grenoble, France",
+      "current": {
+        "lat": 45.191378,
+        "lon": 5.735412,
+        "label": "3 Rue Joseph Chanrion 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189995,
+        "lon": 5.735287,
+        "label": "Rue Hébert 38000 Grenoble",
+        "query": "Rue HEBERT 3, Grenoble",
+        "rank": 4.441
+      },
+      "shiftKm": 0.154,
+      "neighborDistanceKm": 0.169,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 13",
+      "circuit": "C",
+      "address": "Rue HEBERT N°12, Grenoble, France",
+      "current": {
+        "lat": 45.189995,
+        "lon": 5.735287,
+        "label": "Rue Hébert 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189995,
+        "lon": 5.735287,
+        "label": "Rue Hébert 38000 Grenoble",
+        "query": "Rue HEBERT 12, Grenoble",
+        "rank": 4.156
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.054,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 14",
+      "circuit": "C",
+      "address": "Rue Cornélie GEMOND N°7, Grenoble, France",
+      "current": {
+        "lat": 45.190171,
+        "lon": 5.734111,
+        "label": "Rue Cornélie Gémond 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190171,
+        "lon": 5.734111,
+        "label": "Rue Cornélie Gémond 38000 Grenoble",
+        "query": "Rue Cornélie GEMOND 7, Grenoble",
+        "rank": 4.214
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.102,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 15",
+      "circuit": "C",
+      "address": "Rue Cornélie GEMOND N°14 (école maternelle), Grenoble, France",
+      "current": {
+        "lat": 45.190171,
+        "lon": 5.734111,
+        "label": "Rue Cornélie Gémond 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190171,
+        "lon": 5.734111,
+        "label": "Rue Cornélie Gémond 38000 Grenoble",
+        "query": "Rue Cornélie GEMOND 14, Grenoble",
+        "rank": 4.188
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.215,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 16",
+      "circuit": "C",
+      "address": "Boulevard Jean PAIN N°12, Grenoble, France",
+      "current": {
+        "lat": 45.186849,
+        "lon": 5.735706,
+        "label": "Boulevard Jean Pain 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186849,
+        "lon": 5.735706,
+        "label": "Boulevard Jean Pain 38000 Grenoble",
+        "query": "Boulevard Jean PAIN 12, Grenoble",
+        "rank": 4.189
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.258,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 17",
+      "circuit": "C",
+      "address": "Rue du Manège (Cinéma Chavant), Grenoble, France",
+      "current": {
+        "lat": 45.185964,
+        "lon": 5.732375,
+        "label": "Rue du Manège 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185964,
+        "lon": 5.732375,
+        "label": "Rue du Manège 38000 Grenoble",
+        "query": "Rue du Manège, Grenoble",
+        "rank": 4.268
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.196,
+      "suspicious": false
+    },
+    {
+      "name": "C – Point 18",
+      "circuit": "C",
+      "address": "Boulevard Maréchal LYAUTEY N°11, angle rue BECCARIA, Grenoble, France",
+      "current": {
+        "lat": 45.185587,
+        "lon": 5.730701,
+        "label": "Boulevard Maréchal Lyautey 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186281,
+        "lon": 5.731208,
+        "label": "Rue Beccaria 38000 Grenoble",
+        "query": "rue BECCARIA, Grenoble",
+        "rank": 4.271
+      },
+      "shiftKm": 0.087,
+      "neighborDistanceKm": 0.277,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 01",
+      "circuit": "D",
+      "address": "Place André MALRAUX N°7, Grenoble, France",
+      "current": {
+        "lat": 45.185082,
+        "lon": 5.729161,
+        "label": "Place André Malraux 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185082,
+        "lon": 5.729161,
+        "label": "Place André Malraux 38000 Grenoble",
+        "query": "Place André MALRAUX 7, Grenoble",
+        "rank": 4.213
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.135,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 02",
+      "circuit": "D",
+      "address": "Rue du 4ième REGIMENT du GENIE N°11, Grenoble, France",
+      "current": {
+        "lat": 45.18444,
+        "lon": 5.730333,
+        "label": "Rue du 4ème Régiment du Génie 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.18444,
+        "lon": 5.730333,
+        "label": "Rue du 4ème Régiment du Génie 38000 Grenoble",
+        "query": "Rue du 4ième REGIMENT du GENIE 11, Grenoble",
+        "rank": 3.054
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.288,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 03",
+      "circuit": "D",
+      "address": "Place de METZ, Grenoble, France",
+      "current": {
+        "lat": 45.187381,
+        "lon": 5.730512,
+        "label": "Place de Metz 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.187381,
+        "lon": 5.730512,
+        "label": "Place de Metz 38000 Grenoble",
+        "query": "Place de METZ, Grenoble",
+        "rank": 4.269
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.111,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 04",
+      "circuit": "D",
+      "address": "Place VAUCANSON (au centre), Grenoble, France",
+      "current": {
+        "lat": 45.188347,
+        "lon": 5.72846,
+        "label": "Place Vaucanson 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188347,
+        "lon": 5.72846,
+        "label": "Place Vaucanson 38000 Grenoble",
+        "query": "Place VAUCANSON, Grenoble",
+        "rank": 4.27
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.139,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 05",
+      "circuit": "D",
+      "address": "Place Jean ACHARD N°1ter, Grenoble, France",
+      "current": {
+        "lat": 45.189319,
+        "lon": 5.729486,
+        "label": "Place Jean Achard 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189319,
+        "lon": 5.729486,
+        "label": "Place Jean Achard 38000 Grenoble",
+        "query": "Place Jean ACHARD 1ter, Grenoble",
+        "rank": 4.131
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.033,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 06",
+      "circuit": "D",
+      "address": "Passage du LYCEE N°3, Grenoble, France",
+      "current": {
+        "lat": 45.189726,
+        "lon": 5.729664,
+        "label": "Passage du Lycée 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.189726,
+        "lon": 5.729664,
+        "label": "Passage du Lycée 38000 Grenoble",
+        "query": "Passage du LYCEE 3, Grenoble",
+        "rank": 4.454
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.097,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 07",
+      "circuit": "D",
+      "address": "Rue de la REPUBLIQUE N°14 (Office du Tourisme), Grenoble, France",
+      "current": {
+        "lat": 45.190663,
+        "lon": 5.729072,
+        "label": "Rue de la République 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190663,
+        "lon": 5.729072,
+        "label": "Rue de la République 38000 Grenoble",
+        "query": "Rue de la REPUBLIQUE 14, Grenoble",
+        "rank": 4.193
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.116,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 08",
+      "circuit": "D",
+      "address": "Rue MADELEINE N°1, rue de LIONNE, Grenoble, France",
+      "current": {
+        "lat": 45.193813,
+        "lon": 5.729793,
+        "label": "1 Rue de Lionne 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.193735,
+        "lon": 5.729817,
+        "label": "Rue de Lionne 38000 Grenoble",
+        "query": "rue de LIONNE, Grenoble",
+        "rank": 4.269
+      },
+      "shiftKm": 0.009,
+      "neighborDistanceKm": 0.281,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 09",
+      "circuit": "D",
+      "address": "Place NOTRE DAME N°2bis (arrêt de tram), Grenoble, France",
+      "current": {
+        "lat": 45.192817,
+        "lon": 5.731398,
+        "label": "Place Notre Dame 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.192817,
+        "lon": 5.731398,
+        "label": "Place Notre Dame 38000 Grenoble",
+        "query": "Place NOTRE DAME 2bis, Grenoble",
+        "rank": 4.129
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.204,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 10",
+      "circuit": "D",
+      "address": "Rue du VIEUX TEMPLE N°10, rue TRES CLOITRES, Grenoble, France",
+      "current": {
+        "lat": 45.192462,
+        "lon": 5.733544,
+        "label": "Rue Très-Cloîtres 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.192462,
+        "lon": 5.733544,
+        "label": "Rue Très-Cloîtres 38000 Grenoble",
+        "query": "rue TRES CLOITRES, Grenoble",
+        "rank": 4.277
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.253,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 11",
+      "circuit": "D",
+      "address": "Rue HAUQUELIN N°1, Avenue Maréchal RANDON, Grenoble, France",
+      "current": {
+        "lat": 45.19975,
+        "lon": 5.740176,
+        "label": "1 Avenue Maréchal Randon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196957,
+        "lon": 5.736371,
+        "label": "Avenue Maréchal Randon 38000 Grenoble",
+        "query": "Avenue Maréchal RANDON, Grenoble",
+        "rank": 4.279
+      },
+      "shiftKm": 0.431,
+      "neighborDistanceKm": 0.873,
+      "suspicious": true
+    },
+    {
+      "name": "D – Point 12",
+      "circuit": "D",
+      "address": "Place Edmond ARNAUD (sous les arcades), Grenoble, France",
+      "current": {
+        "lat": 45.192508,
+        "lon": 5.734222,
+        "label": "Place Edmond Arnaud 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.192508,
+        "lon": 5.734222,
+        "label": "Place Edmond Arnaud 38000 Grenoble",
+        "query": "Place Edmond ARNAUD, Grenoble",
+        "rank": 4.271
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.449,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 13",
+      "circuit": "D",
+      "address": "Place Saint LAURENT, Grenoble, France",
+      "current": {
+        "lat": 45.197736,
+        "lon": 5.731943,
+        "label": "Place Saint Laurent 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.197736,
+        "lon": 5.731943,
+        "label": "Place Saint Laurent 38000 Grenoble",
+        "query": "Place Saint LAURENT, Grenoble",
+        "rank": 4.268
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.239,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 14",
+      "circuit": "D",
+      "address": "Rue SAINT LAURENT N°77, Grenoble, France",
+      "current": {
+        "lat": 45.196219,
+        "lon": 5.730313,
+        "label": "Rue Saint Laurent 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196219,
+        "lon": 5.730313,
+        "label": "Rue Saint Laurent 38000 Grenoble",
+        "query": "Rue SAINT LAURENT 77, Grenoble",
+        "rank": 4.19
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.179,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 15",
+      "circuit": "D",
+      "address": "Quai PERRIERE face N°16, Grenoble, France",
+      "current": {
+        "lat": 45.194195,
+        "lon": 5.726389,
+        "label": "Quai Perrière 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.194195,
+        "lon": 5.726389,
+        "label": "Quai Perrière 38000 Grenoble",
+        "query": "Quai PERRIERE, Grenoble",
+        "rank": 4.277
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.16,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 16",
+      "circuit": "D",
+      "address": "Quai PERRIERE N°66, Grenoble, France",
+      "current": {
+        "lat": 45.194195,
+        "lon": 5.726389,
+        "label": "Quai Perrière 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.194195,
+        "lon": 5.726389,
+        "label": "Quai Perrière 38000 Grenoble",
+        "query": "Quai PERRIERE 66, Grenoble",
+        "rank": 4.173
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.231,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 17",
+      "circuit": "D",
+      "address": "Quai de France N°50 (Jardin des Dauphins), Grenoble, France",
+      "current": {
+        "lat": 45.193966,
+        "lon": 5.719946,
+        "label": "Jardin des Dauphins 38000 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.335,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 18",
+      "circuit": "D",
+      "address": "Route de LYON N°19, Grenoble, France",
+      "current": {
+        "lat": 45.196512,
+        "lon": 5.718652,
+        "label": "Route de Lyon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.196512,
+        "lon": 5.718652,
+        "label": "Route de Lyon 38000 Grenoble",
+        "query": "Route de LYON 19, Grenoble",
+        "rank": 4.175
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.61,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 19",
+      "circuit": "D",
+      "address": "Rue de BELGRADE N°5 (square Vallois), Grenoble, France",
+      "current": {
+        "lat": 45.191567,
+        "lon": 5.725436,
+        "label": "Square Docteur Vallois 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.191282,
+        "lon": 5.725095,
+        "label": "Rue de Belgrade 38000 Grenoble",
+        "query": "Rue de BELGRADE 5, Grenoble",
+        "rank": 4.207
+      },
+      "shiftKm": 0.041,
+      "neighborDistanceKm": 0.412,
+      "suspicious": false
+    },
+    {
+      "name": "D – Point 20",
+      "circuit": "D",
+      "address": "Jardin de VILLE N°5 (école), Grenoble, France",
+      "current": {
+        "lat": 45.192043,
+        "lon": 5.726489,
+        "label": "Jardin de Ville 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.192043,
+        "lon": 5.726489,
+        "label": "Jardin de Ville 38000 Grenoble",
+        "query": "Jardin de VILLE 5, Grenoble",
+        "rank": 4.202
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.413,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 01",
+      "circuit": "E",
+      "address": "Avenue Félix POULAT N°4 (derrière WC public), Grenoble, France",
+      "current": {
+        "lat": 45.190142,
+        "lon": 5.726227,
+        "label": "Rue Félix Poulat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.190142,
+        "lon": 5.726227,
+        "label": "Rue Félix Poulat 38000 Grenoble",
+        "query": "Avenue Félix POULAT 4, Grenoble",
+        "rank": 4.075
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.23,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 02",
+      "circuit": "E",
+      "address": "Boulevard Agutte SEMBAT N°9, angle rue MILLET, Grenoble, France",
+      "current": {
+        "lat": 45.187356,
+        "lon": 5.727291,
+        "label": "Boulevard Georgette Agutte-Sembat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188641,
+        "lon": 5.72683,
+        "label": "Rue Millet 38000 Grenoble",
+        "query": "rue MILLET, Grenoble",
+        "rank": 4.272
+      },
+      "shiftKm": 0.147,
+      "neighborDistanceKm": 0.271,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 03",
+      "circuit": "E",
+      "address": "Place Victor HUGO, face N°12, Grenoble, France",
+      "current": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble",
+        "query": "Place Victor HUGO, Grenoble",
+        "rank": 4.273
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.086,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 04",
+      "circuit": "E",
+      "address": "Place Victor HUGO, face N°8, Grenoble, France",
+      "current": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble",
+        "query": "Place Victor HUGO, face 8, Grenoble",
+        "rank": 4.34
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.107,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 05",
+      "circuit": "E",
+      "address": "Place Victor HUGO, côté Agutte Sembat, Grenoble, France",
+      "current": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble",
+        "query": "Place Victor HUGO, Grenoble",
+        "rank": 4.273
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.08,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 06",
+      "circuit": "E",
+      "address": "Place Victor HUGO N°9, côté Agutte Sembat, Grenoble, France",
+      "current": {
+        "lat": 45.188207,
+        "lon": 5.726465,
+        "label": "9 Boulevard Georgette Agutte-Sembat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188812,
+        "lon": 5.724569,
+        "label": "Place Victor Hugo 38000 Grenoble",
+        "query": "Place Victor HUGO 9, Grenoble",
+        "rank": 4.211
+      },
+      "shiftKm": 0.163,
+      "neighborDistanceKm": 0.122,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 07",
+      "circuit": "E",
+      "address": "Boulevard GAMBETTA N°33, angle cours LAFONTAINE, Grenoble, France",
+      "current": {
+        "lat": 45.186756,
+        "lon": 5.724237,
+        "label": "Boulevard Gambetta 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186756,
+        "lon": 5.724237,
+        "label": "Boulevard Gambetta 38000 Grenoble",
+        "query": "Boulevard GAMBETTA 33, Grenoble",
+        "rank": 4.193
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.179,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 08",
+      "circuit": "E",
+      "address": "Rue LESDIGUIERES N°30, Grenoble, France",
+      "current": {
+        "lat": 45.186854,
+        "lon": 5.726705,
+        "label": "Rue Lesdiguières 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186854,
+        "lon": 5.726705,
+        "label": "Rue Lesdiguières 38000 Grenoble",
+        "query": "Rue LESDIGUIERES 30, Grenoble",
+        "rank": 4.186
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.086,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 09",
+      "circuit": "E",
+      "address": "Rue LESDIGUIERES N°26, Grenoble, France",
+      "current": {
+        "lat": 45.186854,
+        "lon": 5.726705,
+        "label": "Rue Lesdiguières 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.186854,
+        "lon": 5.726705,
+        "label": "Rue Lesdiguières 38000 Grenoble",
+        "query": "Rue LESDIGUIERES 26, Grenoble",
+        "rank": 4.186
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.282,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 10",
+      "circuit": "E",
+      "address": "Rue Berthe de BOISSIEUX N°6 (square Silvestri), Grenoble, France",
+      "current": {
+        "lat": 45.18487,
+        "lon": 5.725172,
+        "label": "Square Godefroy Silvestri 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184101,
+        "lon": 5.723243,
+        "label": "Rue Berthe de Boissieux 38000 Grenoble",
+        "query": "Rue Berthe de BOISSIEUX 6, Grenoble",
+        "rank": 4.223
+      },
+      "shiftKm": 0.174,
+      "neighborDistanceKm": 0.192,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 11",
+      "circuit": "E",
+      "address": "Rue MARCEAU N°30, angle rue Colonel DUMONT, Grenoble, France",
+      "current": {
+        "lat": 45.181372,
+        "lon": 5.721077,
+        "label": "Rue Colonel Dumont 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.181372,
+        "lon": 5.721077,
+        "label": "Rue Colonel Dumont 38000 Grenoble",
+        "query": "rue Colonel DUMONT, Grenoble",
+        "rank": 4.275
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.353,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 12",
+      "circuit": "E",
+      "address": "Square Charles MICHEL N°2, Grenoble, France",
+      "current": {
+        "lat": 45.181054,
+        "lon": 5.717639,
+        "label": "Square Charles Michels 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.181054,
+        "lon": 5.717639,
+        "label": "Square Charles Michels 38000 Grenoble",
+        "query": "Square Charles MICHEL 2, Grenoble",
+        "rank": 4.144
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.463,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 13",
+      "circuit": "E",
+      "address": "Place Jacqueline MARVAL N°3, Grenoble, France",
+      "current": {
+        "lat": 45.184689,
+        "lon": 5.720761,
+        "label": "Place Jacqueline Marval 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184689,
+        "lon": 5.720761,
+        "label": "Place Jacqueline Marval 38000 Grenoble",
+        "query": "Place Jacqueline MARVAL 3, Grenoble",
+        "rank": 4.468
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.174,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 14",
+      "circuit": "E",
+      "address": "Place Jacqueline MARVAL N°2, Grenoble, France",
+      "current": {
+        "lat": 45.184689,
+        "lon": 5.720761,
+        "label": "Place Jacqueline Marval 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184689,
+        "lon": 5.720761,
+        "label": "Place Jacqueline Marval 38000 Grenoble",
+        "query": "Place Jacqueline MARVAL 2, Grenoble",
+        "rank": 4.218
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.071,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 15",
+      "circuit": "E",
+      "address": "Place CHAMPIONNET N°8, Grenoble, France",
+      "current": {
+        "lat": 45.185438,
+        "lon": 5.722517,
+        "label": "Place Championnet 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185438,
+        "lon": 5.722517,
+        "label": "Place Championnet 38000 Grenoble",
+        "query": "Place CHAMPIONNET 8, Grenoble",
+        "rank": 4.46
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.142,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 16",
+      "circuit": "E",
+      "address": "Place CONDORCET, Grenoble, France",
+      "current": {
+        "lat": 45.185248,
+        "lon": 5.72059,
+        "label": "Place Condorcet 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.185248,
+        "lon": 5.72059,
+        "label": "Place Condorcet 38000 Grenoble",
+        "query": "Place CONDORCET, Grenoble",
+        "rank": 4.268
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.198,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 17",
+      "circuit": "E",
+      "address": "Cours Jean JAURES N°25, cours BERRIAT, Grenoble, France",
+      "current": {
+        "lat": 45.187865,
+        "lon": 5.720769,
+        "label": "25 Cours Berriat 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188412,
+        "lon": 5.712687,
+        "label": "Cours Berriat 38000 Grenoble",
+        "query": "cours BERRIAT, Grenoble",
+        "rank": 4.283
+      },
+      "shiftKm": 0.636,
+      "neighborDistanceKm": 0.058,
+      "suspicious": true
+    },
+    {
+      "name": "E – Point 18",
+      "circuit": "E",
+      "address": "Rue BILLEREY N°8, angle rue JAY, Grenoble, France",
+      "current": {
+        "lat": 45.18981,
+        "lon": 5.721205,
+        "label": "Rue Billerey 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.18981,
+        "lon": 5.721205,
+        "label": "Rue Billerey 38000 Grenoble",
+        "query": "Rue BILLEREY 8, Grenoble",
+        "rank": 4.446
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.243,
+      "suspicious": false
+    },
+    {
+      "name": "E – Point 19",
+      "circuit": "E",
+      "address": "Rue JAY N°2, angle rue BILLEREY, Grenoble, France",
+      "current": {
+        "lat": 45.18981,
+        "lon": 5.721205,
+        "label": "Rue Billerey 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.18981,
+        "lon": 5.721205,
+        "label": "Rue Billerey 38000 Grenoble",
+        "query": "rue BILLEREY, Grenoble",
+        "rank": 4.272
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.109,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 01",
+      "circuit": "F",
+      "address": "CATANE, avenue RHIN et DANUBE, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "avenue RHIN et DANUBE, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.344,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 02",
+      "circuit": "F",
+      "address": "Avenue RHIN et DANUBE N°1, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "Avenue RHIN et DANUBE 1, Grenoble",
+        "rank": 4.476
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.459,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 03",
+      "circuit": "F",
+      "address": "Boulevard Joseph VALLIER N°57, Grenoble, France",
+      "current": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble",
+        "query": "Boulevard Joseph VALLIER 57, Grenoble",
+        "rank": 4.207
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.344,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 04",
+      "circuit": "F",
+      "address": "Avenue Joseph VALLIER N°35, Grenoble, France",
+      "current": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble",
+        "query": "Avenue Joseph VALLIER 35, Grenoble",
+        "rank": 3.913
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.182,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 05",
+      "circuit": "F",
+      "address": "Rue Louis Le CARDONNEL N°2bis, bd Joseph VALLIER, Grenoble, France",
+      "current": {
+        "lat": 45.180154,
+        "lon": 5.710026,
+        "label": "Boulevard Joseph Vallier 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.179597,
+        "lon": 5.71524,
+        "label": "Rue Louis Le Cardonnel 38100 Grenoble",
+        "query": "Rue Louis Le CARDONNEL 2bis, Grenoble",
+        "rank": 4.152
+      },
+      "shiftKm": 0.413,
+      "neighborDistanceKm": 0.162,
+      "suspicious": true
+    },
+    {
+      "name": "F – Point 06",
+      "circuit": "F",
+      "address": "Rue Charles PEGUY N°23, face rue DUNKERQUE, Grenoble, France",
+      "current": {
+        "lat": 45.178771,
+        "lon": 5.714295,
+        "label": "Rue Charles Péguy 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.178771,
+        "lon": 5.714295,
+        "label": "Rue Charles Péguy 38100 Grenoble",
+        "query": "Rue Charles PEGUY 23, Grenoble",
+        "rank": 4.183
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.384,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 07",
+      "circuit": "F",
+      "address": "Rue des EAUX CLAIRES N°1, Grenoble, France",
+      "current": {
+        "lat": 45.176159,
+        "lon": 5.708927,
+        "label": "Rue des Eaux Claires 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.176159,
+        "lon": 5.708927,
+        "label": "Rue des Eaux Claires 38100 Grenoble",
+        "query": "Rue des EAUX CLAIRES 1, Grenoble",
+        "rank": 4.474
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.261,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 08",
+      "circuit": "F",
+      "address": "Rue des EAUX CLAIRES N°27, Grenoble, France",
+      "current": {
+        "lat": 45.176159,
+        "lon": 5.708927,
+        "label": "Rue des Eaux Claires 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.176159,
+        "lon": 5.708927,
+        "label": "Rue des Eaux Claires 38100 Grenoble",
+        "query": "Rue des EAUX CLAIRES 27, Grenoble",
+        "rank": 4.199
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.221,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 09",
+      "circuit": "F",
+      "address": "Rue Joseph BOUCHAYER N°31, Grenoble, France",
+      "current": {
+        "lat": 45.177195,
+        "lon": 5.710236,
+        "label": "Rue Joseph Bouchayer 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177195,
+        "lon": 5.710236,
+        "label": "Rue Joseph Bouchayer 38100 Grenoble",
+        "query": "Rue Joseph BOUCHAYER 31, Grenoble",
+        "rank": 4.199
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.296,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 10",
+      "circuit": "F",
+      "address": "Cours de la LIBERATION N°32, angle rue des MARRONNIERS, Grenoble, France",
+      "current": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177447,
+        "lon": 5.713781,
+        "label": "Chemin des Marronniers 38100 Grenoble",
+        "query": "rue des MARRONNIERS, Grenoble",
+        "rank": 4.046
+      },
+      "shiftKm": 0.72,
+      "neighborDistanceKm": 0.69,
+      "suspicious": true
+    },
+    {
+      "name": "F – Point 11",
+      "circuit": "F",
+      "address": "Rue des EAUX CLAIRES N°55, bd Roger SALENGRO, Grenoble, France",
+      "current": {
+        "lat": 45.175024,
+        "lon": 5.712646,
+        "label": "Boulevard Roger Salengro 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.176159,
+        "lon": 5.708927,
+        "label": "Rue des Eaux Claires 38100 Grenoble",
+        "query": "Rue des EAUX CLAIRES 55, Grenoble",
+        "rank": 4.199
+      },
+      "shiftKm": 0.318,
+      "neighborDistanceKm": 0.262,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 12",
+      "circuit": "F",
+      "address": "Rue MARBEUF N°16, rue des CHAMPS ELYSEES, Grenoble, France",
+      "current": {
+        "lat": 45.178693,
+        "lon": 5.708728,
+        "label": "16 Rue des Champs Elysées 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.178739,
+        "lon": 5.708208,
+        "label": "Rue des Champs Elysées 38100 Grenoble",
+        "query": "rue des CHAMPS ELYSEES, Grenoble",
+        "rank": 4.277
+      },
+      "shiftKm": 0.041,
+      "neighborDistanceKm": 0.522,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 13",
+      "circuit": "F",
+      "address": "Avenue RHIN et DANUBE, face Hôtel des Impôts, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "Avenue RHIN et DANUBE, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.24,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 14",
+      "circuit": "F",
+      "address": "Avenue RHIN et DANUBE, face Hôtel des Impôts, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "Avenue RHIN et DANUBE, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.124,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 15",
+      "circuit": "F",
+      "address": "Avenue RHIN et DANUBE N°48, angle rue SIBELLAS, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "Avenue RHIN et DANUBE 48, Grenoble",
+        "rank": 4.202
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 16",
+      "circuit": "F",
+      "address": "Rue ANATOLE FRANCE N°35, angle avenue RHIN et DANUBE, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "avenue RHIN et DANUBE, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 17",
+      "circuit": "F",
+      "address": "Rue ANATOLE FRANCE N°35, angle avenue RHIN et DANUBE, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "avenue RHIN et DANUBE, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0,
+      "suspicious": false
+    },
+    {
+      "name": "F – Point 18",
+      "circuit": "F",
+      "address": "Avenue RHIN et DANUBE N°70, Grenoble, France",
+      "current": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175001,
+        "lon": 5.705149,
+        "label": "Avenue Rhin et Danube 38100 Grenoble",
+        "query": "Avenue RHIN et DANUBE 70, Grenoble",
+        "rank": 4.202
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 01",
+      "circuit": "G",
+      "address": "Avenue RHIN et DANUBE N°84, rue Paul STRAUSS, Grenoble, France",
+      "current": {
+        "lat": 45.168762,
+        "lon": 5.703613,
+        "label": "Rue Paul Strauss 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.168762,
+        "lon": 5.703613,
+        "label": "Rue Paul Strauss 38100 Grenoble",
+        "query": "rue Paul STRAUSS, Grenoble",
+        "rank": 4.267
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 3.856,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 02",
+      "circuit": "G",
+      "address": "Rue Albert REYNIER N°63 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble",
+        "query": "Rue Albert REYNIER 63, Grenoble",
+        "rank": 4.187
+      },
+      "shiftKm": 3.912,
+      "neighborDistanceKm": 2.586,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 03",
+      "circuit": "G",
+      "address": "Rue Albert REYNIER N°59 (parc Bachelard), Grenoble, France",
+      "current": {
+        "lat": 45.19616,
+        "lon": 5.733765,
+        "label": "Parc Albert Michallon 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble",
+        "query": "Rue Albert REYNIER 59, Grenoble",
+        "rank": 4.187
+      },
+      "shiftKm": 3.912,
+      "neighborDistanceKm": 2.917,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 04",
+      "circuit": "G",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+        "query": "Cours de la LIBERATION 176, Grenoble",
+        "rank": 3.882
+      },
+      "shiftKm": 0.705,
+      "neighborDistanceKm": 2.128,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 05",
+      "circuit": "G",
+      "address": "Cours de la LIBERATION N°176, sous le pont rue Albert REYNIER, Grenoble, France",
+      "current": {
+        "lat": 45.166473,
+        "lon": 5.70699,
+        "label": "Rue Albert Reynier 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+        "query": "Cours de la LIBERATION 176, Grenoble",
+        "rank": 3.882
+      },
+      "shiftKm": 0.705,
+      "neighborDistanceKm": 1.273,
+      "suspicious": true
+    },
+    {
+      "name": "G – Point 06",
+      "circuit": "G",
+      "address": "Cours de la LIBERATION N°198, Grenoble, France",
+      "current": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+        "query": "Cours de la LIBERATION 198, Grenoble",
+        "rank": 3.882
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.401,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 07",
+      "circuit": "G",
+      "address": "Rue André ABRY N°18, Grenoble, France",
+      "current": {
+        "lat": 45.168492,
+        "lon": 5.713652,
+        "label": "Rue André Abry 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.168492,
+        "lon": 5.713652,
+        "label": "Rue André Abry 38100 Grenoble",
+        "query": "Rue André ABRY 18, Grenoble",
+        "rank": 4.174
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.263,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 08",
+      "circuit": "G",
+      "address": "Cours de la LIBERATION N°106, Grenoble, France",
+      "current": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17098,
+        "lon": 5.71332,
+        "label": "Cours de la Libération et du Général de Gaulle 38100 Grenoble",
+        "query": "Cours de la LIBERATION 106, Grenoble",
+        "rank": 3.882
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.111,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 09",
+      "circuit": "G",
+      "address": "Rue Louise MICHEL N°24 (lycée), Grenoble, France",
+      "current": {
+        "lat": 45.168803,
+        "lon": 5.708401,
+        "label": "Rue Louise Michel 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.168803,
+        "lon": 5.708401,
+        "label": "Rue Louise Michel 38100 Grenoble",
+        "query": "Rue Louise MICHEL 24, Grenoble",
+        "rank": 4.187
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.5,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 10",
+      "circuit": "G",
+      "address": "Chemin MENEY, N°19, Grenoble, France",
+      "current": {
+        "lat": 45.172291,
+        "lon": 5.714796,
+        "label": "Chemin Meney 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172291,
+        "lon": 5.714796,
+        "label": "Chemin Meney 38100 Grenoble",
+        "query": "Chemin MENEY, Grenoble",
+        "rank": 4.278
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.317,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 11",
+      "circuit": "G",
+      "address": "Rue Capitaine CAMINE, face N°5, Grenoble, France",
+      "current": {
+        "lat": 45.173545,
+        "lon": 5.712938,
+        "label": "Rue Capitaine Camine 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.173545,
+        "lon": 5.712938,
+        "label": "Rue Capitaine Camine 38100 Grenoble",
+        "query": "Rue Capitaine CAMINE, Grenoble",
+        "rank": 4.274
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.104,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 12",
+      "circuit": "G",
+      "address": "Rue Anatole France N° 28, Grenoble, France",
+      "current": {
+        "lat": 45.173112,
+        "lon": 5.708817,
+        "label": "Rue Anatole France 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.173112,
+        "lon": 5.708817,
+        "label": "Rue Anatole France 38100 Grenoble",
+        "query": "Rue Anatole France 28, Grenoble",
+        "rank": 4.192
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.488,
+      "suspicious": false
+    },
+    {
+      "name": "G – Point 13",
+      "circuit": "G",
+      "address": "Rue SIDI BRAHIM N°45, Grenoble, France",
+      "current": {
+        "lat": 45.176885,
+        "lon": 5.716762,
+        "label": "Rue Sidi-Brahim 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.176885,
+        "lon": 5.716762,
+        "label": "Rue Sidi-Brahim 38100 Grenoble",
+        "query": "Rue SIDI BRAHIM 45, Grenoble",
+        "rank": 4.184
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.608,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 01",
+      "circuit": "H",
+      "address": "Rue Léon JOUHAUX face N°1, boulevard CLEMENCEAU, Grenoble, France",
+      "current": {
+        "lat": 45.186385,
+        "lon": 5.743884,
+        "label": "1 Boulevard Clemenceau 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble",
+        "query": "Rue Léon JOUHAUX, Grenoble",
+        "rank": 4.282
+      },
+      "shiftKm": 1.022,
+      "neighborDistanceKm": 0.665,
+      "suspicious": true
+    },
+    {
+      "name": "H – Point 02",
+      "circuit": "H",
+      "address": "Rue Roger Louis LACHAT N°5, Grenoble, France",
+      "current": {
+        "lat": 45.182958,
+        "lon": 5.739051,
+        "label": "Rue Roger Louis Lachat 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.182958,
+        "lon": 5.739051,
+        "label": "Rue Roger Louis Lachat 38100 Grenoble",
+        "query": "Rue Roger Louis LACHAT 5, Grenoble",
+        "rank": 4.216
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.155,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 03",
+      "circuit": "H",
+      "address": "Rue Colonel DRIANT N°2 (école maternelle), Grenoble, France",
+      "current": {
+        "lat": 45.182934,
+        "lon": 5.734821,
+        "label": "Rue Colonel Driant 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.182934,
+        "lon": 5.734821,
+        "label": "Rue Colonel Driant 38100 Grenoble",
+        "query": "Rue Colonel DRIANT 2, Grenoble",
+        "rank": 4.207
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.488,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 04",
+      "circuit": "H",
+      "address": "Avenue Jean PERROT N°11, Grenoble, France",
+      "current": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble",
+        "query": "Avenue Jean PERROT 11, Grenoble",
+        "rank": 4.197
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.618,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 05",
+      "circuit": "H",
+      "address": "Avenue Jean PERROT N°79, Grenoble, France",
+      "current": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble",
+        "query": "Avenue Jean PERROT 79, Grenoble",
+        "rank": 4.197
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.487,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 06",
+      "circuit": "H",
+      "address": "Avenue Albert 1ier de BELGIQUE N°23, Grenoble, France",
+      "current": {
+        "lat": 45.18194,
+        "lon": 5.731257,
+        "label": "Avenue Albert 1er de Belgique 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.18194,
+        "lon": 5.731257,
+        "label": "Avenue Albert 1er de Belgique 38000 Grenoble",
+        "query": "Avenue Albert 1ier de BELGIQUE 23, Grenoble",
+        "rank": 3.058
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.769,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 07",
+      "circuit": "H",
+      "address": "Avenue Marcellin BERTHELOT N°4 (lycée Mounier), Grenoble, France",
+      "current": {
+        "lat": 45.175507,
+        "lon": 5.731884,
+        "label": "Avenue Marcelin Berthelot 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.202,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 08",
+      "circuit": "H",
+      "address": "Avenue Marcellin BERTHELOT N°38, face à la MC2, Grenoble, France",
+      "current": {
+        "lat": 45.175507,
+        "lon": 5.731884,
+        "label": "Avenue Marcelin Berthelot 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.203,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 09",
+      "circuit": "H",
+      "address": "Avenue Marcellin BERTHELOT N°56, Grenoble, France",
+      "current": {
+        "lat": 45.175507,
+        "lon": 5.731884,
+        "label": "Avenue Marcelin Berthelot 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.184,
+      "suspicious": false
+    },
+    {
+      "name": "H – Point 10",
+      "circuit": "H",
+      "address": "Rue de STALINGRAD parking Clos d'Or, Grenoble, France",
+      "current": {
+        "lat": 45.174181,
+        "lon": 5.72508,
+        "label": "Rue de Stalingrad 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.553,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 01",
+      "circuit": "I",
+      "address": "Rue des ALLIES N°101, angle rue Amable MATUSSIERE, Grenoble, France",
+      "current": {
+        "lat": 45.170895,
+        "lon": 5.720816,
+        "label": "Rue Amable Matussière 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.170895,
+        "lon": 5.720816,
+        "label": "Rue Amable Matussière 38100 Grenoble",
+        "query": "rue Amable MATUSSIERE, Grenoble",
+        "rank": 4.274
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.163,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 02",
+      "circuit": "I",
+      "address": "Rue des ALLIES N°117, angle rue MARQUIAN, Grenoble, France",
+      "current": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.170382,
+        "lon": 5.718332,
+        "label": "Rue Marquian 38100 Grenoble",
+        "query": "rue MARQUIAN, Grenoble",
+        "rank": 4.272
+      },
+      "shiftKm": 0.386,
+      "neighborDistanceKm": 0.366,
+      "suspicious": true
+    },
+    {
+      "name": "I – Point 03",
+      "circuit": "I",
+      "address": "Rue Général MANGIN N°73Ter, Grenoble, France",
+      "current": {
+        "lat": 45.172013,
+        "lon": 5.716547,
+        "label": "Rue Général Mangin 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.327,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 04",
+      "circuit": "I",
+      "address": "Rue Général MANGIN N°73Ter, Grenoble, France",
+      "current": {
+        "lat": 45.172013,
+        "lon": 5.716547,
+        "label": "Rue Général Mangin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172013,
+        "lon": 5.716547,
+        "label": "Rue Général Mangin 38100 Grenoble",
+        "query": "Rue Général MANGIN 73Ter, Grenoble",
+        "rank": 4.123
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.345,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 05",
+      "circuit": "I",
+      "address": "Avenue Léon BLUM N°82, Grenoble, France",
+      "current": {
+        "lat": 45.165506,
+        "lon": 5.719055,
+        "label": "Avenue Léon Blum 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.165506,
+        "lon": 5.719055,
+        "label": "Avenue Léon Blum 38100 Grenoble",
+        "query": "Avenue Léon BLUM 82, Grenoble",
+        "rank": 4.187
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.586,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 06",
+      "circuit": "I",
+      "address": "Rue René LESAGE N°6, Grenoble, France",
+      "current": {
+        "lat": 45.169494,
+        "lon": 5.720279,
+        "label": "Rue René Lesage 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169494,
+        "lon": 5.720279,
+        "label": "Rue René Lesage 38100 Grenoble",
+        "query": "Rue René LESAGE 6, Grenoble",
+        "rank": 4.207
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.09,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 07",
+      "circuit": "I",
+      "address": "Rue René LESAGE N°16 (groupe scolaire), Grenoble, France",
+      "current": {
+        "lat": 45.169494,
+        "lon": 5.720279,
+        "label": "Rue René Lesage 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169494,
+        "lon": 5.720279,
+        "label": "Rue René Lesage 38100 Grenoble",
+        "query": "Rue René LESAGE 16, Grenoble",
+        "rank": 4.177
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.2,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 08",
+      "circuit": "I",
+      "address": "Rue de STALINGRAD N°86, Grenoble, France",
+      "current": {
+        "lat": 45.174181,
+        "lon": 5.72508,
+        "label": "Rue de Stalingrad 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.174181,
+        "lon": 5.72508,
+        "label": "Rue de Stalingrad 38100 Grenoble",
+        "query": "Rue de STALINGRAD 86, Grenoble",
+        "rank": 4.193
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.308,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 09",
+      "circuit": "I",
+      "address": "Rue JACQUARD N°1, angle rue Honoré de BALZAC, Grenoble, France",
+      "current": {
+        "lat": 45.175238,
+        "lon": 5.721293,
+        "label": "Rue Jacquard 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175238,
+        "lon": 5.721293,
+        "label": "Rue Jacquard 38100 Grenoble",
+        "query": "Rue JACQUARD 1, Grenoble",
+        "rank": 4.449
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.306,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 10",
+      "circuit": "I",
+      "address": "Rue Pierre BONNARD N°4, place Docteur GALLIMARD, Grenoble, France",
+      "current": {
+        "lat": 45.175476,
+        "lon": 5.726299,
+        "label": "Place Docteur Gallimard 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175476,
+        "lon": 5.726299,
+        "label": "Place Docteur Gallimard 38100 Grenoble",
+        "query": "place Docteur GALLIMARD, Grenoble",
+        "rank": 4.265
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.102,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 11",
+      "circuit": "I",
+      "address": "Rue Pierre BONNARD N°2, place Docteur GALLIMARD, Grenoble, France",
+      "current": {
+        "lat": 45.175476,
+        "lon": 5.726299,
+        "label": "Place Docteur Gallimard 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175476,
+        "lon": 5.726299,
+        "label": "Place Docteur Gallimard 38100 Grenoble",
+        "query": "place Docteur GALLIMARD, Grenoble",
+        "rank": 4.265
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.102,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 12",
+      "circuit": "I",
+      "address": "Rue Edouard VAILLANT N°33, rue des DEPORTES du 11/11/1943, Grenoble, France",
+      "current": {
+        "lat": 45.17764,
+        "lon": 5.727404,
+        "label": "33 Rue des Déportés du 11 Novembre 1943 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.178722,
+        "lon": 5.727894,
+        "label": "Rue des Déportés du 11 Novembre 1943 38100 Grenoble",
+        "query": "rue des DEPORTES du 11/11/1943, Grenoble",
+        "rank": 4.312
+      },
+      "shiftKm": 0.126,
+      "neighborDistanceKm": 0.203,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 13",
+      "circuit": "I",
+      "address": "Rue de STALINGRAD N°58, Grenoble, France",
+      "current": {
+        "lat": 45.174181,
+        "lon": 5.72508,
+        "label": "Rue de Stalingrad 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.174181,
+        "lon": 5.72508,
+        "label": "Rue de Stalingrad 38100 Grenoble",
+        "query": "Rue de STALINGRAD 58, Grenoble",
+        "rank": 4.193
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.404,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 14",
+      "circuit": "I",
+      "address": "Rue des DEPORTES du 11/11/1943, face rue Paul BOURGET, Grenoble, France",
+      "current": {
+        "lat": 45.178722,
+        "lon": 5.727894,
+        "label": "Rue des Déportés du 11 Novembre 1943 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.178722,
+        "lon": 5.727894,
+        "label": "Rue des Déportés du 11 Novembre 1943 38100 Grenoble",
+        "query": "Rue des DEPORTES du 11/11/1943, Grenoble",
+        "rank": 4.312
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.278,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 15",
+      "circuit": "I",
+      "address": "Rue Paul BOURGET N°5 (groupe scolaire Ferdinand Buisson), Grenoble, France",
+      "current": {
+        "lat": 45.177777,
+        "lon": 5.72822,
+        "label": "Rue Paul Bourget 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177777,
+        "lon": 5.72822,
+        "label": "Rue Paul Bourget 38100 Grenoble",
+        "query": "Rue Paul BOURGET 5, Grenoble",
+        "rank": 4.212
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.293,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 16",
+      "circuit": "I",
+      "address": "Rue LEBRIX N°29, rue Léo LAGRANGE, Grenoble, France",
+      "current": {
+        "lat": 45.177109,
+        "lon": 5.722697,
+        "label": "Rue Léo Lagrange 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177109,
+        "lon": 5.722697,
+        "label": "Rue Léo Lagrange 38100 Grenoble",
+        "query": "rue Léo LAGRANGE, Grenoble",
+        "rank": 4.275
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.351,
+      "suspicious": false
+    },
+    {
+      "name": "I – Point 17",
+      "circuit": "I",
+      "address": "Boulevard Maréchal FOCH N°51, Grenoble, France",
+      "current": {
+        "lat": 45.180931,
+        "lon": 5.722246,
+        "label": "Boulevard Maréchal Foch 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.180931,
+        "lon": 5.722246,
+        "label": "Boulevard Maréchal Foch 38100 Grenoble",
+        "query": "Boulevard Maréchal FOCH 51, Grenoble",
+        "rank": 4.205
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.462,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 01",
+      "circuit": "J",
+      "address": "Boulevard CLEMENCEAU N°42, Grenoble, France",
+      "current": {
+        "lat": 45.184289,
+        "lon": 5.739892,
+        "label": "Boulevard Clemenceau 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184289,
+        "lon": 5.739892,
+        "label": "Boulevard Clemenceau 38100 Grenoble",
+        "query": "Boulevard CLEMENCEAU 42, Grenoble",
+        "rank": 4.198
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.376,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 02",
+      "circuit": "J",
+      "address": "Boulevard CLEMENCEAU N°12, face rue du MONT FROID, Grenoble, France",
+      "current": {
+        "lat": 45.184664,
+        "lon": 5.742449,
+        "label": "Rue du Mont Froid 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.184664,
+        "lon": 5.742449,
+        "label": "Rue du Mont Froid 38100 Grenoble",
+        "query": "rue du MONT FROID, Grenoble",
+        "rank": 4.273
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.256,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 03",
+      "circuit": "J",
+      "address": "Rue du 19 MARS 1962, angle Jean PAIN, Grenoble, France",
+      "current": {
+        "lat": 45.188736,
+        "lon": 5.744052,
+        "label": "Rue du 19 mars 1962 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.188736,
+        "lon": 5.744052,
+        "label": "Rue du 19 mars 1962 38100 Grenoble",
+        "query": "Rue du 19 MARS 1962, Grenoble",
+        "rank": 4.515
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.438,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 04",
+      "circuit": "J",
+      "address": "Rue Jules FLANDRIN N°3, Grenoble, France",
+      "current": {
+        "lat": 45.187611,
+        "lon": 5.746094,
+        "label": "Rue Jules Flandrin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.187611,
+        "lon": 5.746094,
+        "label": "Rue Jules Flandrin 38100 Grenoble",
+        "query": "Rue Jules FLANDRIN 3, Grenoble",
+        "rank": 4.464
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.393,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 05",
+      "circuit": "J",
+      "address": "Avenue Jeanne d'ARC, rue Commandant PERREAU N°20, Grenoble, France",
+      "current": {
+        "lat": 45.182876,
+        "lon": 5.743908,
+        "label": "Rue Commandant Perreau 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.182852,
+        "lon": 5.744151,
+        "label": "Avenue Jeanne d'Arc 38100 Grenoble",
+        "query": "Avenue Jeanne d'ARC, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0.019,
+      "neighborDistanceKm": 0.174,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 06",
+      "circuit": "J",
+      "address": "Rue Claude GENIN N°57, Grenoble, France",
+      "current": {
+        "lat": 45.181594,
+        "lon": 5.744767,
+        "label": "Rue Claude Genin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.181594,
+        "lon": 5.744767,
+        "label": "Rue Claude Genin 38100 Grenoble",
+        "query": "Rue Claude GENIN 57, Grenoble",
+        "rank": 4.186
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.179,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 07",
+      "circuit": "J",
+      "address": "Rue CONDE, Grenoble, France",
+      "current": {
+        "lat": 45.17944,
+        "lon": 5.743813,
+        "label": "Rue Condé 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17944,
+        "lon": 5.743813,
+        "label": "Rue Condé 38100 Grenoble",
+        "query": "Rue CONDE, Grenoble",
+        "rank": 4.27
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.274,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 08",
+      "circuit": "J",
+      "address": "Avenue Jeanne d'ARC N°84, Grenoble, France",
+      "current": {
+        "lat": 45.182852,
+        "lon": 5.744151,
+        "label": "Avenue Jeanne d'Arc 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.182852,
+        "lon": 5.744151,
+        "label": "Avenue Jeanne d'Arc 38100 Grenoble",
+        "query": "Avenue Jeanne d'ARC 84, Grenoble",
+        "rank": 4.197
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.348,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 09",
+      "circuit": "J",
+      "address": "Place Joseph RIBOUD N°7, Grenoble, France",
+      "current": {
+        "lat": 45.180018,
+        "lon": 5.745614,
+        "label": "Place Joseph Riboud 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.180018,
+        "lon": 5.745614,
+        "label": "Place Joseph Riboud 38100 Grenoble",
+        "query": "Place Joseph RIBOUD 7, Grenoble",
+        "rank": 4.213
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.085,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 10",
+      "circuit": "J",
+      "address": "Rue Henri POINCARE N°1(école), Grenoble, France",
+      "current": {
+        "lat": 45.178552,
+        "lon": 5.748254,
+        "label": "Rue Henri Poincaré 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.178552,
+        "lon": 5.748254,
+        "label": "Rue Henri Poincaré 38100 Grenoble",
+        "query": "Rue Henri POINCARE 1, Grenoble",
+        "rank": 4.46
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.221,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 11",
+      "circuit": "J",
+      "address": "Rue Marius BLANCHET, av du GRAND CHATELET, Grenoble, France",
+      "current": {
+        "lat": 45.178612,
+        "lon": 5.750463,
+        "label": "Rue Marius Blanchet 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.178612,
+        "lon": 5.750463,
+        "label": "Rue Marius Blanchet 38100 Grenoble",
+        "query": "Rue Marius BLANCHET, Grenoble",
+        "rank": 4.271
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.387,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 12",
+      "circuit": "J",
+      "address": "Place de la COMMUNE, angle rue André ARGOUGES, Grenoble, France",
+      "current": {
+        "lat": 45.177827,
+        "lon": 5.744127,
+        "label": "Rue André Argouges 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177827,
+        "lon": 5.744127,
+        "label": "Rue André Argouges 38100 Grenoble",
+        "query": "rue André ARGOUGES, Grenoble",
+        "rank": 4.272
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.157,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 13",
+      "circuit": "J",
+      "address": "Rue André ARGOUGES N°14, Grenoble, France",
+      "current": {
+        "lat": 45.177827,
+        "lon": 5.744127,
+        "label": "Rue André Argouges 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.177827,
+        "lon": 5.744127,
+        "label": "Rue André Argouges 38100 Grenoble",
+        "query": "Rue André ARGOUGES 14, Grenoble",
+        "rank": 4.186
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.056,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 14",
+      "circuit": "J",
+      "address": "Rue Jean BART face N°33, Grenoble, France",
+      "current": {
+        "lat": 45.176958,
+        "lon": 5.74164,
+        "label": "Rue Jean Bart 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.176958,
+        "lon": 5.74164,
+        "label": "Rue Jean Bart 38100 Grenoble",
+        "query": "Rue Jean BART, Grenoble",
+        "rank": 4.27
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.162,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 15",
+      "circuit": "J",
+      "address": "Rue Léon JOUHAUX N°59 Bis (entrée collège), Grenoble, France",
+      "current": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble",
+        "query": "Rue Léon JOUHAUX 59 Bis, Grenoble",
+        "rank": 2.994
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.014,
+      "suspicious": false
+    },
+    {
+      "name": "J – Point 16",
+      "circuit": "J",
+      "address": "Rue Léon JOUHAUX N°61, Grenoble, France",
+      "current": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.17722,
+        "lon": 5.742969,
+        "label": "Rue Léon Jouhaux 38100 Grenoble",
+        "query": "Rue Léon JOUHAUX 61, Grenoble",
+        "rank": 4.19
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.054,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 01",
+      "circuit": "K",
+      "address": "Rue Georges de MANTEYER N°15, Grenoble, France",
+      "current": {
+        "lat": 45.172911,
+        "lon": 5.742326,
+        "label": "Rue Georges de Manteyer 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172911,
+        "lon": 5.742326,
+        "label": "Rue Georges de Manteyer 38100 Grenoble",
+        "query": "Rue Georges de MANTEYER 15, Grenoble",
+        "rank": 4.203
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.15,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 02",
+      "circuit": "K",
+      "address": "Rue Georges de MANTEYER N°33, Grenoble, France",
+      "current": {
+        "lat": 45.172911,
+        "lon": 5.742326,
+        "label": "Rue Georges de Manteyer 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172911,
+        "lon": 5.742326,
+        "label": "Rue Georges de Manteyer 38100 Grenoble",
+        "query": "Rue Georges de MANTEYER 33, Grenoble",
+        "rank": 4.203
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.225,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 03",
+      "circuit": "K",
+      "address": "Rue LETONNELIER N°4, Grenoble, France",
+      "current": {
+        "lat": 45.170274,
+        "lon": 5.743086,
+        "label": "Rue Gaston Letonnelier 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.170274,
+        "lon": 5.743086,
+        "label": "Rue Gaston Letonnelier 38100 Grenoble",
+        "query": "Rue LETONNELIER 4, Grenoble",
+        "rank": 4.041
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.125,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 04",
+      "circuit": "K",
+      "address": "Avenue TEISSEIRE N°22 (Groupe scolaire), Grenoble, France",
+      "current": {
+        "lat": 45.169477,
+        "lon": 5.742014,
+        "label": "Avenue Teisseire 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169477,
+        "lon": 5.742014,
+        "label": "Avenue Teisseire 38100 Grenoble",
+        "query": "Avenue TEISSEIRE 22, Grenoble",
+        "rank": 4.183
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.289,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 05",
+      "circuit": "K",
+      "address": "Avenue TEISSEIRE N°22 (Groupe scolaire), Grenoble, France",
+      "current": {
+        "lat": 45.169477,
+        "lon": 5.742014,
+        "label": "Avenue Teisseire 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169477,
+        "lon": 5.742014,
+        "label": "Avenue Teisseire 38100 Grenoble",
+        "query": "Avenue TEISSEIRE 22, Grenoble",
+        "rank": 4.183
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.265,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 06",
+      "circuit": "K",
+      "address": "Avenue Jean PERROT, avenue Paul COCAT N°31, Grenoble, France",
+      "current": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble",
+        "query": "Avenue Jean PERROT, Grenoble",
+        "rank": 4.283
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.604,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 07",
+      "circuit": "K",
+      "address": "Place Salvador ALLENDE N°4, Grenoble, France",
+      "current": {
+        "lat": 45.171395,
+        "lon": 5.739774,
+        "label": "Place Salvador Allende 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.171395,
+        "lon": 5.739774,
+        "label": "Place Salvador Allende 38100 Grenoble",
+        "query": "Place Salvador ALLENDE 4, Grenoble",
+        "rank": 4.213
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.182,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 08",
+      "circuit": "K",
+      "address": "Rue Ninon VALLIN N°2, Grenoble, France",
+      "current": {
+        "lat": 45.171346,
+        "lon": 5.7385,
+        "label": "Rue Ninon Vallin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.171346,
+        "lon": 5.7385,
+        "label": "Rue Ninon Vallin 38100 Grenoble",
+        "query": "Rue Ninon VALLIN 2, Grenoble",
+        "rank": 4.208
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.26,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 09",
+      "circuit": "K",
+      "address": "Avenue Jean PERROT N°107, Grenoble, France",
+      "current": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.175418,
+        "lon": 5.73754,
+        "label": "Avenue Jean Perrot 38100 Grenoble",
+        "query": "Avenue Jean PERROT 107, Grenoble",
+        "rank": 4.172
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.466,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 10",
+      "circuit": "K",
+      "address": "MC2 (parking), rue Paul CLAUDEL, Grenoble, France",
+      "current": {
+        "lat": 45.172013,
+        "lon": 5.73487,
+        "label": "Rue Paul Claudel 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172013,
+        "lon": 5.73487,
+        "label": "Rue Paul Claudel 38100 Grenoble",
+        "query": "rue Paul CLAUDEL, Grenoble",
+        "rank": 4.27
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.139,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 11",
+      "circuit": "K",
+      "address": "Rue Gérard PHILIPPE, avenue MALHERBE N°28, Grenoble, France",
+      "current": {
+        "lat": 45.170314,
+        "lon": 5.733918,
+        "label": "Rue Gerard Philipe 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble",
+        "query": "avenue MALHERBE 28, Grenoble",
+        "rank": 4.179
+      },
+      "shiftKm": 0.203,
+      "neighborDistanceKm": 0.243,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 12",
+      "circuit": "K",
+      "address": "Avenue MALHERBE N°25 (groupe scolaire), Grenoble, France",
+      "current": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble",
+        "query": "Avenue MALHERBE 25, Grenoble",
+        "rank": 4.179
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.111,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 13",
+      "circuit": "K",
+      "address": "Avenue MALHERBE N°25 (groupe scolaire), Grenoble, France",
+      "current": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble",
+        "query": "Avenue MALHERBE 25, Grenoble",
+        "rank": 4.179
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.027,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 14",
+      "circuit": "K",
+      "address": "Avenue MALHERBE N°13, Grenoble, France",
+      "current": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble",
+        "query": "Avenue MALHERBE 13, Grenoble",
+        "rank": 4.179
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.053,
+      "suspicious": false
+    },
+    {
+      "name": "K – Point 15",
+      "circuit": "K",
+      "address": "Rue TURGOT N°2, sous la voûte, Grenoble, France",
+      "current": {
+        "lat": 45.168637,
+        "lon": 5.737634,
+        "label": "Rue Turgot 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.168637,
+        "lon": 5.737634,
+        "label": "Rue Turgot 38100 Grenoble",
+        "query": "Rue TURGOT 2, Grenoble",
+        "rank": 4.193
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.158,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 01",
+      "circuit": "L",
+      "address": "Avenue MALHERBE N°31, Grenoble, France",
+      "current": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.169739,
+        "lon": 5.736369,
+        "label": "Avenue Malherbe 38100 Grenoble",
+        "query": "Avenue MALHERBE 31, Grenoble",
+        "rank": 4.179
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.61,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 02",
+      "circuit": "L",
+      "address": "Rue des Alliés N°1, avenue Marie REYNOARD, Grenoble, France",
+      "current": {
+        "lat": 45.16851,
+        "lon": 5.731581,
+        "label": "1 Avenue Marie Reynoard 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.172124,
+        "lon": 5.722589,
+        "label": "Rue des Alliés 38100 Grenoble",
+        "query": "Rue des Alliés 1, Grenoble",
+        "rank": 4.461
+      },
+      "shiftKm": 0.811,
+      "neighborDistanceKm": 0.17,
+      "suspicious": true
+    },
+    {
+      "name": "L – Point 03",
+      "circuit": "L",
+      "address": "Rue Guy MOQUET N°1, Grenoble, France",
+      "current": {
+        "lat": 45.168221,
+        "lon": 5.726101,
+        "label": "Rue Guy Môquet 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.168221,
+        "lon": 5.726101,
+        "label": "Rue Guy Môquet 38100 Grenoble",
+        "query": "Rue Guy MOQUET 1, Grenoble",
+        "rank": 4.453
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.394,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 04",
+      "circuit": "L",
+      "address": "Avenue Marie REYNOARD N°10, Grenoble, France",
+      "current": {
+        "lat": 45.163711,
+        "lon": 5.728776,
+        "label": "Avenue Marie Reynoard 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163711,
+        "lon": 5.728776,
+        "label": "Avenue Marie Reynoard 38100 Grenoble",
+        "query": "Avenue Marie REYNOARD 10, Grenoble",
+        "rank": 4.45
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.371,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 05",
+      "circuit": "L",
+      "address": "Allée des Deux MONDES N°50, Grenoble, France",
+      "current": {
+        "lat": 45.16647,
+        "lon": 5.726748,
+        "label": "Allée des Deux Mondes 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.16647,
+        "lon": 5.726748,
+        "label": "Allée des Deux Mondes 38100 Grenoble",
+        "query": "Allée des Deux MONDES 50, Grenoble",
+        "rank": 4.194
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.158,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 06",
+      "circuit": "L",
+      "address": "Rue Alfred de MUSSET N°1Ter, Grenoble, France",
+      "current": {
+        "lat": 45.16466,
+        "lon": 5.72647,
+        "label": "Rue Alfred de Musset 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.16466,
+        "lon": 5.72647,
+        "label": "Rue Alfred de Musset 38100 Grenoble",
+        "query": "Rue Alfred de MUSSET 1Ter, Grenoble",
+        "rank": 4.148
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.092,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 07",
+      "circuit": "L",
+      "address": "Placette PREMOL, rue du VILLAGE face N°2, Grenoble, France",
+      "current": {
+        "lat": 45.163814,
+        "lon": 5.727883,
+        "label": "Placette Prémol 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.164006,
+        "lon": 5.727827,
+        "label": "Rue du Village 38100 Grenoble",
+        "query": "rue du VILLAGE, Grenoble",
+        "rank": 4.265
+      },
+      "shiftKm": 0.022,
+      "neighborDistanceKm": 0.666,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 08",
+      "circuit": "L",
+      "address": "Rue Aimé PUPIN, rue Roger FRANCOIS, Grenoble, France",
+      "current": {
+        "lat": 45.161512,
+        "lon": 5.724048,
+        "label": "Rue Aimé Pupin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.161512,
+        "lon": 5.724048,
+        "label": "Rue Aimé Pupin 38100 Grenoble",
+        "query": "Rue Aimé PUPIN, Grenoble",
+        "rank": 4.271
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.812,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 09",
+      "circuit": "L",
+      "address": "Rue Aimé PUPIN N°8 (côté sud du tunnel), Grenoble, France",
+      "current": {
+        "lat": 45.184819,
+        "lon": 5.721453,
+        "label": "8 Rue de Turenne 38000 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.161512,
+        "lon": 5.724048,
+        "label": "Rue Aimé Pupin 38100 Grenoble",
+        "query": "Rue Aimé PUPIN 8, Grenoble",
+        "rank": 4.452
+      },
+      "shiftKm": 2.6,
+      "neighborDistanceKm": 2.535,
+      "suspicious": true
+    },
+    {
+      "name": "L – Point 10",
+      "circuit": "L",
+      "address": "Rue Claude KOGAN, angle rue Christophe TURC, Grenoble, France",
+      "current": {
+        "lat": 45.161753,
+        "lon": 5.725234,
+        "label": "Rue Christophe Turc 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.162993,
+        "lon": 5.723506,
+        "label": "Rue Claude Kogan 38100 Grenoble",
+        "query": "Rue Claude KOGAN, Grenoble",
+        "rank": 4.276
+      },
+      "shiftKm": 0.193,
+      "neighborDistanceKm": 0.637,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 11",
+      "circuit": "L",
+      "address": "Rue Gusto GERVASOTI, angle rue Christophe TURC, Grenoble, France",
+      "current": {
+        "lat": 45.161753,
+        "lon": 5.725234,
+        "label": "Rue Christophe Turc 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.161753,
+        "lon": 5.725234,
+        "label": "Rue Christophe Turc 38100 Grenoble",
+        "query": "rue Christophe TURC, Grenoble",
+        "rank": 4.276
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.609,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 12",
+      "circuit": "L",
+      "address": "Avenue Edmond ESMONIN N°12 (piscine des Dauphins), Grenoble, France",
+      "current": {
+        "lat": 45.160629,
+        "lon": 5.719773,
+        "label": "Avenue Edmond Esmonin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.160629,
+        "lon": 5.719773,
+        "label": "Avenue Edmond Esmonin 38100 Grenoble",
+        "query": "Avenue Edmond ESMONIN 12, Grenoble",
+        "rank": 4.194
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.584,
+      "suspicious": false
+    },
+    {
+      "name": "L – Point 13",
+      "circuit": "L",
+      "address": "Avenue de l'EUROPE, face rue Maurice DODERO N°43, Grenoble, France",
+      "current": {
+        "lat": 45.161563,
+        "lon": 5.730725,
+        "label": "Rue Maurice Dodero 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.159264,
+        "lon": 5.733502,
+        "label": "Avenue de l'Europe 38100 Grenoble",
+        "query": "Avenue de l'EUROPE, Grenoble",
+        "rank": 4.275
+      },
+      "shiftKm": 0.336,
+      "neighborDistanceKm": 0.646,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 01",
+      "circuit": "M",
+      "address": "Arrêt de tram ARLEQUIN, rue Maurice DODERO, Grenoble, France",
+      "current": {
+        "lat": 45.161563,
+        "lon": 5.730725,
+        "label": "Rue Maurice Dodero 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.161563,
+        "lon": 5.730725,
+        "label": "Rue Maurice Dodero 38100 Grenoble",
+        "query": "rue Maurice DODERO, Grenoble",
+        "rank": 4.273
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.272,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 02",
+      "circuit": "M",
+      "address": "Galerie de l'ARLEQUIN N°110, Grenoble, France",
+      "current": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble",
+        "query": "Galerie de l'ARLEQUIN 110, Grenoble",
+        "rank": 4.177
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.091,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 03",
+      "circuit": "M",
+      "address": "Galerie de l'ARLEQUIN N°70, Grenoble, France",
+      "current": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble",
+        "query": "Galerie de l'ARLEQUIN 70, Grenoble",
+        "rank": 4.2
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.068,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 04",
+      "circuit": "M",
+      "address": "Galerie de l'ARLEQUIN N°60, Grenoble, France",
+      "current": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble",
+        "query": "Galerie de l'ARLEQUIN 60, Grenoble",
+        "rank": 4.2
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 05",
+      "circuit": "M",
+      "address": "Galerie de l'ARLEQUIN N°30, Grenoble, France",
+      "current": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble",
+        "query": "Galerie de l'ARLEQUIN 30, Grenoble",
+        "rank": 4.2
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 06",
+      "circuit": "M",
+      "address": "Galerie de l'ARLEQUIN N°150, Grenoble, France",
+      "current": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble",
+        "query": "Galerie de l'ARLEQUIN 150, Grenoble",
+        "rank": 4.177
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.084,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 07",
+      "circuit": "M",
+      "address": "Galerie de l'ARLEQUIN N°170, Grenoble, France",
+      "current": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.163716,
+        "lon": 5.732379,
+        "label": "Galerie de l'Arlequin 38100 Grenoble",
+        "query": "Galerie de l'ARLEQUIN 170, Grenoble",
+        "rank": 4.177
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.187,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 08",
+      "circuit": "M",
+      "address": "Allée des Genêts N°7 (école), Grenoble, France",
+      "current": {
+        "lat": 45.161068,
+        "lon": 5.734429,
+        "label": "Allée des Genêts 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.161068,
+        "lon": 5.734429,
+        "label": "Allée des Genêts 38100 Grenoble",
+        "query": "Allée des Genêts 7, Grenoble",
+        "rank": 4.208
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.134,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 09",
+      "circuit": "M",
+      "address": "Avenue de CONSTANTINE N°22, Grenoble, France",
+      "current": {
+        "lat": 45.160231,
+        "lon": 5.734289,
+        "label": "Avenue de Constantine 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.160231,
+        "lon": 5.734289,
+        "label": "Avenue de Constantine 38100 Grenoble",
+        "query": "Avenue de CONSTANTINE 22, Grenoble",
+        "rank": 4.199
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.218,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 10",
+      "circuit": "M",
+      "address": "Place des GEANTS N°40, Grenoble, France",
+      "current": {
+        "lat": 45.158108,
+        "lon": 5.732145,
+        "label": "Grand Place 38100 Grenoble"
+      },
+      "candidate": null,
+      "shiftKm": null,
+      "neighborDistanceKm": 0.638,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 11",
+      "circuit": "M",
+      "address": "Rue Paul HELBRONNER N°16Bis (école), Grenoble, France",
+      "current": {
+        "lat": 45.165817,
+        "lon": 5.739575,
+        "label": "Rue Paul Helbronner 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.165817,
+        "lon": 5.739575,
+        "label": "Rue Paul Helbronner 38100 Grenoble",
+        "query": "Rue Paul HELBRONNER 16Bis, Grenoble",
+        "rank": 4.124
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.736,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 12",
+      "circuit": "M",
+      "address": "Avenue La BRUYERE, face N°30 (école), Grenoble, France",
+      "current": {
+        "lat": 45.166673,
+        "lon": 5.732235,
+        "label": "Avenue La Bruyère 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.166673,
+        "lon": 5.732235,
+        "label": "Avenue La Bruyère 38100 Grenoble",
+        "query": "Avenue La BRUYERE, Grenoble",
+        "rank": 4.28
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.662,
+      "suspicious": false
+    },
+    {
+      "name": "M – Point 13",
+      "circuit": "M",
+      "address": "Avenue de l'EUROPE N°34 (bourse du travail), Grenoble, France",
+      "current": {
+        "lat": 45.159264,
+        "lon": 5.733502,
+        "label": "Avenue de l'Europe 38100 Grenoble"
+      },
+      "candidate": {
+        "lat": 45.159264,
+        "lon": 5.733502,
+        "label": "Avenue de l'Europe 38100 Grenoble",
+        "query": "Avenue de l'EUROPE 34, Grenoble",
+        "rank": 4.189
+      },
+      "shiftKm": 0,
+      "neighborDistanceKm": 0.799,
+      "suspicious": false
+    }
+  ]
+}
