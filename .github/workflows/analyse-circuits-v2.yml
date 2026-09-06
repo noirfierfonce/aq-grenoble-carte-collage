@@ -1,0 +1,30 @@
+name: Analyse finale de regroupement des circuits.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/analyse-circuits-v2.mjs'
+      - '.github/workflows/analyse-circuits-v2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Calculer la compacité et les tournées.
+        run: node scripts/analyse-circuits-v2.mjs
+      - name: Enregistrer uniquement le rapport et la proposition.
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis/circuit-distance-report-v2.md analysis/circuit-proposal-v2.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Ajouter l analyse finale des circuits v2'
+          git push
