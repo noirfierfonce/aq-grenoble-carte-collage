@@ -1,4 +1,5 @@
 const APP_SYNC_SHEET = 'APP-SYNC';
+const APP_ANALYTICS_SHEET = 'APP-ANALYTICS';
 
 function doGet(e) {
   const params = e && e.parameter ? e.parameter : {};
@@ -11,7 +12,9 @@ function doGet(e) {
 
 function doPost(e) {
   const params = e && e.parameter ? e.parameter : {};
-  const payload = handleMutation_(params);
+  const payload = String(params.action || '') === 'analytics'
+    ? handleAnalytics_(params)
+    : handleMutation_(params);
   return ContentService
     .createTextOutput(JSON.stringify(payload))
     .setMimeType(ContentService.MimeType.JSON);
@@ -23,6 +26,7 @@ function setupBackend(spreadsheetId, accessCode) {
     ACCESS_CODE: String(accessCode)
   }, false);
   ensureSyncSheet_();
+  ensureAnalyticsSheet_();
 }
 
 function handleSnapshot_(params) {
@@ -85,6 +89,77 @@ function handleMutation_(params) {
   } finally {
     try { lock.releaseLock(); } catch (e) {}
   }
+}
+
+function handleAnalytics_(params) {
+  const lock = LockService.getScriptLock();
+  try {
+    const event = cleanAnalyticsValue_(params.event, 32).toLowerCase();
+    const allowed = ['open', 'view', 'route', 'share', 'affiches'];
+    if (!allowed.includes(event)) throw new Error('Événement invalide.');
+
+    const visitorId = cleanAnalyticsId_(params.visitorId);
+    const sessionId = cleanAnalyticsId_(params.sessionId);
+    if (!visitorId || !sessionId) throw new Error('Identifiant analytique manquant.');
+
+    const view = cleanAnalyticsValue_(params.view, 16).toUpperCase();
+    const target = cleanAnalyticsValue_(params.target, 120);
+    const mode = cleanAnalyticsValue_(params.mode, 16).toLowerCase();
+    const path = cleanAnalyticsValue_(params.path, 160);
+
+    lock.waitLock(10000);
+    const sheet = ensureAnalyticsSheet_();
+    sheet.appendRow([
+      new Date(),
+      event,
+      visitorId,
+      sessionId,
+      view,
+      target,
+      mode,
+      path
+    ]);
+    return { ok: true };
+  } catch (error) {
+    return { ok: false, error: String(error && error.message ? error.message : error) };
+  } finally {
+    try { lock.releaseLock(); } catch (e) {}
+  }
+}
+
+function ensureAnalyticsSheet_() {
+  const ss = getSpreadsheet_();
+  let sheet = ss.getSheetByName(APP_ANALYTICS_SHEET);
+  if (!sheet) {
+    sheet = ss.insertSheet(APP_ANALYTICS_SHEET);
+    sheet.getRange(1, 1, 1, 8).setValues([[
+      'date_heure',
+      'evenement',
+      'visiteur_anonyme',
+      'session',
+      'vue_circuit',
+      'cible',
+      'mode',
+      'chemin'
+    ]]);
+    sheet.setFrozenRows(1);
+    sheet.getRange('A:A').setNumberFormat('dd/MM/yyyy HH:mm:ss');
+    sheet.autoResizeColumns(1, 8);
+  }
+  return sheet;
+}
+
+function cleanAnalyticsId_(value) {
+  const clean = String(value || '').trim();
+  return /^[a-zA-Z0-9_-]{8,80}$/.test(clean) ? clean : '';
+}
+
+function cleanAnalyticsValue_(value, maxLength) {
+  return String(value || '')
+    .replace(/[\r\n\t]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, maxLength);
 }
 
 function assertAccess_(provided) {
