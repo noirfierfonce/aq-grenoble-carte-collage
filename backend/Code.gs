@@ -103,22 +103,56 @@ function handleAnalytics_(params) {
     if (!visitorId || !sessionId) throw new Error('Identifiant analytique manquant.');
 
     const view = cleanAnalyticsValue_(params.view, 16).toUpperCase();
-    const target = cleanAnalyticsValue_(params.target, 120);
     const mode = cleanAnalyticsValue_(params.mode, 16).toLowerCase();
     const path = cleanAnalyticsValue_(params.path, 160);
 
     lock.waitLock(10000);
     const sheet = ensureAnalyticsSheet_();
-    sheet.appendRow([
-      new Date(),
-      event,
-      visitorId,
-      sessionId,
-      view,
-      target,
-      mode,
-      path
-    ]);
+    const row = findAnalyticsRow_(sheet, visitorId);
+    const now = new Date();
+
+    if (!row) {
+      const circuits = event === 'view' && /^[A-M]$/.test(view) ? view : '';
+      sheet.appendRow([
+        visitorId,
+        now,
+        now,
+        1,
+        event === 'open' ? 1 : 0,
+        circuits,
+        circuits ? 1 : 0,
+        event === 'route' ? 1 : 0,
+        event === 'share' ? 1 : 0,
+        event === 'affiches' ? 1 : 0,
+        mode,
+        path,
+        sessionId
+      ]);
+    } else {
+      const values = sheet.getRange(row, 1, 1, 13).getValues()[0];
+      const sessions = splitList_(values[12]);
+      const circuits = splitList_(values[5]);
+
+      if (!sessions.includes(sessionId)) sessions.push(sessionId);
+      if (event === 'view' && /^[A-M]$/.test(view) && !circuits.includes(view)) circuits.push(view);
+
+      sheet.getRange(row, 1, 1, 13).setValues([[
+        visitorId,
+        values[1] || now,
+        now,
+        sessions.length,
+        Number(values[4] || 0) + (event === 'open' ? 1 : 0),
+        circuits.join(', '),
+        circuits.length,
+        Number(values[7] || 0) + (event === 'route' ? 1 : 0),
+        Number(values[8] || 0) + (event === 'share' ? 1 : 0),
+        Number(values[9] || 0) + (event === 'affiches' ? 1 : 0),
+        mode || values[10] || '',
+        path || values[11] || '',
+        sessions.join(',')
+      ]]);
+    }
+
     return { ok: true };
   } catch (error) {
     return { ok: false, error: String(error && error.message ? error.message : error) };
@@ -130,23 +164,115 @@ function handleAnalytics_(params) {
 function ensureAnalyticsSheet_() {
   const ss = getSpreadsheet_();
   let sheet = ss.getSheetByName(APP_ANALYTICS_SHEET);
-  if (!sheet) {
-    sheet = ss.insertSheet(APP_ANALYTICS_SHEET);
-    sheet.getRange(1, 1, 1, 8).setValues([[
-      'date_heure',
-      'evenement',
-      'visiteur_anonyme',
-      'session',
-      'vue_circuit',
-      'cible',
-      'mode',
-      'chemin'
-    ]]);
-    sheet.setFrozenRows(1);
-    sheet.getRange('A:A').setNumberFormat('dd/MM/yyyy HH:mm:ss');
-    sheet.autoResizeColumns(1, 8);
+  if (!sheet) sheet = ss.insertSheet(APP_ANALYTICS_SHEET);
+
+  const currentHeader = String(sheet.getRange('A1').getValue() || '').trim();
+  if (currentHeader === 'date_heure') migrateLegacyAnalytics_(sheet);
+
+  if (String(sheet.getRange('A1').getValue() || '').trim() !== 'visiteur_anonyme') {
+    writeAnalyticsHeaders_(sheet);
   }
+
   return sheet;
+}
+
+function writeAnalyticsHeaders_(sheet) {
+  sheet.clearContents();
+  sheet.getRange(1, 1, 1, 13).setValues([[
+    'visiteur_anonyme',
+    'premiere_visite',
+    'derniere_activite',
+    'sessions',
+    'ouvertures',
+    'circuits_consultes',
+    'nb_circuits',
+    'itineraires',
+    'partages',
+    'affiches',
+    'mode',
+    'dernier_chemin',
+    'sessions_ids'
+  ]]);
+  sheet.setFrozenRows(1);
+  sheet.getRange('B:C').setNumberFormat('dd/MM/yyyy HH:mm:ss');
+  sheet.autoResizeColumns(1, 12);
+  sheet.hideColumns(13);
+}
+
+function migrateLegacyAnalytics_(sheet) {
+  const lastRow = sheet.getLastRow();
+  const rows = lastRow >= 2 ? sheet.getRange(2, 1, lastRow - 1, 8).getValues() : [];
+  const byVisitor = {};
+
+  rows.forEach(r => {
+    const date = r[0] instanceof Date ? r[0] : new Date(r[0]);
+    const event = String(r[1] || '').trim().toLowerCase();
+    const visitorId = String(r[2] || '').trim();
+    const sessionId = String(r[3] || '').trim();
+    const view = String(r[4] || '').trim().toUpperCase();
+    const mode = String(r[6] || '').trim();
+    const path = String(r[7] || '').trim();
+    if (!visitorId) return;
+
+    if (!byVisitor[visitorId]) {
+      byVisitor[visitorId] = {
+        first: date,
+        last: date,
+        sessions: [],
+        opens: 0,
+        circuits: [],
+        routes: 0,
+        shares: 0,
+        affiches: 0,
+        mode: mode,
+        path: path
+      };
+    }
+
+    const a = byVisitor[visitorId];
+    if (date < a.first) a.first = date;
+    if (date > a.last) a.last = date;
+    if (sessionId && !a.sessions.includes(sessionId)) a.sessions.push(sessionId);
+    if (event === 'open') a.opens++;
+    if (event === 'view' && /^[A-M]$/.test(view) && !a.circuits.includes(view)) a.circuits.push(view);
+    if (event === 'route') a.routes++;
+    if (event === 'share') a.shares++;
+    if (event === 'affiches') a.affiches++;
+    if (mode) a.mode = mode;
+    if (path) a.path = path;
+  });
+
+  writeAnalyticsHeaders_(sheet);
+  const output = Object.keys(byVisitor).map(visitorId => {
+    const a = byVisitor[visitorId];
+    return [
+      visitorId,
+      a.first,
+      a.last,
+      a.sessions.length,
+      a.opens,
+      a.circuits.join(', '),
+      a.circuits.length,
+      a.routes,
+      a.shares,
+      a.affiches,
+      a.mode,
+      a.path,
+      a.sessions.join(',')
+    ];
+  });
+  if (output.length) sheet.getRange(2, 1, output.length, 13).setValues(output);
+}
+
+function findAnalyticsRow_(sheet, visitorId) {
+  const last = sheet.getLastRow();
+  if (last < 2) return null;
+  const finder = sheet.getRange(2, 1, last - 1, 1).createTextFinder(visitorId).matchEntireCell(true).findNext();
+  return finder ? finder.getRow() : null;
+}
+
+function splitList_(value) {
+  return String(value || '').split(',').map(v => v.trim()).filter(Boolean);
 }
 
 function cleanAnalyticsId_(value) {
